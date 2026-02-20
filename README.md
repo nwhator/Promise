@@ -58,6 +58,24 @@ Admin URL: `http://127.0.0.1:8000/admin/`
 - `DATABASE_URL`
 - `CORS_ALLOWED_ORIGINS`
 - `CSRF_TRUSTED_ORIGINS`
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY` (optional)
+- `SUPABASE_SERVICE_ROLE_KEY` (server-only)
+
+## Vercel Deployment Notes
+
+- Deploy frontend and backend as separate Vercel projects.
+- Frontend project root: `frontend/`
+- Backend project root: `backend/`
+- Backend entrypoint files are included:
+  - `backend/vercel.json`
+  - `backend/api/index.py`
+- Run Django migrations after backend deploy:
+
+```bash
+cd backend
+python manage.py migrate
+```
 
 ## Supabase
 
