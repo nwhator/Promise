@@ -32,6 +32,8 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
+`npm run dev` and `npm run build` automatically sync `../stitch_promise_portfolio/` into `frontend/stitch_promise_portfolio/`.
+
 Frontend URLs:
 
 - Home: `http://localhost:3000/`

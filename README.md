@@ -67,6 +67,8 @@ Admin URL: `http://127.0.0.1:8000/admin/`
 - Deploy frontend and backend as separate Vercel projects.
 - Frontend project root: `frontend/`
 - Backend project root: `backend/`
+- Stitched HTML source can remain in repo root `stitch_promise_portfolio/`.
+- Frontend auto-syncs those files into `frontend/stitch_promise_portfolio/` before `dev` and `build`.
 - Backend entrypoint files are included:
   - `backend/vercel.json`
   - `backend/api/index.py`

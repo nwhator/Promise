@@ -135,7 +135,14 @@ export function getPageBySlug(slug: string): PageEntry | undefined {
 }
 
 export function loadPageHtml(page: PageEntry): string {
-  const sourceRoot = path.join(process.cwd(), "..", "stitch_promise_portfolio");
+  const localRoot = path.join(process.cwd(), "stitch_promise_portfolio");
+  const monorepoRoot = path.join(process.cwd(), "..", "stitch_promise_portfolio");
+  const sourceRoot = fs.existsSync(localRoot) ? localRoot : monorepoRoot;
   const filePath = path.join(sourceRoot, page.folder, "code.html");
+
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Missing stitched HTML file: ${filePath}`);
+  }
+
   return fs.readFileSync(filePath, "utf8");
 }
