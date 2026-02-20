@@ -1,0 +1,70 @@
+# PROMISE NWHATOR — Next.js + Django + Supabase
+
+## Project Structure
+
+- `frontend/` — Next.js App Router frontend
+- `backend/` — Django backend (admin + API)
+- `stitch_promise_portfolio/` — provided HTML source pages
+- `supabase/schema.sql` — SQL setup script for Supabase
+
+## Completed
+
+- 24 stitch pages are mapped and available through dynamic Next route `/<slug>`.
+- Django blog app is implemented with admin creation/editing and image uploads.
+- Blog API endpoints are available:
+  - `GET /api/blog/`
+  - `GET /api/blog/<slug>/`
+- Frontend API-connected blog pages are available:
+  - `/blog`
+  - `/blog/<slug>`
+
+## Quick Start
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+cp .env.local.example .env.local
+npm run dev
+```
+
+### Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+cp .env.example .env
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+Admin URL: `http://127.0.0.1:8000/admin/`
+
+## Environment Variables
+
+### `frontend/.env.local`
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_API_BASE_URL` (default `http://127.0.0.1:8000`)
+
+### `backend/.env`
+
+- `DJANGO_SECRET_KEY`
+- `DJANGO_DEBUG`
+- `DJANGO_ALLOWED_HOSTS`
+- `DATABASE_URL`
+- `CORS_ALLOWED_ORIGINS`
+- `CSRF_TRUSTED_ORIGINS`
+
+## Supabase
+
+Run `supabase/schema.sql` in Supabase SQL Editor.
+
+## Remaining Tasks
+
+1. Add your real Supabase credentials to env files.
+2. Decide whether blog data source should be Django DB only or synced with Supabase.
+3. Deploy frontend/backend and set production host/origin values.

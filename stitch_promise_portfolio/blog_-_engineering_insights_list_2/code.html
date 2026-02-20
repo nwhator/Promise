@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Engineering Insights - Promise.dev</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1e60f1",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "card-dark": "#1b212d",
+                        "border-dark": "#282d39",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col overflow-x-hidden relative">
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4">
+<div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+<div class="relative w-full max-w-lg transform overflow-hidden rounded-2xl bg-[#1b212d] border border-[#282d39] p-8 text-left shadow-2xl transition-all ring-1 ring-white/10 ring-offset-0 shadow-primary/10">
+<button class="absolute right-4 top-4 rounded-full p-1 text-slate-400 hover:bg-white/5 hover:text-white transition-colors">
+<span class="material-symbols-outlined !text-xl">close</span>
+</button>
+<div class="flex flex-col items-center text-center">
+<div class="mb-5 flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary ring-1 ring-primary/20">
+<span class="material-symbols-outlined !text-3xl">mark_email_unread</span>
+</div>
+<h3 class="mb-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Level Up Your Engineering Skills
+            </h3>
+<p class="mb-8 text-slate-400">
+                Join 5,000+ engineers. Get deep dives into FastAPI, Django, and system architecture delivered straight to your inbox.
+            </p>
+<form class="w-full space-y-4">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+<span class="material-symbols-outlined !text-xl">mail</span>
+</div>
+<input class="block w-full rounded-lg border border-[#282d39] bg-[#101622] py-3 pl-10 pr-4 text-white placeholder-slate-500 focus:border-primary focus:ring-1 focus:ring-primary sm:text-sm" placeholder="engineer@example.com" required="" type="email"/>
+</div>
+<button class="group relative flex w-full justify-center rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#1b212d] shadow-[0_0_20px_-5px_#1e60f1]" type="button">
+                    Join the Newsletter
+                    <span class="absolute inset-y-0 right-4 flex items-center pl-3">
+<span class="material-symbols-outlined !text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</span>
+</button>
+</form>
+<p class="mt-4 text-xs text-slate-500">
+                No spam, unsubscribe anytime. Read our <a class="text-slate-400 underline decoration-slate-600 hover:text-primary hover:decoration-primary" href="#">privacy policy</a>.
+            </p>
+</div>
+<div class="absolute -top-24 -right-24 -z-10 h-64 w-64 rounded-full bg-primary/20 blur-[80px]"></div>
+<div class="absolute -bottom-24 -left-24 -z-10 h-64 w-64 rounded-full bg-primary/10 blur-[80px]"></div>
+</div>
+</div>
+<header class="sticky top-0 z-50 w-full border-b border-solid border-slate-200 dark:border-border-dark bg-white/80 dark:bg-[#101622]/80 backdrop-blur-md">
+<div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-7xl">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-2xl">terminal</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Promise.dev</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-primary text-sm font-bold" href="#">Blog</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-9 px-5 bg-primary hover:bg-primary/90 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-all">
+<span>Subscribe</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-10 py-8 md:py-12">
+<section class="flex flex-col gap-4 mb-12">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-slate-900 dark:text-white mb-3">
+                    Engineering Insights &amp; <span class="text-primary">System Design</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl font-normal leading-relaxed">
+                    Deep dives into backend architecture, system scaling, and modern web development. Exploring the intersection of code, complexity, and performance.
+                </p>
+</div>
+</section>
+<section class="mb-12 sticky top-[70px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-2 -mx-2 px-2 md:mx-0 md:px-0 transition-all">
+<div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+<div class="relative w-full md:w-96 group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 dark:text-slate-500 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border-none rounded-lg leading-5 bg-white dark:bg-card-dark text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary/50 sm:text-sm shadow-sm" placeholder="Search articles by topic or keyword..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar items-center">
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium shadow-lg shadow-primary/25 transition-transform active:scale-95">
+                        All Posts
+                    </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-white dark:bg-card-dark hover:bg-slate-100 dark:hover:bg-border-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-border-dark transition-colors">
+                        Backend
+                    </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-white dark:bg-card-dark hover:bg-slate-100 dark:hover:bg-border-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-border-dark transition-colors">
+                        FastAPI
+                    </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-white dark:bg-card-dark hover:bg-slate-100 dark:hover:bg-border-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-border-dark transition-colors">
+                        Django
+                    </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-white dark:bg-card-dark hover:bg-slate-100 dark:hover:bg-border-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-border-dark transition-colors">
+                        System Design
+                    </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-lg bg-white dark:bg-card-dark hover:bg-slate-100 dark:hover:bg-border-dark text-slate-600 dark:text-slate-300 text-sm font-medium border border-slate-200 dark:border-border-dark transition-colors">
+                        Performance
+                    </button>
+</div>
+</div>
+</section>
+<section class="mb-12 group">
+<div class="bg-white dark:bg-card-dark rounded-xl shadow-sm border border-slate-200 dark:border-border-dark overflow-hidden flex flex-col lg:flex-row transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/30">
+<div class="w-full lg:w-3/5 relative h-64 lg:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:hidden z-10"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Abstract visualization of digital data streams and high concurrency networks" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAipbhK-rPKee1WLxXs5U7EX2bRmKKbk_Ky0NRPrj194WO5goRXdkV4x8b3QEA3L281sotoIHNrRoa3KiRNhbUQ7RR86VB9PUPJUiq4Oqx79hVixBX917_RcNgfApDqgnezWoQjWfF2tF3FWlprz3TorQ72OqubRVKHgLOkoW6q_iUd_nEPgQcXcUFjKRvzuq_KLBWy-fJK_CpXMuQkALFZ7Nuc0MmsjyAq67bHmGgUb8wlM1LROEfStoG_LDOdhfkz3qwtgS-wonQ');"></div>
+<div class="absolute top-4 left-4 z-20">
+<span class="inline-flex items-center px-3 py-1 rounded-md text-xs font-mono font-bold bg-primary text-white shadow-lg">
+                            FEATURED
+                        </span>
+</div>
+</div>
+<div class="flex flex-col justify-center p-6 lg:p-10 w-full lg:w-2/5 relative">
+<div class="flex items-center gap-3 text-xs font-mono text-slate-500 dark:text-slate-400 mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-[14px]">calendar_today</span> Sep 28, 2023</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined !text-[14px]">schedule</span> 8 min read</span>
+</div>
+<a class="group-hover:text-primary transition-colors" href="#">
+<h2 class="text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
+                            Scaling FastAPI for High Concurrency
+                        </h2>
+</a>
+<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
+                        A comprehensive guide to managing async workers, optimizing database connection pooling, and handling traffic spikes effectively in production environments.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">#Backend</span>
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">#Python</span>
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">#Architecture</span>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary/80 transition-colors" href="#">
+                            Read Article 
+                            <span class="material-symbols-outlined !text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Abstract blue database server rack visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0vmR1qBRcWdKxLvaUMRmULQ2XmPmcX3QZxWBCNOPxlUWfN4p1D34M5uCbQGmXdlU_pFWSiQuGkANm0g0Lq0ZWOJlsSk0-tTUjlAmuGas-Zhgosu2cTOrMo9VZUcFqpGYjvsDvO7vffYZOfN9kdHOFMuj7UJ4-CMGspXGrqDaO-JD7DpV5ncv-QG2y5q0O73NN4x9izwKkRVEePG6y5rkCfLtW_SNcg1wU8jsigIEa0xyrIAiKOOnUUgwNfpEW9xlNYVgKkbGZURU');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#Database</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Sep 12, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">5 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        Optimizing SQL Queries in Django ORM
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        Learn how to identify N+1 problems, use select_related and prefetch_related efficiently, and write raw SQL when the ORM isn't enough.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic network nodes connected on a dark blue background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCJlAKd1w7WUlJTNQlbClV4ZtscuUtd-a16U9lqEdEknXqnywndfaLPdg7mAugxXYIpVlBCLrIk29fYQttsWvu_-YtNTN_TP8VQ72I0kKBDX33M3RyBa427ST7OMw2LxobpheCGMl6fHTdUHNWWwkxGkhGgxwOvE4378Nu9sGy-Wgjgdq8yRdJxXTcp60Fx6JBvGqifbmrj0MGTk7NDzhKkgj67q1ysdVOeRHkHROopfLwjKF-sBah3IL0BcoyG5Yp4OXFhcUMuqo');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#SystemDesign</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Aug 28, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">12 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        The Architecture of Microservices
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        Breaking down the monolith isn't always the answer. We explore when to switch to microservices and how to design fault-tolerant distributed systems.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="React logo abstract representation with code symbols" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsZ8XWKE_AW4AbM3417hAjinK4P_km0gaoJAaB3T-ooMFPO2x6TuEot7faRr11ALuS8SuycInJABysGE4sSFHvXnmYAjInCRaO-xRttrNpbphsUB6XQgE8T39rbkBbb_A-aJzUEX6XPABpjTXi6AT_q6TY81UScQnO6EjSIBuQrO11hhs6NGQrxCwxExznWp81Aqfbe_GOHL3KoJ0-FsKHQJV3G5fZ05FGfGrF5kO7o7ap1eyXC9KUDK5H2BzNuLXm-adrtgBSagw');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#Frontend</span>
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#React</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Aug 10, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">8 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        React Server Components Explained
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        Understanding the mental model shift of RSCs, how they differ from SSR, and practical examples of fetching data directly in your components.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of computer code on a dark monitor screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARLoZhORDujarrGN7bULtQMDmrD6s6YQa6748-gFr2tKO62rgWRZCxjztszehWY2gR9RCDGEvwvLBiVFxgNUtqiZw5y5O54pdHaQTc6B_ZgjshAabucFkdGiueS1Cjg9CgOaRUBxqjYFWGQovgbyj9juXfkvaJGDXPR5_uH9qlsGsLgv0lcSfjNmGpNAjiGjx4MMiOJTGSj80phRJTsnU2znBIG_TfcrU_czki0C4iFYnEEnvBMmJoWXWdwB4uWUi6h-gIeonrgME');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#DevOps</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Jul 22, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">6 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        CI/CD Pipelines for Monorepos
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        Best practices for setting up efficient build pipelines using GitHub Actions and Turborepo to save time and compute resources.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Data analytics dashboard charts glowing blue" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVLcxqf2Byw64BFd0idqs-yLVe4s_E2OGq_x1aUqY-do54flD5oWk-TPZtxXRCupqwKNe713xjRE0VrxFlIFZeomlEBrbmPZ6KYW-BAh5pZ1oTEL1dIcO1rUfot32DyadISeXZ6imxFStjWU0yB714bqEBKoP69ZW7HLQDNH-evrSSnHqszc0llsUWtCAFkOeS5uqaK74FXenVpEKSILmz30_u4a9PDhBYLM-HxUCv_raWCLNpiyJ7NzLUfW94xg36JJbBj_TD5ds');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#Performance</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Jul 05, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">10 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        Web Performance Metrics That Matter
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        Moving beyond basic load times. A deep dive into Core Web Vitals, LCP, CLS, and how to optimize your React application for speed.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<article class="flex flex-col h-full bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden group hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Digital lock icon representing cybersecurity concepts" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC22JEn4Zl1SaQI8cUSx5dGf7zlprc5-7UlhvdOedxyYWzb7HipgX0LzvtukXW-_T2f7_G8HOw0uiLhpIZBahPnNraYfxoLPK0U_2zXU27UgFL6qqKXrGROtEzJ6ohLmEvgl0n02qhmK5Sk7UuGgKM_qB4zTsggjWab7l9RnYd9aSMT7Uoz3QM0xY3IsnqLCluKVhT1RK52td5tGLC7lauMab9PCx20PAcb7aRDBom5Bn3l3MkCO0cCOwHMtUcP_tFcMcftEQcMOYc');"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="text-[10px] font-mono font-bold bg-background-dark/80 text-white backdrop-blur-sm px-2 py-1 rounded border border-white/10">#Security</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-5">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">Jun 18, 2023</span>
+<span class="text-xs font-mono text-slate-500 dark:text-slate-400">7 min read</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                        Securing JWT Authentication
+                    </h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 flex-1">
+                        JSON Web Tokens are convenient but risky if mishandled. Learn about refresh tokens, storage strategies, and common vulnerabilities.
+                    </p>
+<a class="inline-flex items-center text-sm font-medium text-primary mt-auto" href="#">
+                        Read more <span class="material-symbols-outlined !text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+</a>
+</div>
+</article>
+</div>
+<div class="flex justify-center pb-10">
+<button class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark rounded-full text-sm font-bold text-slate-700 dark:text-slate-300 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all shadow-sm">
+<span class="material-symbols-outlined !text-lg">refresh</span>
+                Load More Articles
+            </button>
+</div>
+</main>
+<footer class="border-t border-solid border-slate-200 dark:border-border-dark bg-white dark:bg-[#101622] mt-auto">
+<div class="max-w-7xl mx-auto px-4 md:px-10 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-5 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined !text-xl">terminal</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Promise.dev. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="sr-only">Twitter</span>
+<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="sr-only">GitHub</span>
+<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="sr-only">LinkedIn</span>
+<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

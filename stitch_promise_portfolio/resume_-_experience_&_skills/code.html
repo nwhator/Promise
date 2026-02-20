@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nwhator Promise - Resume</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                        "surface-dark": "#1c2333", // Slightly lighter than bg-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased selection:bg-primary selection:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-10">
+<div class="flex items-center gap-4">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Nwhator Promise</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-bold text-primary" href="#">Resume</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 cursor-pointer overflow-hidden rounded-lg bg-primary px-4 py-2 text-white shadow-lg shadow-primary/20 hover:bg-blue-600 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="text-sm font-bold">Download PDF</span>
+</button>
+</div>
+</header>
+<main class="layout-container flex flex-col items-center py-10 px-4 md:px-10">
+<div class="w-full max-w-5xl space-y-12">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-slate-200 dark:border-slate-800 pb-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold tracking-wider uppercase text-sm">Resume</span>
+<h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">Experience &amp; Skills</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mt-2 leading-relaxed">
+                            Full-Stack Software Engineer &amp; Systems Architect focusing on building scalable, high-performance web applications and cloud infrastructure.
+                        </p>
+</div>
+</div>
+<!-- Summary Section -->
+<section>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl mt-1">format_quote</span>
+<div>
+<h3 class="text-xl font-bold mb-3">Professional Summary</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base md:text-lg">
+                                    Experienced Full-Stack Engineer with over 6 years of proven track record in designing scalable systems and leading high-performance teams. My expertise spans modern web technologies, cloud infrastructure, and architectural patterns. I specialize in transforming complex business requirements into robust technical solutions, with a strong emphasis on code quality, performance optimization, and developer experience.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Skills Grid -->
+<section>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">code_blocks</span>
+                        Technical Skills
+                    </h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Backend -->
+<div class="bg-white dark:bg-surface-dark rounded-lg p-5 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+<div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<h3 class="font-bold text-lg mb-3">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Node.js</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Python</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Go</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">PostgreSQL</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Redis</span>
+</div>
+</div>
+<!-- Frontend -->
+<div class="bg-white dark:bg-surface-dark rounded-lg p-5 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+<div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">desktop_windows</span>
+</div>
+<h3 class="font-bold text-lg mb-3">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">React</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">TypeScript</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Next.js</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Tailwind</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Vue.js</span>
+</div>
+</div>
+<!-- CMS -->
+<div class="bg-white dark:bg-surface-dark rounded-lg p-5 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+<div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">article</span>
+</div>
+<h3 class="font-bold text-lg mb-3">CMS</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Contentful</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Strapi</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">WordPress</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Sanity</span>
+</div>
+</div>
+<!-- DevOps -->
+<div class="bg-white dark:bg-surface-dark rounded-lg p-5 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors group">
+<div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">cloud</span>
+</div>
+<h3 class="font-bold text-lg mb-3">DevOps</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">AWS</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Docker</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Kubernetes</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">CI/CD</span>
+<span class="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-300">Terraform</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section>
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">work_history</span>
+                        Work Experience
+                    </h2>
+<div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
+<!-- Job 1 -->
+<div class="relative pl-8 md:pl-12">
+<span class="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-2 border-white dark:border-background-dark bg-primary"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Software Engineer</h3>
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0 w-fit">2021 — Present</span>
+</div>
+<div class="flex items-center gap-2 mb-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">business</span>
+<span class="font-medium">TechNova Solutions</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-sm">San Francisco, CA (Remote)</span>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-300 list-disc pl-4 marker:text-primary">
+<li class="pl-2">Architected and led the migration of a legacy monolithic application to a microservices architecture using Go and Kubernetes, improving system scalability by 40%.</li>
+<li class="pl-2">Designed and implemented a real-time data processing pipeline capable of handling 50k events/second using Apache Kafka and Redis.</li>
+<li class="pl-2">Mentored a team of 5 junior developers, conducting code reviews and introducing TDD practices that reduced production bugs by 25%.</li>
+<li class="pl-2">Optimized database queries and indexing strategies in PostgreSQL, reducing average query response time from 500ms to 80ms.</li>
+</ul>
+</div>
+<!-- Job 2 -->
+<div class="relative pl-8 md:pl-12">
+<span class="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-2 border-white dark:border-background-dark bg-slate-400 dark:bg-slate-600"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Software Developer</h3>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0 w-fit">2018 — 2021</span>
+</div>
+<div class="flex items-center gap-2 mb-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">business</span>
+<span class="font-medium">Creative Digital Agency</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-sm">London, UK</span>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-300 list-disc pl-4 marker:text-slate-500">
+<li class="pl-2">Developed and maintained 15+ custom WordPress themes and plugins for high-profile clients, ensuring 100% adherence to design specifications.</li>
+<li class="pl-2">Integrated third-party APIs (Stripe, Twilio, Salesforce) to extend application functionality and automate business workflows.</li>
+<li class="pl-2">Collaborated with UX/UI designers to implement responsive, pixel-perfect frontend interfaces using React and SCSS.</li>
+<li class="pl-2">Implemented CI/CD pipelines using GitHub Actions, reducing deployment time from 1 hour to 10 minutes.</li>
+</ul>
+</div>
+<!-- Job 3 -->
+<div class="relative pl-8 md:pl-12">
+<span class="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-2 border-white dark:border-background-dark bg-slate-400 dark:bg-slate-600"></span>
+<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Junior Web Developer</h3>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full whitespace-nowrap mt-2 sm:mt-0 w-fit">2016 — 2018</span>
+</div>
+<div class="flex items-center gap-2 mb-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">business</span>
+<span class="font-medium">StartUp Inc.</span>
+<span class="text-xs text-slate-300 dark:text-slate-600">•</span>
+<span class="text-sm">Remote</span>
+</div>
+<ul class="space-y-3 text-slate-600 dark:text-slate-300 list-disc pl-4 marker:text-slate-500">
+<li class="pl-2">Assisted in building the MVP for a SaaS product using the MERN stack (MongoDB, Express, React, Node.js).</li>
+<li class="pl-2">Wrote comprehensive unit and integration tests using Jest and Enzyme to ensure application stability.</li>
+<li class="pl-2">Participated in daily stand-ups and agile sprint planning to track progress and resolve blockers.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Education & Certifications -->
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Education -->
+<section>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">school</span>
+                            Education
+                        </h2>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-4">
+<div>
+<h3 class="text-lg font-bold">BSc Computer Science</h3>
+<p class="text-slate-500 dark:text-slate-400">University of Technology</p>
+<p class="text-sm text-slate-400 dark:text-slate-500 mt-1">2012 — 2016</p>
+</div>
+<hr class="border-slate-100 dark:border-slate-700"/>
+<div>
+<h3 class="text-lg font-bold">MSc Software Engineering</h3>
+<p class="text-slate-500 dark:text-slate-400">Tech Institute of Innovation</p>
+<p class="text-sm text-slate-400 dark:text-slate-500 mt-1">2017 — 2019</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+                            Certifications
+                        </h2>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<h3 class="text-base font-bold">AWS Certified Solutions Architect</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Amazon Web Services • 2022</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<h3 class="text-base font-bold">Certified Kubernetes Administrator (CKA)</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">The Linux Foundation • 2021</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
+<div>
+<h3 class="text-base font-bold">Google Professional Cloud Developer</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Google Cloud • 2020</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<!-- Footer Call to Action -->
+<div class="mt-8 bg-gradient-to-r from-primary/20 to-transparent p-8 rounded-xl border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h3 class="text-xl font-bold mb-2 text-white">Interested in working together?</h3>
+<p class="text-slate-400">I'm currently open to new opportunities and interesting projects.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-white dark:bg-white text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors">Contact Me</button>
+<button class="px-6 py-3 bg-transparent border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 transition-colors">View Portfolio</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-8 px-10">
+<div class="layout-container flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 dark:text-slate-400 gap-4">
+<p>© 2023 Nwhator Promise. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">LinkedIn</a>
+<a class="hover:text-primary" href="#">GitHub</a>
+<a class="hover:text-primary" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FastAPI Cheat Sheet - Nwhator Promise</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#259df4",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101a22",
+                        "card-dark": "#1b2631",
+                        "code-bg": "#0d1318",
+                        "accent-purple": "#a855f7",
+                        "accent-green": "#22c55e",
+                        "accent-yellow": "#eab308",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        mono: ["Fira Code", "monospace"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .syntax-kw { color: #259df4; } /* Keywords like def, class, return, import */
+        .syntax-dec { color: #eab308; } /* Decorators @app.get */
+        .syntax-str { color: #22c55e; } /* Strings "Hello" */
+        .syntax-fn { color: #60a5fa; }  /* Function names */
+        .syntax-type { color: #a855f7; } /* Types str, int, BaseModel */
+        .syntax-cls { color: #facc15; }  /* Class names */
+        
+        /* Custom Scrollbar for code blocks */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0d1318;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #283239;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #3b4a54;
+        }
+
+        /* Print Styles */
+        @media print {
+            body { background-color: white !important; color: black !important; }
+            .bg-background-dark { background-color: white !important; }
+            .text-white { color: black !important; }
+            .border-slate-800 { border-color: #ddd !important; }
+            .code-block { border: 1px solid #ccc; background: #f5f5f5 !important; color: black !important; }
+            header, footer, button { display: none !important; }
+            .layout-content-container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col selection:bg-primary/30 selection:text-white">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-slate-900 dark:text-white font-bold text-lg tracking-tight">Nwhator Promise</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Articles</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Speaking</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2 px-4 rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Get PDF</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wide">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Updated for v0.109.0+
+                </div>
+<h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight tracking-tight">
+                    FastAPI <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple">Quick Reference</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+                    A high-value cheat sheet for modern backend development. Master the basics, dependencies, and Pydantic models in minutes. Curated by Nwhator Promise.
+                </p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md">
+<div class="relative flex-grow">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-500">mail</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-card-dark border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your email for the PDF" type="email"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-lg shadow-primary/25 whitespace-nowrap" type="button">
+                        Send it to me
+                    </button>
+</form>
+<p class="text-xs text-slate-500 dark:text-slate-500">
+                    Join 4,000+ developers. No spam, just high-quality backend tips.
+                </p>
+</div>
+<div class="relative hidden lg:block group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent-purple rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-card-dark rounded-xl border border-slate-800 p-2 shadow-2xl overflow-hidden aspect-video flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Abstract code on a dark screen representing backend development">
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
+<div class="relative z-10 text-center p-8">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Build Faster APIs</h3>
+<p class="text-slate-400">Production-ready patterns at your fingertips.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cheat Sheet Grid -->
+<div class="mb-8 flex items-center justify-between">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+                Reference Grid
+            </h2>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-white transition-colors" title="Print View">
+<span class="material-symbols-outlined">print</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-white transition-colors" title="Copy Link">
+<span class="material-symbols-outlined">link</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
+<!-- Card 1: Basic App Structure -->
+<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">rocket_launch</span>
+                        Basic App Structure
+                    </div>
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
+</div>
+</div>
+<div class="p-0 bg-code-bg overflow-x-auto custom-scrollbar flex-grow code-block">
+<pre class="font-mono text-sm leading-6 p-4 text-slate-300"><span class="text-slate-500 select-none mr-3">1</span><span class="syntax-kw">from</span> typing <span class="syntax-kw">import</span> Union
+<span class="text-slate-500 select-none mr-3">2</span><span class="syntax-kw">from</span> fastapi <span class="syntax-kw">import</span> FastAPI
+<span class="text-slate-500 select-none mr-3">3</span>
+<span class="text-slate-500 select-none mr-3">4</span>app = <span class="syntax-cls">FastAPI</span>()
+<span class="text-slate-500 select-none mr-3">5</span>
+<span class="text-slate-500 select-none mr-3">6</span><span class="syntax-dec">@app.get</span>(<span class="syntax-str">"/"</span>)
+<span class="text-slate-500 select-none mr-3">7</span><span class="syntax-kw">async def</span> <span class="syntax-fn">read_root</span>():
+<span class="text-slate-500 select-none mr-3">8</span>    <span class="syntax-kw">return</span> {<span class="syntax-str">"Hello"</span>: <span class="syntax-str">"World"</span>}
+<span class="text-slate-500 select-none mr-3">9</span>
+<span class="text-slate-500 select-none mr-3">10</span><span class="syntax-dec">@app.get</span>(<span class="syntax-str">"/items/{item_id}"</span>)
+<span class="text-slate-500 select-none mr-3">11</span><span class="syntax-kw">async def</span> <span class="syntax-fn">read_item</span>(item_id: <span class="syntax-type">int</span>, q: Union[<span class="syntax-type">str</span>, <span class="syntax-kw">None</span>] = <span class="syntax-kw">None</span>):
+<span class="text-slate-500 select-none mr-3">12</span>    <span class="syntax-kw">return</span> {<span class="syntax-str">"item_id"</span>: item_id, <span class="syntax-str">"q"</span>: q}
+</pre>
+</div>
+<div class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-[#151e26] border-t border-slate-200 dark:border-slate-800">
+                    Run with: <code class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-200 font-mono">fastapi dev main.py</code>
+</div>
+</div>
+<!-- Card 2: Common HTTP Methods -->
+<div class="col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">http</span>
+                        HTTP Methods
+                    </div>
+</div>
+<div class="p-4 flex flex-col gap-2 h-full">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<span class="text-xs font-bold px-2 py-1 rounded bg-blue-500/20 text-blue-500 min-w-[60px] text-center font-mono">GET</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Read data</span>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<span class="text-xs font-bold px-2 py-1 rounded bg-green-500/20 text-green-500 min-w-[60px] text-center font-mono">POST</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Create data</span>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<span class="text-xs font-bold px-2 py-1 rounded bg-yellow-500/20 text-yellow-500 min-w-[60px] text-center font-mono">PUT</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Update data</span>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<span class="text-xs font-bold px-2 py-1 rounded bg-red-500/20 text-red-500 min-w-[60px] text-center font-mono">DELETE</span>
+<span class="text-sm text-slate-600 dark:text-slate-300">Delete data</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Pydantic Models -->
+<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">data_object</span>
+                        Pydantic Models
+                    </div>
+</div>
+<div class="p-0 bg-code-bg overflow-x-auto custom-scrollbar flex-grow code-block">
+<pre class="font-mono text-sm leading-6 p-4 text-slate-300"><span class="syntax-kw">from</span> pydantic <span class="syntax-kw">import</span> BaseModel
+
+<span class="syntax-kw">class</span> <span class="syntax-cls">Item</span>(<span class="syntax-cls">BaseModel</span>):
+    name: <span class="syntax-type">str</span>
+    description: <span class="syntax-type">str</span> | <span class="syntax-kw">None</span> = <span class="syntax-kw">None</span>
+    price: <span class="syntax-type">float</span>
+    tax: <span class="syntax-type">float</span> | <span class="syntax-kw">None</span> = <span class="syntax-kw">None</span>
+
+<span class="syntax-dec">@app.post</span>(<span class="syntax-str">"/items/"</span>)
+<span class="syntax-kw">async def</span> <span class="syntax-fn">create_item</span>(item: <span class="syntax-cls">Item</span>):
+    <span class="syntax-kw">return</span> item
+</pre>
+</div>
+</div>
+<!-- Card 4: Path & Query Parameters -->
+<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">alt_route</span>
+                        Path &amp; Query Params
+                    </div>
+</div>
+<div class="p-0 bg-code-bg overflow-x-auto custom-scrollbar flex-grow code-block">
+<pre class="font-mono text-sm leading-6 p-4 text-slate-300"><span class="text-slate-500 text-xs mb-2 block">// Path Param: {item_id}</span>
+<span class="syntax-dec">@app.get</span>(<span class="syntax-str">"/items/{item_id}"</span>)
+<span class="syntax-kw">def</span> <span class="syntax-fn">read_item</span>(item_id: <span class="syntax-type">int</span>):
+    <span class="syntax-kw">pass</span>
+
+<span class="text-slate-500 text-xs mb-2 mt-4 block">// Query Param: ?skip=0&amp;limit=10</span>
+<span class="syntax-dec">@app.get</span>(<span class="syntax-str">"/items/"</span>)
+<span class="syntax-kw">def</span> <span class="syntax-fn">read_items</span>(
+    skip: <span class="syntax-type">int</span> = 0, 
+    limit: <span class="syntax-type">int</span> = 10
+):
+    <span class="syntax-kw">return</span> db[skip : skip + limit]
+</pre>
+</div>
+</div>
+<!-- Card 5: Dependency Injection -->
+<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+                        Dependency Injection
+                    </div>
+</div>
+<div class="p-0 bg-code-bg overflow-x-auto custom-scrollbar flex-grow code-block">
+<pre class="font-mono text-sm leading-6 p-4 text-slate-300"><span class="syntax-kw">from</span> fastapi <span class="syntax-kw">import</span> Depends
+
+<span class="syntax-kw">async def</span> <span class="syntax-fn">common_params</span>(
+    q: <span class="syntax-type">str</span> | <span class="syntax-kw">None</span> = <span class="syntax-kw">None</span>, 
+    skip: <span class="syntax-type">int</span> = 0, 
+    limit: <span class="syntax-type">int</span> = 100
+):
+    <span class="syntax-kw">return</span> {<span class="syntax-str">"q"</span>: q, <span class="syntax-str">"skip"</span>: skip, <span class="syntax-str">"limit"</span>: limit}
+
+<span class="syntax-dec">@app.get</span>(<span class="syntax-str">"/items/"</span>)
+<span class="syntax-kw">async def</span> <span class="syntax-fn">read_items</span>(
+    commons: <span class="syntax-type">dict</span> = <span class="syntax-cls">Depends</span>(common_params)
+):
+    <span class="syntax-kw">return</span> commons
+</pre>
+</div>
+</div>
+<!-- Card 6: Common Status Codes -->
+<div class="col-span-1 lg:col-span-3 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<span class="material-symbols-outlined text-primary text-[20px]">traffic</span>
+                        Response Status Codes
+                    </div>
+</div>
+<div class="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+<div class="flex flex-col items-center justify-center p-3 rounded bg-green-500/10 border border-green-500/20">
+<span class="text-xl font-bold text-green-500 font-mono">200</span>
+<span class="text-xs text-green-400 font-medium mt-1">OK</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded bg-green-500/10 border border-green-500/20">
+<span class="text-xl font-bold text-green-500 font-mono">201</span>
+<span class="text-xs text-green-400 font-medium mt-1">Created</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded bg-yellow-500/10 border border-yellow-500/20">
+<span class="text-xl font-bold text-yellow-500 font-mono">400</span>
+<span class="text-xs text-yellow-500 font-medium mt-1">Bad Request</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded bg-yellow-500/10 border border-yellow-500/20">
+<span class="text-xl font-bold text-yellow-500 font-mono">404</span>
+<span class="text-xs text-yellow-500 font-medium mt-1">Not Found</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded bg-red-500/10 border border-red-500/20">
+<span class="text-xl font-bold text-red-500 font-mono">500</span>
+<span class="text-xs text-red-500 font-medium mt-1">Server Error</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Bar / Watermark -->
+<div class="mt-16 border-t border-slate-200 dark:border-slate-800 pt-8 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 dark:text-slate-500 text-sm">
+<div class="flex items-center gap-2">
+<div class="size-6 text-slate-400 dark:text-slate-600">
+<svg class="w-full h-full opacity-50" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold tracking-wide">NWHATOR PROMISE</span>
+<span class="mx-1 opacity-50">|</span>
+<span>SYSTEMS ARCHITECT</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Twitter/X</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</main>
+</body></html>
