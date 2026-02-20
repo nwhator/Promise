@@ -19,9 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path
 
-from .views import favicon, health
+from .views import favicon, health, root
 
 urlpatterns = [
+    path('', root, name='root'),
     path('favicon.ico', favicon, name='favicon'),
     path('admin/', admin.site.urls),
     path('api/health/', health, name='health'),

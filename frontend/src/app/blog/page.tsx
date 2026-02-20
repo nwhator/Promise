@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getBlogPosts } from "@/lib/blogApi";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Blog",
   description: "Engineering insights, backend architecture notes, and technical write-ups by Nwhator Promise.",

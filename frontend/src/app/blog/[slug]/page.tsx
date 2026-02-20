@@ -1,16 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBlogPost, getBlogPosts } from "@/lib/blogApi";
+import { getBlogPost } from "@/lib/blogApi";
+
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
-}
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

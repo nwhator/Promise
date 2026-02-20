@@ -1,6 +1,16 @@
 from django.http import HttpResponse, JsonResponse
 
 
+def root(_request):
+    return JsonResponse(
+        {
+            "service": "promise-backend",
+            "status": "ok",
+            "endpoints": ["/api/health/", "/api/blog/", "/admin/"],
+        }
+    )
+
+
 def health(_request):
     return JsonResponse({"status": "ok"})
 
