@@ -144,5 +144,68 @@ export function loadPageHtml(page: PageEntry): string {
     throw new Error(`Missing stitched HTML file: ${filePath}`);
   }
 
-  return fs.readFileSync(filePath, "utf8");
+  const html = fs.readFileSync(filePath, "utf8");
+  return normalizeLinks(html);
+}
+
+function normalizeLinks(html: string): string {
+  const replacedProfiles = html
+    .replaceAll('href="https://github.com"', 'href="https://github.com/nwhator"')
+    .replaceAll('href="https://github.com/"', 'href="https://github.com/nwhator"')
+    .replaceAll('href="https://linkedin.com"', 'href="https://linkedin.com/in/nwhator"')
+    .replaceAll('href="https://linkedin.com/"', 'href="https://linkedin.com/in/nwhator"');
+
+  const routeScript = `
+<script>
+  (function () {
+    const routeMap = {
+      home: '/',
+      about: '/about',
+      project: '/projects',
+      projects: '/projects',
+      services: '/services',
+      technologies: '/technologies',
+      resume: '/resume',
+      contact: '/contact',
+      blog: '/blog'
+    };
+
+    document.querySelectorAll('a').forEach(function(anchor) {
+      const rawHref = (anchor.getAttribute('href') || '').trim();
+      const label = (anchor.textContent || '').trim().toLowerCase();
+
+      if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
+        anchor.setAttribute('href', 'https://github.com/nwhator');
+        anchor.setAttribute('target', '_blank');
+        anchor.setAttribute('rel', 'noreferrer');
+        return;
+      }
+
+      if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
+        anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
+        anchor.setAttribute('target', '_blank');
+        anchor.setAttribute('rel', 'noreferrer');
+        return;
+      }
+
+      if (rawHref !== '#') {
+        return;
+      }
+
+      for (const key in routeMap) {
+        if (label.includes(key)) {
+          anchor.setAttribute('href', routeMap[key]);
+          break;
+        }
+      }
+    });
+  })();
+</script>
+`;
+
+  if (replacedProfiles.includes("</body>")) {
+    return replacedProfiles.replace("</body>", `${routeScript}</body>`);
+  }
+
+  return `${replacedProfiles}${routeScript}`;
 }

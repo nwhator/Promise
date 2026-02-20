@@ -4,7 +4,8 @@
 
 - `frontend/` — Next.js App Router frontend
 - `backend/` — Django backend (admin + API)
-- `stitch_promise_portfolio/` — provided HTML source pages
+- `stitch_promise_portfolio/` — original HTML source pages
+- `frontend/stitch_promise_portfolio/` — frontend runtime copy used for deployment
 - `supabase/schema.sql` — SQL setup script for Supabase
 
 ## Completed
@@ -69,6 +70,7 @@ Admin URL: `http://127.0.0.1:8000/admin/`
 - Backend project root: `backend/`
 - Stitched HTML source can remain in repo root `stitch_promise_portfolio/`.
 - Frontend auto-syncs those files into `frontend/stitch_promise_portfolio/` before `dev` and `build`.
+- Stitched pages render inside one shared frontend header/footer/logo shell with connected top-level links.
 - Backend entrypoint files are included:
   - `backend/vercel.json`
   - `backend/api/index.py`
