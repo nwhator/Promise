@@ -39,7 +39,7 @@ shared_header = '''<!-- PROMISE_SHARED_HEADER_START -->
 shared_footer = '''<!-- PROMISE_SHARED_FOOTER_START -->
 <footer class="border-t border-border-dark bg-background-dark/95 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Nwhator Promise. All rights reserved.</p>
+    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
       <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
       <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
@@ -99,6 +99,7 @@ shared_footer = '''<!-- PROMISE_SHARED_FOOTER_START -->
 header_re = re.compile(r'<!-- PROMISE_SHARED_HEADER_START -->.*?<!-- PROMISE_SHARED_HEADER_END -->', re.S)
 footer_re = re.compile(r'<!-- PROMISE_SHARED_FOOTER_START -->.*?<!-- PROMISE_SHARED_FOOTER_END -->', re.S)
 first_header_re = re.compile(r'<header\b.*?</header>', re.S | re.I)
+legacy_footer_re = re.compile(r'<footer\b.*?</footer>', re.S | re.I)
 
 updated = 0
 for file_path in sorted(root.glob('*/code.html')):
@@ -107,6 +108,7 @@ for file_path in sorted(root.glob('*/code.html')):
 
     html = header_re.sub('', html)
     html = footer_re.sub('', html)
+    html = legacy_footer_re.sub('', html)
 
     if folder not in exempt_folders:
         if first_header_re.search(html):

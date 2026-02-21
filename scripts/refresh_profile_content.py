@@ -1,72 +1,65 @@
-<!DOCTYPE html>
+from pathlib import Path
+import re
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Promise Ayobami Nwhator - Resume</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#2463eb",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                        "surface-dark": "#1c2333", // Slightly lighter than bg-dark for cards
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased selection:bg-primary selection:text-white">
-<!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="/" target="_top" class="flex items-center gap-3 text-white">
-        <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
-      </nav>
-    </div>
-  </div>
-</header>
-<!-- PROMISE_SHARED_HEADER_END -->
+root = Path("c:/Users/nwhat/Promise/stitch_promise_portfolio")
 
+files = sorted(root.glob("*/code.html"))
 
+GLOBAL_REPLACEMENTS = [
+    ("Nwhator Promise", "Promise Ayobami Nwhator"),
+    ("hello@nwhator.dev", "nwhator@gmail.com"),
+    ("Osun, Nigeria", "Nigeria"),
+]
 
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Navbar -->
+for file_path in files:
+    text = file_path.read_text(encoding="utf-8")
+    for old, new in GLOBAL_REPLACEMENTS:
+        text = text.replace(old, new)
+    file_path.write_text(text, encoding="utf-8")
 
-<main class="layout-container flex flex-col items-center py-10 px-4 md:px-10">
+# Home page targeted refresh
+home_file = root / "home_-_nwhator_promise_portfolio" / "code.html"
+home_html = home_file.read_text(encoding="utf-8")
+home_html = home_html.replace(
+    "<title>Promise Ayobami Nwhator - Full-Stack Software Engineer</title>",
+    "<title>Promise Ayobami Nwhator - Backend Engineer | WordPress Systems Architect</title>",
+)
+home_html = home_html.replace(
+    "Hi, I'm <span class=\"text-white font-semibold\">Promise Ayobami Nwhator</span>. A Full-Stack Software Engineer and Systems Architect obsessed with high-performance backends, clean architecture, and delivering robust solutions.",
+    "Hi, I’m <span class=\"text-white font-semibold\">Promise Ayobami Nwhator</span> — Backend Engineer, WordPress Systems Architect, and scalable platform builder. I build secure, revenue-driven digital platforms from backend APIs to journal and e-commerce systems.",
+)
+home_html = home_html.replace(
+    "I leverage modern frameworks and robust databases to build systems that are secure, fast, and scalable.",
+    "I specialize in secure backend systems, WordPress architecture, and performance-focused stacks that scale without breaking.",
+)
+home_file.write_text(home_html, encoding="utf-8")
+
+# About page targeted refresh
+about_file = root / "about_-_engineering_philosophy" / "code.html"
+about_html = about_file.read_text(encoding="utf-8")
+about_html = about_html.replace(
+    "<title>About - Promise Ayobami Nwhator</title>",
+    "<title>About - Promise Ayobami Nwhator | Backend Engineer</title>",
+)
+about_html = about_html.replace(
+    "<p class=\"mt-1 text-sm font-medium text-primary\">Systems Architect</p>",
+    "<p class=\"mt-1 text-sm font-medium text-primary\">Backend Engineer • WordPress Systems Architect</p>",
+)
+about_html = about_html.replace(
+    "Building scalable systems with precision. Obsessed with clean architecture and performance.",
+    "I build secure, scalable, and revenue-driven digital platforms with strong focus on performance, SEO, and long-term maintainability.",
+)
+about_html = about_html.replace(
+    "Code is a liability.<br/>\n<span class=\"text-slate-400 dark:text-slate-600\">Functionality is an asset.</span>",
+    "Structure drives growth.<br/>\n<span class=\"text-slate-400 dark:text-slate-600\">Performance keeps it sustainable.</span>",
+)
+about_file.write_text(about_html, encoding="utf-8")
+
+# Resume page main content rewrite
+resume_file = root / "resume_-_experience_&_skills" / "code.html"
+resume_html = resume_file.read_text(encoding="utf-8")
+
+new_main = '''<main class="layout-container flex flex-col items-center py-10 px-4 md:px-10">
 <div class="w-full max-w-5xl space-y-12">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-slate-200 dark:border-slate-800 pb-8">
 <div class="flex flex-col gap-2">
@@ -172,70 +165,9 @@
 </div>
 </section>
 </div>
-</main>
+</main>'''
 
-</div>
+resume_html = re.sub(r"<main class=\"layout-container[\s\S]*?</main>", new_main, resume_html, count=1)
+resume_file.write_text(resume_html, encoding="utf-8")
 
-
-
-
-<!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
-    <div class="flex items-center gap-4 text-sm">
-      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
-      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
-    </div>
-  </div>
-</footer>
-<script>
-(function () {
-  const yearNode = document.getElementById('copyright-year');
-  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
-
-  const routeMap = {
-    home: '/',
-    about: '/about',
-    work: '/projects',
-    project: '/projects',
-    projects: '/projects',
-    services: '/services',
-    technologies: '/technologies',
-    resume: '/resume',
-    contact: '/contact',
-    blog: '/blog'
-  };
-
-  document.querySelectorAll('a').forEach(function (anchor) {
-    const rawHref = (anchor.getAttribute('href') || '').trim();
-    const label = (anchor.textContent || '').trim().toLowerCase();
-
-    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
-      anchor.setAttribute('href', 'https://github.com/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
-      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref !== '#') return;
-
-    for (const key in routeMap) {
-      if (label.includes(key)) {
-        anchor.setAttribute('href', routeMap[key]);
-        anchor.setAttribute('target', '_top');
-        break;
-      }
-    }
-  });
-})();
-</script>
-<!-- PROMISE_SHARED_FOOTER_END -->
-</body></html>
+print(f"Updated global profile content in {len(files)} stitched files and rewrote resume page.")
