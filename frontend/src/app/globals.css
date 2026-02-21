@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Stitch page container — allow the injected HTML to take full viewport */
+.stitch-page-root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling to match dark-theme pages */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111621;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3748;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5568;
+}
+
+/* Admin prose styles */
+.prose-invert {
+  color: #e2e8f0;
+}
+.prose-invert h1,
+.prose-invert h2,
+.prose-invert h3 {
+  color: #f8fafc;
+}

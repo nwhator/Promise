@@ -1,34 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   title: {
     default: "PROMISE NWHATOR | Full-Stack Software Engineer",
     template: "%s | PROMISE NWHATOR",
   },
   description:
-    "Nwhator Promise portfolio: scalable systems, backend engineering, case studies, and technical blog posts built with Next.js, Django, and Supabase.",
+    "Nwhator Promise portfolio: scalable systems, backend engineering, case studies, and technical blog posts built with Next.js and Supabase.",
   keywords: [
     "Nwhator Promise",
     "PROMISE NWHATOR",
     "Full-Stack Engineer",
-    "Django",
     "Next.js",
     "Supabase",
     "Software Engineer Portfolio",
     "Backend Engineer",
+    "FastAPI",
+    "Python",
   ],
   authors: [{ name: "Nwhator Promise" }],
   creator: "Nwhator Promise",
@@ -78,12 +70,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className="dark">
+      {/*
+       * The stitch_promise_portfolio pages load Tailwind CDN and Google Fonts
+       * from within their injected HTML bodies. This base layout intentionally
+       * keeps the <head> minimal so those external assets can co-exist.
+       */}
+      <body>{children}</body>
     </html>
   );
 }

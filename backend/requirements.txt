@@ -1,6 +1,0 @@
-django>=6.0
-psycopg[binary]>=3.2
-python-dotenv>=1.0
-django-cors-headers>=4.4
-dj-database-url>=2.2
-Pillow>=11.0

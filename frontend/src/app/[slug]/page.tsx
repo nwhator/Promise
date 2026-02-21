@@ -7,10 +7,16 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+// These slugs have dedicated Next.js routes — exclude from dynamic catch-all
+const DEDICATED_ROUTES = new Set([
+  "blog",
+  "admin-dashboard",
+]);
+
 export function generateStaticParams() {
-  return PAGE_ENTRIES.filter((page) => page.slug !== "home").map((page) => ({
-    slug: page.slug,
-  }));
+  return PAGE_ENTRIES.filter(
+    (page) => page.slug !== "home" && !DEDICATED_ROUTES.has(page.slug)
+  ).map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -25,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const canonicalPath = slug === "home" ? "/" : `/${slug}`;
-  const description = `${page.title} page in the PROMISE NWHATOR portfolio.`;
+  const description = `${page.title} — PROMISE NWHATOR portfolio.`;
 
   return {
     title: page.title,
@@ -58,6 +64,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DynamicPage({ params }: Props) {
   const { slug } = await params;
+
+  // Guard dedicated routes
+  if (DEDICATED_ROUTES.has(slug)) {
+    notFound();
+  }
+
   const page = getPageBySlug(slug);
 
   if (!page || page.slug === "home") {
