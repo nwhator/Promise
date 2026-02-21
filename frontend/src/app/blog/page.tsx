@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import { getBlogPosts } from "@/lib/blogApi";
+import Link from "next/link";
+import { BlogChrome } from "@/components/BlogChrome";
 
 export const dynamic = "force-dynamic";
 
@@ -36,21 +36,8 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-white px-4 py-8">
-      <div className="mx-auto max-w-4xl">
-        <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
-          <Image
-            src="/promise-nwhator-logo.svg"
-            alt="PROMISE NWHATOR logo"
-            width={220}
-            height={36}
-            priority
-          />
-          <Link href="/pages" className="text-blue-300 hover:text-blue-200 text-sm">
-            Open all pages
-          </Link>
-        </header>
-
+    <BlogChrome>
+      <section className="px-4 py-8">
         <h1 className="text-2xl font-bold mb-2">Blog</h1>
         <p className="text-white/70 mb-6 text-sm">
           Posts created from Django admin and served by the backend API.
@@ -70,7 +57,7 @@ export default async function BlogPage() {
             ))}
           </ul>
         )}
-      </div>
-    </main>
+      </section>
+    </BlogChrome>
   );
 }

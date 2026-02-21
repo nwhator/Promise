@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPost } from "@/lib/blogApi";
+import { BlogChrome } from "@/components/BlogChrome";
 
 export const dynamic = "force-dynamic";
 
@@ -56,14 +57,11 @@ export default async function BlogDetailPage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-white px-4 py-8">
-      <div className="mx-auto max-w-3xl">
+    <BlogChrome>
+      <section className="px-4 py-8">
         <div className="mb-6 flex items-center justify-between gap-4">
           <Link href="/blog" className="text-blue-300 hover:text-blue-200 text-sm">
             ← Back to blog
-          </Link>
-          <Link href="/pages" className="text-blue-300 hover:text-blue-200 text-sm">
-            All pages
           </Link>
         </div>
 
@@ -77,7 +75,7 @@ export default async function BlogDetailPage({ params }: Props) {
           {post.excerpt ? <p className="text-white/80 mb-6">{post.excerpt}</p> : null}
           <div className="prose prose-invert max-w-none whitespace-pre-wrap">{post.content}</div>
         </article>
-      </div>
-    </main>
+      </section>
+    </BlogChrome>
   );
 }
