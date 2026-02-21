@@ -137,7 +137,7 @@ export function getPageBySlug(slug: string): PageEntry | undefined {
 export function loadPageHtml(page: PageEntry): string {
   const localRoot = path.join(process.cwd(), "stitch_promise_portfolio");
   const monorepoRoot = path.join(process.cwd(), "..", "stitch_promise_portfolio");
-  const sourceRoot = fs.existsSync(localRoot) ? localRoot : monorepoRoot;
+  const sourceRoot = fs.existsSync(monorepoRoot) ? monorepoRoot : localRoot;
   const filePath = path.join(sourceRoot, page.folder, "code.html");
 
   if (!fs.existsSync(filePath)) {
