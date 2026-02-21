@@ -2,7 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+from pathlib import Path
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).resolve().parent / '.env.local'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    pass  # python-dotenv not installed, skip
 
 def main():
     """Run administrative tasks."""
