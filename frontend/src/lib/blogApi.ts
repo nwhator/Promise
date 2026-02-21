@@ -15,30 +15,47 @@ const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "http://127.0.0.1:8000";
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  const response = await fetch(`${API_BASE_URL}/api/blog/`, {
-    next: { revalidate: 60 },
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/blog/`, {
+      next: { revalidate: 60 },
+    });
 
-  if (!response.ok) {
-    throw new Error("Failed to load blog posts");
+    if (!response.ok) {
+      return [];
+    }
+
+    const payload = (await response.json()) as { results?: BlogPost[] } | BlogPost[];
+
+    if (Array.isArray(payload)) {
+      return payload;
+    }
+
+    if (Array.isArray(payload.results)) {
+      return payload.results;
+    }
+
+    return [];
+  } catch {
+    return [];
   }
-
-  const payload = (await response.json()) as { results: BlogPost[] };
-  return payload.results;
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  const response = await fetch(`${API_BASE_URL}/api/blog/${slug}/`, {
-    next: { revalidate: 60 },
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/blog/${slug}/`, {
+      next: { revalidate: 60 },
+    });
 
-  if (response.status === 404) {
+    if (response.status === 404) {
+      return null;
+    }
+
+    if (!response.ok) {
+      return null;
+    }
+
+    return (await response.json()) as BlogPost;
+  } catch {
     return null;
   }
-
-  if (!response.ok) {
-    throw new Error("Failed to load blog post");
-  }
-
-  return (await response.json()) as BlogPost;
 }
