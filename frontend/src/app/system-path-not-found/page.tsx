@@ -1,0 +1,295 @@
+
+import parse from 'html-react-parser';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'System Path Not Found - PROMISE NWHATOR',
+  description: 'System Path Not Found page for PROMISE NWHATOR.',
+  alternates: {
+    canonical: '/system-path-not-found',
+  },
+};
+
+export default function SystemPathNotFound() {
+  const htmlContent = `
+    
+
+
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            animation: {
+              'blink': 'blink 1s step-end infinite',
+              'scanline': 'scanline 8s linear infinite',
+            },
+            keyframes: {
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            position: fixed;
+            pointer-events: none;
+            inset: 0;
+            z-index: 50;
+        }
+        .crt-overlay {
+            background: radial-gradient(circle, rgba(16, 22, 34, 0) 60%, rgba(0, 0, 0, 0.4) 100%);
+            position: fixed;
+            pointer-events: none;
+            inset: 0;
+            z-index: 40;
+        }
+    </style>
+
+
+<!-- PROMISE_SHARED_HEADER_START -->
+<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" target="_top" class="flex items-center gap-3 text-white">
+        <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- PROMISE_SHARED_HEADER_END -->
+
+
+
+<!-- Scanline Effect -->
+<div class="scanlines"></div>
+<div class="crt-overlay"></div>
+<!-- Header / Navbar -->
+
+<!-- Main Content -->
+<main class="relative z-20 flex-grow flex flex-col items-center justify-center p-4 sm:p-8">
+<div class="w-full max-w-3xl flex flex-col gap-8">
+<!-- Terminal Window -->
+<div class="flex flex-col rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0e14] shadow-2xl overflow-hidden relative">
+<!-- Terminal Header Bar -->
+<div class="flex items-center justify-between px-4 py-2 bg-slate-100 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-green-500"></div>
+</div>
+<div class="text-xs font-mono text-slate-500 dark:text-slate-400">bash — 80x24</div>
+</div>
+<!-- Terminal Body -->
+<div class="p-6 sm:p-10 flex flex-col items-center gap-6 text-center">
+<div class="flex flex-col items-center gap-4 max-w-[580px]">
+<!-- 404 Status -->
+<h1 class="text-primary text-4xl sm:text-6xl font-bold tracking-tighter mb-2">
+                            404 <span class="text-slate-800 dark:text-white text-2xl sm:text-4xl font-light opacity-50 mx-2">//</span> SYSTEM_ERROR
+                        </h1>
+<!-- CLI Prompt Simulation -->
+<div class="w-full text-left bg-slate-100 dark:bg-slate-900/50 p-4 rounded-lg font-mono text-sm sm:text-base border border-slate-200 dark:border-slate-800">
+<p class="text-green-600 dark:text-green-400 font-bold mb-1">
+                                root@nwhator:~\$ <span class="text-slate-900 dark:text-slate-100 font-normal">locate /page-not-found</span>
+</p>
+<p class="text-red-500 dark:text-red-400 mb-4">
+                                &gt; Error: path '/page-not-found' does not exist in volume main.
+                            </p>
+<p class="text-slate-600 dark:text-slate-400">
+                                The requested resource could not be found. System suggests executing recovery subroutines immediately.<span class="animate-blink inline-block w-2 h-4 align-middle bg-primary ml-1"></span>
+</p>
+</div>
+</div>
+<!-- Main CTA -->
+<button class="group mt-4 relative inline-flex items-center justify-center px-8 py-3 font-mono font-bold text-white transition-all duration-200 bg-slate-900 dark:bg-slate-800 rounded-lg hover:bg-primary hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-slate-900">
+<span class="mr-2">[ EXECUTE_RETURN_HOME ]</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-lg">keyboard_return</span>
+</button>
+</div>
+</div>
+<!-- Available Commands Section -->
+<div class="@container w-full">
+<div class="flex flex-col gap-4">
+<div class="px-2">
+<p class="text-slate-900 dark:text-white text-lg font-bold">Available Commands</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Select a command to execute navigation subroutines.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Command Item 1 -->
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /home</p>
+<span class="text-slate-500 dark:text-slate-400 text-xs truncate">Return to base directory</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+<!-- Command Item 2 -->
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /projects</p>
+<span class="text-slate-500 dark:text-slate-400 text-xs truncate">View portfolio work</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+<!-- Command Item 3 -->
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /contact</p>
+<span class="text-slate-500 dark:text-slate-400 text-xs truncate">Send a signal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+<!-- Command Item 4 -->
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; --help</p>
+<span class="text-slate-500 dark:text-slate-400 text-xs truncate">List all options</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+
+
+
+<!-- PROMISE_SHARED_FOOTER_START -->
+<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
+      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  const yearNode = document.getElementById('copyright-year');
+  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
+  const routeMap = {
+    home: '/',
+    about: '/about',
+    work: '/projects',
+    project: '/projects',
+    projects: '/projects',
+    services: '/services',
+    technologies: '/technologies',
+    resume: '/resume',
+    contact: '/contact',
+    blog: '/blog'
+  };
+
+  document.querySelectorAll('a').forEach(function (anchor) {
+    const rawHref = (anchor.getAttribute('href') || '').trim();
+    const label = (anchor.textContent || '').trim().toLowerCase();
+
+    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
+      anchor.setAttribute('href', 'https://github.com/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
+      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref !== '#') return;
+
+    for (const key in routeMap) {
+      if (label.includes(key)) {
+        anchor.setAttribute('href', routeMap[key]);
+        anchor.setAttribute('target', '_top');
+        break;
+      }
+    }
+  });
+})();
+</script>
+<!-- PROMISE_SHARED_FOOTER_END -->
+
+  `;
+  return (
+    <div className="stitch-page-root">
+      {parse(htmlContent)}
+    </div>
+  );
+}

@@ -1,0 +1,361 @@
+
+import parse from 'html-react-parser';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Admin Generate Project Invoice - PROMISE NWHATOR',
+  description: 'Admin Generate Project Invoice page for PROMISE NWHATOR.',
+  alternates: {
+    canonical: '/admin-generate-project-invoice',
+  },
+};
+
+export default function AdminGenerateProjectInvoice() {
+  const htmlContent = `
+    
+
+
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1b1f27",
+                        "border-dark": "#282e39",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode tables */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1b1f27; 
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #3b4354; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #4b5563; 
+        }
+    </style>
+
+
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="flex flex-none items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-border-dark px-6 py-4 bg-white dark:bg-[#111318]">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">Generate Project Invoice</h2>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Promise Ayobami Nwhator Admin Dashboard</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex h-10 items-center justify-center rounded-lg border border-slate-200 dark:border-border-dark bg-transparent px-4 text-sm font-bold text-slate-700 dark:text-slate-200 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800">
+                Cancel
+            </button>
+<button class="flex h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-blue-600 hover:shadow-primary/40">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                Generate &amp; Send
+            </button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex flex-1 overflow-hidden">
+<div class="mx-auto flex h-full w-full max-w-[1600px] flex-col gap-6 p-4 lg:flex-row lg:p-6">
+<!-- Left Panel: Context & Details -->
+<div class="flex flex-col gap-6 overflow-y-auto lg:w-1/3 lg:flex-none">
+<!-- Client & Project Section -->
+<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-6 shadow-sm">
+<h3 class="mb-4 text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">domain</span>
+                        Client Details
+                    </h3>
+<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Select Client</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] px-4 py-3 pr-10 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+<option disabled="" selected="" value="">Search for a client...</option>
+<option value="acme">Acme Corp</option>
+<option value="globex">Globex Corporation</option>
+<option value="stark">Stark Industries</option>
+</select>
+<div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<button class="mt-1 w-fit text-xs font-bold text-primary hover:underline">+ Add New Client</button>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Project Scope</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] px-4 py-3 pr-10 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+<option disabled="" value="">Select a project...</option>
+<option selected="" value="backend">Q3 Backend Migration</option>
+<option value="mobile">Mobile App MVP</option>
+<option value="consulting">DevOps Consulting</option>
+</select>
+<div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Invoice Meta Section -->
+<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-6 shadow-sm">
+<h3 class="mb-4 text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+                        Invoice Meta
+                    </h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Invoice Date</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] px-3 py-2.5 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" type="date" value="2023-10-24"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Due Date</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] px-3 py-2.5 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" type="date" value="2023-11-24"/>
+</div>
+<div class="col-span-2 flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Invoice Number</label>
+<div class="relative">
+<input class="w-full rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] px-3 py-2.5 pl-10 text-sm font-medium text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="INV-2023-001"/>
+<div class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+<span class="material-symbols-outlined text-[18px]">tag</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notes Section -->
+<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark p-6 shadow-sm flex-1">
+<h3 class="mb-4 text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">sticky_note_2</span>
+                        Notes &amp; Terms
+                    </h3>
+<textarea class="h-32 w-full resize-none rounded-lg border border-slate-300 dark:border-border-dark bg-slate-50 dark:bg-[#111318] p-3 text-sm text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary placeholder-slate-400" placeholder="Enter notes about payment terms, project details, or specific instructions..."></textarea>
+</div>
+</div>
+<!-- Right Panel: Line Items & Totals -->
+<div class="flex flex-1 flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark shadow-sm">
+<!-- Table Header & Actions -->
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-border-dark px-6 py-4">
+<h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+                        Line Items
+                    </h3>
+<div class="flex items-center gap-3">
+<label class="flex items-center gap-2 cursor-pointer">
+<span class="text-xs font-semibold text-slate-600 dark:text-slate-300">Online Payment</span>
+<div class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary/20 dark:bg-primary/30">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-6 w-11 rounded-full bg-slate-200 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:bg-slate-700"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Items Table Container -->
+<div class="custom-scrollbar flex-1 overflow-auto p-0">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 text-xs uppercase text-slate-500 dark:bg-[#111318] dark:text-slate-400 sticky top-0 z-10">
+<tr>
+<th class="px-6 py-3 font-semibold">Service Description</th>
+<th class="px-6 py-3 font-semibold w-24 text-center">Qty</th>
+<th class="px-6 py-3 font-semibold w-32 text-right">Rate</th>
+<th class="px-6 py-3 font-semibold w-32 text-right">Total</th>
+<th class="px-4 py-3 w-10"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-border-dark">
+<!-- Row 1 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-3">
+<input class="w-full bg-transparent border-0 p-0 text-slate-900 dark:text-white focus:ring-0 font-medium placeholder-slate-400" type="text" value="Backend Development - Phase 1"/>
+<p class="text-xs text-slate-500 mt-1">Initial setup and database schema design.</p>
+</td>
+<td class="px-6 py-3">
+<input class="w-full bg-slate-100 dark:bg-[#111318] rounded border-0 py-1 px-2 text-center text-slate-900 dark:text-white focus:ring-1 focus:ring-primary" type="number" value="40"/>
+</td>
+<td class="px-6 py-3 text-right font-medium text-slate-700 dark:text-slate-300">
+                                    \$150.00
+                                </td>
+<td class="px-6 py-3 text-right font-bold text-slate-900 dark:text-white">
+                                    \$6,000.00
+                                </td>
+<td class="px-4 py-3 text-center">
+<button class="opacity-0 group-hover:opacity-100 text-red-500 hover:text-red-600 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-3">
+<input class="w-full bg-transparent border-0 p-0 text-slate-900 dark:text-white focus:ring-0 font-medium placeholder-slate-400" type="text" value="API Integration"/>
+<p class="text-xs text-slate-500 mt-1">Stripe and Twilio integration endpoints.</p>
+</td>
+<td class="px-6 py-3">
+<input class="w-full bg-slate-100 dark:bg-[#111318] rounded border-0 py-1 px-2 text-center text-slate-900 dark:text-white focus:ring-1 focus:ring-primary" type="number" value="10"/>
+</td>
+<td class="px-6 py-3 text-right font-medium text-slate-700 dark:text-slate-300">
+                                    \$150.00
+                                </td>
+<td class="px-6 py-3 text-right font-bold text-slate-900 dark:text-white">
+                                    \$1,500.00
+                                </td>
+<td class="px-4 py-3 text-center">
+<button class="opacity-0 group-hover:opacity-100 text-red-500 hover:text-red-600 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: New Empty Row -->
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-3">
+<input class="w-full bg-transparent border-0 p-0 text-slate-900 dark:text-white focus:ring-0 font-medium placeholder-slate-400" placeholder="Add item description..." type="text"/>
+</td>
+<td class="px-6 py-3">
+<input class="w-full bg-slate-100 dark:bg-[#111318] rounded border-0 py-1 px-2 text-center text-slate-900 dark:text-white focus:ring-1 focus:ring-primary" placeholder="0" type="number"/>
+</td>
+<td class="px-6 py-3 text-right font-medium text-slate-700 dark:text-slate-300">
+                                    \$0.00
+                                </td>
+<td class="px-6 py-3 text-right font-bold text-slate-900 dark:text-white">
+                                    \$0.00
+                                </td>
+<td class="px-4 py-3 text-center">
+<button class="opacity-0 group-hover:opacity-100 text-red-500 hover:text-red-600 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<button class="group mt-2 flex w-full items-center justify-center gap-2 border-t border-dashed border-slate-200 dark:border-border-dark py-4 text-sm font-semibold text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                        Add New Line Item
+                    </button>
+</div>
+<!-- Footer Totals -->
+<div class="border-t border-slate-200 dark:border-border-dark bg-slate-50 dark:bg-[#111318] p-6">
+<div class="ml-auto w-full max-w-sm space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Subtotal</span>
+<span class="font-bold text-slate-900 dark:text-white">\$7,500.00</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                                Tax Rate 
+                                <span class="rounded bg-slate-200 dark:bg-slate-800 px-1.5 py-0.5 text-xs font-semibold text-slate-700 dark:text-slate-300">10%</span>
+</span>
+<span class="font-medium text-slate-700 dark:text-slate-300">\$750.00</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Discount</span>
+<span class="font-medium text-slate-700 dark:text-slate-300">- \$0.00</span>
+</div>
+<div class="my-2 h-px bg-slate-200 dark:bg-border-dark"></div>
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-slate-900 dark:text-white">Grand Total</span>
+<span class="text-2xl font-black tracking-tight text-primary">\$8,250.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+<!-- PROMISE_SHARED_FOOTER_START -->
+<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
+      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  const yearNode = document.getElementById('copyright-year');
+  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
+  const routeMap = {
+    home: '/',
+    about: '/about',
+    work: '/projects',
+    project: '/projects',
+    projects: '/projects',
+    services: '/services',
+    technologies: '/technologies',
+    resume: '/resume',
+    contact: '/contact',
+    blog: '/blog'
+  };
+
+  document.querySelectorAll('a').forEach(function (anchor) {
+    const rawHref = (anchor.getAttribute('href') || '').trim();
+    const label = (anchor.textContent || '').trim().toLowerCase();
+
+    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
+      anchor.setAttribute('href', 'https://github.com/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
+      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref !== '#') return;
+
+    for (const key in routeMap) {
+      if (label.includes(key)) {
+        anchor.setAttribute('href', routeMap[key]);
+        anchor.setAttribute('target', '_top');
+        break;
+      }
+    }
+  });
+})();
+</script>
+<!-- PROMISE_SHARED_FOOTER_END -->
+
+  `;
+  return (
+    <div className="stitch-page-root">
+      {parse(htmlContent)}
+    </div>
+  );
+}

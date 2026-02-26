@@ -1,0 +1,518 @@
+
+import parse from 'html-react-parser';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Api Documentation - PROMISE NWHATOR',
+  description: 'Api Documentation page for PROMISE NWHATOR.',
+  alternates: {
+    canonical: '/api-documentation',
+  },
+};
+
+export default function ApiDocumentation() {
+  const htmlContent = `
+    
+
+
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1a242f",
+                        "border-dark": "#283039",
+                        "text-primary": "#e2e8f0",
+                        "text-secondary": "#94a3b8",
+                        "method-get": "#10b981",
+                        "method-post": "#f59e0b",
+                        "method-put": "#3b82f6",
+                        "method-delete": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetic in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101922; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283039; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b4754; 
+        }
+        
+        .syntax-key { color: #38bdf8; } /* Light Blue */
+        .syntax-string { color: #a5f3fc; } /* Cyan */
+        .syntax-number { color: #f472b6; } /* Pink */
+        .syntax-boolean { color: #fcd34d; } /* Yellow */
+    </style>
+
+
+<!-- PROMISE_SHARED_HEADER_START -->
+<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" target="_top" class="flex items-center gap-3 text-white">
+        <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
+        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- PROMISE_SHARED_HEADER_END -->
+
+
+
+<!-- Top Navigation Bar -->
+
+<!-- Main Layout -->
+<div class="flex flex-1 overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-80 bg-background-dark border-r border-border-dark flex flex-col flex-none overflow-y-auto z-10">
+<!-- Search -->
+<div class="p-4 sticky top-0 bg-background-dark z-20 border-b border-border-dark/50">
+<label class="relative flex items-center w-full group">
+<span class="absolute left-3 text-text-secondary group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full bg-surface-dark border border-border-dark text-sm rounded-lg py-2.5 pl-10 pr-4 text-white placeholder-text-secondary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search endpoints..." type="text"/>
+<div class="absolute right-3 hidden group-focus-within:block text-xs text-text-secondary border border-border-dark px-1.5 py-0.5 rounded bg-background-dark">ESC</div>
+</label>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 p-4 space-y-6">
+<!-- Section: Introduction -->
+<div class="space-y-1">
+<div class="px-3 py-1 text-xs font-bold text-text-secondary uppercase tracking-wider mb-2">Getting Started</div>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-secondary hover:text-white hover:bg-surface-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:text-primary transition-colors">description</span>
+                        Overview
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-secondary hover:text-white hover:bg-surface-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:text-primary transition-colors">key</span>
+                        Authentication
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-secondary hover:text-white hover:bg-surface-dark rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:text-primary transition-colors">bug_report</span>
+                        Errors
+                    </a>
+</div>
+<!-- Section: Resources -->
+<div class="space-y-3">
+<div class="px-3 py-1 text-xs font-bold text-text-secondary uppercase tracking-wider">Resources</div>
+<!-- Users Group -->
+<details class="group/details" open="">
+<summary class="flex cursor-pointer items-center justify-between px-3 py-2 text-sm font-medium text-white bg-surface-dark rounded-lg hover:bg-surface-dark/80 transition-colors select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">group</span>
+                                Users
+                            </div>
+<span class="material-symbols-outlined text-[16px] text-text-secondary transition-transform group-open/details:rotate-180">expand_more</span>
+</summary>
+<div class="mt-1 ml-2 pl-2 border-l border-border-dark space-y-0.5">
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-primary bg-primary/10 border-r-2 border-primary rounded-l-md" href="#">
+<span class="font-medium">Get Profile</span>
+<span class="text-[10px] font-bold text-method-get bg-method-get/10 px-1.5 py-0.5 rounded uppercase">GET</span>
+</a>
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-text-secondary hover:text-white hover:bg-surface-dark/50 rounded-l-md transition-colors" href="#">
+<span class="font-medium">Update User</span>
+<span class="text-[10px] font-bold text-method-put bg-method-put/10 px-1.5 py-0.5 rounded uppercase">PUT</span>
+</a>
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-text-secondary hover:text-white hover:bg-surface-dark/50 rounded-l-md transition-colors" href="#">
+<span class="font-medium">Delete User</span>
+<span class="text-[10px] font-bold text-method-delete bg-method-delete/10 px-1.5 py-0.5 rounded uppercase">DEL</span>
+</a>
+</div>
+</details>
+<!-- Projects Group -->
+<details class="group/details">
+<summary class="flex cursor-pointer items-center justify-between px-3 py-2 text-sm font-medium text-text-secondary hover:text-white hover:bg-surface-dark rounded-lg transition-colors select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+                                Projects
+                            </div>
+<span class="material-symbols-outlined text-[16px] text-text-secondary transition-transform group-open/details:rotate-180">expand_more</span>
+</summary>
+<div class="mt-1 ml-2 pl-2 border-l border-border-dark space-y-0.5">
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-text-secondary hover:text-white hover:bg-surface-dark/50 rounded-l-md transition-colors" href="#">
+<span class="font-medium">List Projects</span>
+<span class="text-[10px] font-bold text-method-get bg-method-get/10 px-1.5 py-0.5 rounded uppercase">GET</span>
+</a>
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-text-secondary hover:text-white hover:bg-surface-dark/50 rounded-l-md transition-colors" href="#">
+<span class="font-medium">Create Project</span>
+<span class="text-[10px] font-bold text-method-post bg-method-post/10 px-1.5 py-0.5 rounded uppercase">POST</span>
+</a>
+</div>
+</details>
+<!-- Systems Group -->
+<details class="group/details">
+<summary class="flex cursor-pointer items-center justify-between px-3 py-2 text-sm font-medium text-text-secondary hover:text-white hover:bg-surface-dark rounded-lg transition-colors select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+                                Systems
+                            </div>
+<span class="material-symbols-outlined text-[16px] text-text-secondary transition-transform group-open/details:rotate-180">expand_more</span>
+</summary>
+<div class="mt-1 ml-2 pl-2 border-l border-border-dark space-y-0.5">
+<a class="flex items-center justify-between gap-2 px-3 py-2 text-xs text-text-secondary hover:text-white hover:bg-surface-dark/50 rounded-l-md transition-colors" href="#">
+<span class="font-medium">System Health</span>
+<span class="text-[10px] font-bold text-method-get bg-method-get/10 px-1.5 py-0.5 rounded uppercase">GET</span>
+</a>
+</div>
+</details>
+</div>
+</div>
+<!-- Sidebar Footer -->
+<div class="p-4 border-t border-border-dark mt-auto bg-background-dark sticky bottom-0">
+<a class="flex items-center gap-2 text-xs text-primary hover:underline" href="#">
+<span class="material-symbols-outlined text-[16px]">help</span>
+                    Need help? Contact Support
+                </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto bg-background-dark scroll-smooth">
+<div class="max-w-5xl mx-auto px-8 py-10 pb-24">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-xs text-text-secondary mb-6">
+<span>Resources</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span>Users</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-white font-medium">Get User Profile</span>
+</div>
+<!-- Endpoint Header -->
+<div class="flex flex-col gap-6 mb-10 border-b border-border-dark pb-10">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="text-3xl font-bold text-white mb-3">Get User Profile</h1>
+<p class="text-text-secondary text-lg leading-relaxed max-w-3xl">
+                                Retrieves the public profile information for the authenticated user. This endpoint returns the user's ID, email, role, and current project assignments.
+                            </p>
+</div>
+<div class="hidden xl:block">
+<span class="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20">Stable</span>
+</div>
+</div>
+<!-- URL Bar -->
+<div class="flex items-stretch rounded-lg overflow-hidden border border-border-dark bg-surface-dark">
+<div class="flex items-center justify-center px-4 bg-method-get/10 border-r border-border-dark">
+<span class="text-sm font-bold text-method-get uppercase">GET</span>
+</div>
+<div class="flex-1 px-4 py-3 font-mono text-sm text-text-primary overflow-x-auto whitespace-nowrap">
+<span class="text-text-secondary">https://api.nwhator.com/v1</span>/users/me
+                        </div>
+<button class="px-4 hover:bg-white/5 transition-colors border-l border-border-dark text-text-secondary hover:text-white" title="Copy URL">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Content Grid: Details vs Example -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+<!-- Left Column: Params & Schema -->
+<div class="space-y-10">
+<!-- Headers Section -->
+<section>
+<h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">security</span>
+                                Authorizations
+                            </h3>
+<div class="bg-surface-dark rounded-lg border border-border-dark overflow-hidden">
+<div class="px-4 py-3 border-b border-border-dark bg-background-dark/50 flex justify-between items-center">
+<span class="text-xs font-bold text-text-secondary uppercase tracking-wider">Header</span>
+<span class="text-xs font-bold text-text-secondary uppercase tracking-wider">Type</span>
+</div>
+<div class="p-4">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<span class="font-mono text-sm text-primary">Authorization</span>
+<span class="text-xs text-text-secondary font-mono">string</span>
+</div>
+<div class="text-sm text-text-secondary mt-1">
+                                            Required. The Bearer token received from login.
+                                            <code class="bg-black/30 px-1.5 py-0.5 rounded text-xs text-text-primary ml-1 font-mono">Bearer &lt;token&gt;</code>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Query Params Section -->
+<section>
+<h3 class="text-lg font-bold text-white mb-4">Query Parameters</h3>
+<div class="bg-surface-dark rounded-lg border border-border-dark overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-dark bg-background-dark/50">
+<th class="px-4 py-3 text-xs font-bold text-text-secondary uppercase tracking-wider w-1/3">Parameter</th>
+<th class="px-4 py-3 text-xs font-bold text-text-secondary uppercase tracking-wider w-1/6">Type</th>
+<th class="px-4 py-3 text-xs font-bold text-text-secondary uppercase tracking-wider">Description</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-dark">
+<tr>
+<td class="px-4 py-3 align-top">
+<div class="font-mono text-sm text-white">include_projects</div>
+</td>
+<td class="px-4 py-3 align-top">
+<span class="text-xs text-text-secondary font-mono">boolean</span>
+</td>
+<td class="px-4 py-3 align-top text-sm text-text-secondary">
+                                                Optional. Whether to return the full list of projects assigned to the user. Default is <code class="text-primary">false</code>.
+                                            </td>
+</tr>
+<tr>
+<td class="px-4 py-3 align-top">
+<div class="font-mono text-sm text-white">format</div>
+</td>
+<td class="px-4 py-3 align-top">
+<span class="text-xs text-text-secondary font-mono">string</span>
+</td>
+<td class="px-4 py-3 align-top text-sm text-text-secondary">
+                                                Optional. Response format. Values: <code class="text-primary">json</code>, <code class="text-primary">xml</code>.
+                                            </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Response Schema Table -->
+<section>
+<h3 class="text-lg font-bold text-white mb-4">Response Attributes</h3>
+<div class="space-y-4">
+<div class="flex flex-col gap-1 pb-3 border-b border-border-dark/50">
+<div class="flex items-baseline gap-3">
+<span class="font-mono text-sm font-bold text-white">id</span>
+<span class="text-xs text-text-secondary font-mono">string (uuid)</span>
+</div>
+<p class="text-sm text-text-secondary">Unique identifier for the user.</p>
+</div>
+<div class="flex flex-col gap-1 pb-3 border-b border-border-dark/50">
+<div class="flex items-baseline gap-3">
+<span class="font-mono text-sm font-bold text-white">email</span>
+<span class="text-xs text-text-secondary font-mono">string</span>
+</div>
+<p class="text-sm text-text-secondary">The user's registered email address.</p>
+</div>
+<div class="flex flex-col gap-1 pb-3 border-b border-border-dark/50">
+<div class="flex items-baseline gap-3">
+<span class="font-mono text-sm font-bold text-white">role</span>
+<span class="text-xs text-text-secondary font-mono">enum</span>
+</div>
+<p class="text-sm text-text-secondary">One of: <code class="text-primary">admin</code>, <code class="text-primary">editor</code>, <code class="text-primary">viewer</code>.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Code Example -->
+<div class="relative">
+<div class="sticky top-24 flex flex-col gap-4">
+<!-- Interactive Console Header -->
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-white">Example Request</h3>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-dark border border-border-dark text-xs font-medium text-white hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">play_arrow</span>
+                                        Try it out
+                                    </button>
+</div>
+</div>
+<!-- Code Block Container -->
+<div class="rounded-xl overflow-hidden bg-[#0c1219] border border-border-dark shadow-2xl ring-1 ring-white/5">
+<!-- Tab Header -->
+<div class="flex items-center justify-between bg-[#151e29] px-4 py-2 border-b border-border-dark">
+<div class="flex gap-4">
+<button class="text-xs font-bold text-white border-b-2 border-primary pb-2 -mb-2.5">Response (200 OK)</button>
+<button class="text-xs font-medium text-text-secondary hover:text-white transition-colors pb-2 -mb-2.5">Error (401)</button>
+<button class="text-xs font-medium text-text-secondary hover:text-white transition-colors pb-2 -mb-2.5">cURL</button>
+</div>
+<button class="text-text-secondary hover:text-white transition-colors" title="Copy to clipboard">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<!-- Code Body -->
+<div class="p-6 overflow-x-auto">
+<pre class="font-mono text-sm leading-relaxed text-slate-300"><code><span class="syntax-string">"data"</span>: {
+  <span class="syntax-key">"id"</span>: <span class="syntax-string">"usr_8j29f8a8-44b1"</span>,
+  <span class="syntax-key">"email"</span>: <span class="syntax-string">"sarah.e@client.com"</span>,
+  <span class="syntax-key">"full_name"</span>: <span class="syntax-string">"Sarah Engineer"</span>,
+  <span class="syntax-key">"role"</span>: <span class="syntax-string">"admin"</span>,
+  <span class="syntax-key">"created_at"</span>: <span class="syntax-string">"2023-10-15T08:30:00Z"</span>,
+  <span class="syntax-key">"is_active"</span>: <span class="syntax-boolean">true</span>,
+  <span class="syntax-key">"projects"</span>: [
+    {
+      <span class="syntax-key">"id"</span>: <span class="syntax-string">"prj_9982"</span>,
+      <span class="syntax-key">"name"</span>: <span class="syntax-string">"Alpha Migration"</span>,
+      <span class="syntax-key">"status"</span>: <span class="syntax-string">"in_progress"</span>
+    },
+    {
+      <span class="syntax-key">"id"</span>: <span class="syntax-string">"prj_1102"</span>,
+      <span class="syntax-key">"name"</span>: <span class="syntax-string">"Beta API Integration"</span>,
+      <span class="syntax-key">"status"</span>: <span class="syntax-string">"planning"</span>
+    }
+  ],
+  <span class="syntax-key">"rate_limit"</span>: {
+      <span class="syntax-key">"remaining"</span>: <span class="syntax-number">985</span>,
+      <span class="syntax-key">"total"</span>: <span class="syntax-number">1000</span>,
+      <span class="syntax-key">"reset_in_seconds"</span>: <span class="syntax-number">45</span>
+  }
+}</code></pre>
+</div>
+<!-- Code Footer -->
+<div class="px-4 py-2 bg-[#151e29] border-t border-border-dark flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-green-500"></div>
+<span class="text-xs text-text-secondary">24ms latency</span>
+</div>
+<span class="text-xs text-text-secondary">application/json</span>
+</div>
+</div>
+<!-- Note Card -->
+<div class="bg-blue-900/20 border border-blue-800/50 rounded-lg p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+<div>
+<h4 class="text-sm font-bold text-white mb-1">Rate Limiting</h4>
+<p class="text-xs text-text-secondary leading-relaxed">
+                                        Your client tier allows for 1,000 requests per minute. Headers <code>X-RateLimit-Remaining</code> are included in every response.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        // Simple script to demonstrate active state toggle on sidebar links
+        // In a real app this would be handled by router
+        const links = document.querySelectorAll('aside a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Remove active classes from all
+                links.forEach(l => {
+                    l.classList.remove('bg-primary/10', 'text-primary', 'border-primary');
+                    l.classList.add('text-text-secondary', 'hover:text-white');
+                    const span = l.querySelector('.material-symbols-outlined');
+                    if(span) span.classList.remove('text-primary');
+                });
+                
+                // Add to clicked
+                // This is simplified logic just for visual demo
+            });
+        });
+    </script>
+
+
+
+
+<!-- PROMISE_SHARED_FOOTER_START -->
+<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
+      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  const yearNode = document.getElementById('copyright-year');
+  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
+  const routeMap = {
+    home: '/',
+    about: '/about',
+    work: '/projects',
+    project: '/projects',
+    projects: '/projects',
+    services: '/services',
+    technologies: '/technologies',
+    resume: '/resume',
+    contact: '/contact',
+    blog: '/blog'
+  };
+
+  document.querySelectorAll('a').forEach(function (anchor) {
+    const rawHref = (anchor.getAttribute('href') || '').trim();
+    const label = (anchor.textContent || '').trim().toLowerCase();
+
+    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
+      anchor.setAttribute('href', 'https://github.com/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
+      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noreferrer');
+      return;
+    }
+
+    if (rawHref !== '#') return;
+
+    for (const key in routeMap) {
+      if (label.includes(key)) {
+        anchor.setAttribute('href', routeMap[key]);
+        anchor.setAttribute('target', '_top');
+        break;
+      }
+    }
+  });
+})();
+</script>
+<!-- PROMISE_SHARED_FOOTER_END -->
+
+  `;
+  return (
+    <div className="stitch-page-root">
+      {parse(htmlContent)}
+    </div>
+  );
+}
