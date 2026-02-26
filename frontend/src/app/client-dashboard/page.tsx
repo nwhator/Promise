@@ -69,19 +69,19 @@ export default function ClientDashboard() {
 <span class="material-symbols-outlined text-white">dashboard</span>
 <span class="text-sm font-medium text-white">Overview</span>
 </a>
-<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5 transition-colors" href="#">
+<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-surface/5 transition-colors" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-white">flag</span>
 <span class="text-sm font-medium text-slate-400 group-hover:text-white">Milestones</span>
 </a>
-<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5 transition-colors" href="#">
+<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-surface/5 transition-colors" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-white">api</span>
 <span class="text-sm font-medium text-slate-400 group-hover:text-white">API Docs</span>
 </a>
-<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5 transition-colors" href="#">
+<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-surface/5 transition-colors" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-white">folder_open</span>
 <span class="text-sm font-medium text-slate-400 group-hover:text-white">Files</span>
 </a>
-<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-white/5 transition-colors" href="#">
+<a class="group flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-surface/5 transition-colors" href="#">
 <span class="material-symbols-outlined text-slate-400 group-hover:text-white">receipt_long</span>
 <span class="text-sm font-medium text-slate-400 group-hover:text-white">Billing</span>
 </a>
@@ -89,7 +89,7 @@ export default function ClientDashboard() {
 </div>
 <!-- Bottom User Profile -->
 <div class="mt-auto border-t border-border-dark pt-4">
-<button class="flex w-full items-center gap-3 rounded-lg p-2 hover:bg-white/5 transition-colors text-left">
+<button class="flex w-full items-center gap-3 rounded-lg p-2 hover:bg-surface/5 transition-colors text-left">
 <div class="h-10 w-10 rounded-full bg-cover bg-center" data-alt="Portrait of a male client" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBY0aXSCjPyQZV5C0tT_bxaGfjAMy0j-RCMHlrsKUZLgM8OAMEfxzjbWCsWddwyHM1syZTnozZBtWx947OxzMdVFyGrUmNnRAdgnSx-BcqbKO6PQ05mYzZF1VfY83ys4lhYWIXA0-VJ1X31w9QTpo2_ERPZZSg2btcwcSSsvsXNEqOST0P_Ej0d1L7abe0mgeR2urMY7aEO5PmTRKHSj9QOfQptGnh77A2_WbRyerTiDqgEhNd2aUr2pYsRH5VDxRvPfE1bcdR2jA0');"></div>
 <div class="flex flex-col overflow-hidden">
 <span class="truncate text-sm font-medium text-white">Client Dashboard</span>
@@ -210,13 +210,13 @@ export default function ClientDashboard() {
 <!-- Future Item -->
 <div class="flex gap-4">
 <div class="flex flex-col items-center">
-<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-slate-600 bg-transparent text-slate-600">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-slate-600 bg-transparent text-slate-400">
 <div class="h-2 w-2 rounded-full bg-slate-600"></div>
 </div>
 </div>
 <div>
 <h4 class="text-sm font-medium text-slate-400">User Testing &amp; QA</h4>
-<p class="text-xs text-slate-600">Scheduled for Nov 01</p>
+<p class="text-xs text-slate-400">Scheduled for Nov 01</p>
 </div>
 </div>
 </div>
@@ -230,7 +230,7 @@ export default function ClientDashboard() {
 <h3 class="font-semibold text-white">Recent Activity</h3>
 </div>
 <div class="flex flex-col p-2">
-<div class="group flex gap-3 rounded-lg p-3 hover:bg-white/5 transition-colors">
+<div class="group flex gap-3 rounded-lg p-3 hover:bg-surface/5 transition-colors">
 <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 <span class="material-symbols-outlined text-[18px]">webhook</span>
 </div>
@@ -239,7 +239,7 @@ export default function ClientDashboard() {
 <p class="text-xs text-slate-500">2 hours ago</p>
 </div>
 </div>
-<div class="group flex gap-3 rounded-lg p-3 hover:bg-white/5 transition-colors">
+<div class="group flex gap-3 rounded-lg p-3 hover:bg-surface/5 transition-colors">
 <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-purple-500/10 text-purple-500">
 <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
 </div>
@@ -248,7 +248,7 @@ export default function ClientDashboard() {
 <p class="text-xs text-slate-500">Yesterday, 4:30 PM</p>
 </div>
 </div>
-<div class="group flex gap-3 rounded-lg p-3 hover:bg-white/5 transition-colors">
+<div class="group flex gap-3 rounded-lg p-3 hover:bg-surface/5 transition-colors">
 <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
 <span class="material-symbols-outlined text-[18px]">attach_file</span>
 </div>
@@ -261,7 +261,7 @@ export default function ClientDashboard() {
 </div>
 </div>
 </div>
-<div class="group flex gap-3 rounded-lg p-3 hover:bg-white/5 transition-colors">
+<div class="group flex gap-3 rounded-lg p-3 hover:bg-surface/5 transition-colors">
 <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
 <span class="material-symbols-outlined text-[18px]">payments</span>
 </div>
@@ -284,7 +284,7 @@ export default function ClientDashboard() {
 </div>
 <span class="text-sm text-slate-300 group-hover:text-white transition-colors">Documentation</span>
 </div>
-<span class="material-symbols-outlined text-[16px] text-slate-600 group-hover:text-primary transition-colors">open_in_new</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:text-primary transition-colors">open_in_new</span>
 </a>
 </li>
 <li>
@@ -295,7 +295,7 @@ export default function ClientDashboard() {
 </div>
 <span class="text-sm text-slate-300 group-hover:text-white transition-colors">Figma Prototype</span>
 </div>
-<span class="material-symbols-outlined text-[16px] text-slate-600 group-hover:text-primary transition-colors">open_in_new</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:text-primary transition-colors">open_in_new</span>
 </a>
 </li>
 <li>
@@ -306,7 +306,7 @@ export default function ClientDashboard() {
 </div>
 <span class="text-sm text-slate-300 group-hover:text-white transition-colors">Brand Assets</span>
 </div>
-<span class="material-symbols-outlined text-[16px] text-slate-600 group-hover:text-primary transition-colors">download</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400 group-hover:text-primary transition-colors">download</span>
 </a>
 </li>
 </ul>
@@ -318,7 +318,7 @@ export default function ClientDashboard() {
 </div>
 <h3 class="relative z-10 text-lg font-bold">Need Help?</h3>
 <p class="relative z-10 mt-1 mb-4 text-sm text-blue-100">Have questions about the current phase?</p>
-<button class="relative z-10 w-full rounded-lg bg-white py-2 text-sm font-bold text-primary hover:bg-blue-50 transition-colors">
+<button class="relative z-10 w-full rounded-lg bg-surface py-2 text-sm font-bold text-primary hover:bg-blue-50 transition-colors">
                                 Contact Support
                             </button>
 </div>
@@ -332,7 +332,7 @@ export default function ClientDashboard() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -393,9 +393,11 @@ export default function ClientDashboard() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

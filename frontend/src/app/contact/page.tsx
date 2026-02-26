@@ -43,7 +43,7 @@ export default function Contact() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -80,10 +80,10 @@ export default function Contact() {
 <!-- Left Column: Info -->
 <div class="lg:col-span-2 flex flex-col gap-8">
 <div>
-<h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight tracking-tight mb-4">
+<h1 class="text-4xl md:text-5xl font-black text-foreground dark:text-white leading-tight tracking-tight mb-4">
                             Let's Build <br class="hidden md:block"/> <span class="text-primary">Together.</span>
 </h1>
-<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+<p class="text-slate-400 dark:text-slate-400 text-lg leading-relaxed">
                             If you’re building something serious — a platform, system, journal, e-commerce brand, or scalable backend — I can help you structure it properly from the foundation.
                         </p>
 </div>
@@ -98,21 +98,21 @@ export default function Contact() {
 <!-- Contact Details -->
 <div class="space-y-6 mt-4">
 <div class="flex items-start gap-4 group">
-<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
 <span class="material-symbols-outlined">mail</span>
 </div>
 <div>
-<h3 class="text-slate-900 dark:text-white font-semibold text-base mb-0.5">Email</h3>
-<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm break-all" href="mailto:nwhator@gmail.com">nwhator@gmail.com</a>
+<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">Email</h3>
+<a class="text-slate-400 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm break-all" href="mailto:nwhator@gmail.com">nwhator@gmail.com</a>
 </div>
 </div>
 <div class="flex items-start gap-4 group">
-<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
 <span class="material-symbols-outlined">location_on</span>
 </div>
 <div>
-<h3 class="text-slate-900 dark:text-white font-semibold text-base mb-0.5">Based in</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Nigeria</p>
+<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">Based in</h3>
+<p class="text-slate-400 dark:text-slate-400 text-sm">Nigeria</p>
 </div>
 </div>
 </div>
@@ -120,15 +120,15 @@ export default function Contact() {
 <div class="border-t border-slate-200 dark:border-slate-800 pt-8 mt-auto">
 <p class="text-sm font-medium text-slate-500 dark:text-slate-500 uppercase tracking-wider mb-4">Connect on Socials</p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
 <!-- GitHub Icon using Material Symbol substitute for generic branding -->
 <span class="material-symbols-outlined text-[1.25rem]">code</span>
 </a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
 <!-- LinkedIn Icon substitute -->
 <span class="material-symbols-outlined text-[1.25rem]">work</span>
 </a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="#">
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="#">
 <!-- WhatsApp Icon substitute -->
 <span class="material-symbols-outlined text-[1.25rem]">chat</span>
 </a>
@@ -137,8 +137,8 @@ export default function Contact() {
 </div>
 <!-- Right Column: Form -->
 <div class="lg:col-span-3">
-<div class="bg-white dark:bg-[#1c2230] rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h2>
+<div class="bg-surface dark:bg-[#1c2230] rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-bold text-foreground dark:text-white mb-6">Send a Message</h2>
 <form class="space-y-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
@@ -147,7 +147,7 @@ export default function Contact() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-400 text-[1.25rem]">person</span>
 </div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-[#111621] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="name" placeholder="John Doe" type="text"/>
+<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="name" placeholder="John Doe" type="text"/>
 </div>
 </div>
 <div class="space-y-2">
@@ -156,7 +156,7 @@ export default function Contact() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-400 text-[1.25rem]">alternate_email</span>
 </div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-[#111621] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="email" placeholder="john@example.com" type="email"/>
+<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="email" placeholder="john@example.com" type="email"/>
 </div>
 </div>
 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-400 text-[1.25rem]">title</span>
 </div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-[#111621] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="subject" placeholder="Project Inquiry / Job Opportunity" type="text"/>
+<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="subject" placeholder="Project Inquiry / Job Opportunity" type="text"/>
 </div>
 </div>
 <div class="space-y-2">
@@ -175,7 +175,7 @@ export default function Contact() {
 <div class="absolute top-3 left-3 pointer-events-none">
 <span class="material-symbols-outlined text-slate-400 text-[1.25rem]">chat_bubble_outline</span>
 </div>
-<textarea class="block w-full pl-10 pt-3 rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-[#111621] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm" id="message" placeholder="Tell me about your project needs..." rows="5"></textarea>
+<textarea class="block w-full pl-10 pt-3 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm" id="message" placeholder="Tell me about your project needs..." rows="5"></textarea>
 </div>
 </div>
 <div class="pt-2">
@@ -200,7 +200,7 @@ export default function Contact() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -261,9 +261,11 @@ export default function Contact() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

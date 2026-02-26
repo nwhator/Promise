@@ -87,7 +87,7 @@ export default function SystemPathNotFound() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -119,9 +119,9 @@ export default function SystemPathNotFound() {
 <main class="relative z-20 flex-grow flex flex-col items-center justify-center p-4 sm:p-8">
 <div class="w-full max-w-3xl flex flex-col gap-8">
 <!-- Terminal Window -->
-<div class="flex flex-col rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0e14] shadow-2xl overflow-hidden relative">
+<div class="flex flex-col rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#0b0e14] shadow-2xl overflow-hidden relative">
 <!-- Terminal Header Bar -->
-<div class="flex items-center justify-between px-4 py-2 bg-slate-100 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
+<div class="flex items-center justify-between px-4 py-2 bg-surface-brighter dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
 <div class="flex gap-2">
 <div class="w-3 h-3 rounded-full bg-red-500"></div>
 <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -137,14 +137,14 @@ export default function SystemPathNotFound() {
                             404 <span class="text-slate-800 dark:text-white text-2xl sm:text-4xl font-light opacity-50 mx-2">//</span> SYSTEM_ERROR
                         </h1>
 <!-- CLI Prompt Simulation -->
-<div class="w-full text-left bg-slate-100 dark:bg-slate-900/50 p-4 rounded-lg font-mono text-sm sm:text-base border border-slate-200 dark:border-slate-800">
+<div class="w-full text-left bg-surface-brighter dark:bg-slate-900/50 p-4 rounded-lg font-mono text-sm sm:text-base border border-slate-200 dark:border-slate-800">
 <p class="text-green-600 dark:text-green-400 font-bold mb-1">
-                                root@nwhator:~\$ <span class="text-slate-900 dark:text-slate-100 font-normal">locate /page-not-found</span>
+                                root@nwhator:~\$ <span class="text-foreground dark:text-slate-100 font-normal">locate /page-not-found</span>
 </p>
 <p class="text-red-500 dark:text-red-400 mb-4">
                                 &gt; Error: path '/page-not-found' does not exist in volume main.
                             </p>
-<p class="text-slate-600 dark:text-slate-400">
+<p class="text-slate-400 dark:text-slate-400">
                                 The requested resource could not be found. System suggests executing recovery subroutines immediately.<span class="animate-blink inline-block w-2 h-4 align-middle bg-primary ml-1"></span>
 </p>
 </div>
@@ -160,57 +160,57 @@ export default function SystemPathNotFound() {
 <div class="@container w-full">
 <div class="flex flex-col gap-4">
 <div class="px-2">
-<p class="text-slate-900 dark:text-white text-lg font-bold">Available Commands</p>
+<p class="text-foreground dark:text-white text-lg font-bold">Available Commands</p>
 <p class="text-slate-500 dark:text-slate-400 text-sm">Select a command to execute navigation subroutines.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <!-- Command Item 1 -->
-<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-surface dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-surface dark:hover:bg-[#1c222f] transition-all" href="#">
 <div class="flex items-center gap-3 overflow-hidden">
-<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<div class="flex items-center justify-center rounded-md bg-surface-brighter dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">home</span>
 </div>
 <div class="flex flex-col min-w-0">
-<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /home</p>
+<p class="text-foreground dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /home</p>
 <span class="text-slate-500 dark:text-slate-400 text-xs truncate">Return to base directory</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
 </a>
 <!-- Command Item 2 -->
-<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-surface dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-surface dark:hover:bg-[#1c222f] transition-all" href="#">
 <div class="flex items-center gap-3 overflow-hidden">
-<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<div class="flex items-center justify-center rounded-md bg-surface-brighter dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">folder_open</span>
 </div>
 <div class="flex flex-col min-w-0">
-<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /projects</p>
+<p class="text-foreground dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /projects</p>
 <span class="text-slate-500 dark:text-slate-400 text-xs truncate">View portfolio work</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
 </a>
 <!-- Command Item 3 -->
-<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-surface dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-surface dark:hover:bg-[#1c222f] transition-all" href="#">
 <div class="flex items-center gap-3 overflow-hidden">
-<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<div class="flex items-center justify-center rounded-md bg-surface-brighter dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">mail</span>
 </div>
 <div class="flex flex-col min-w-0">
-<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /contact</p>
+<p class="text-foreground dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; cd /contact</p>
 <span class="text-slate-500 dark:text-slate-400 text-xs truncate">Send a signal</span>
 </div>
 </div>
 <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_forward</span>
 </a>
 <!-- Command Item 4 -->
-<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-[#1c222f] transition-all" href="#">
+<a class="group flex items-center justify-between gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-surface dark:bg-[#161b26] p-4 hover:border-primary/50 hover:bg-surface dark:hover:bg-[#1c222f] transition-all" href="#">
 <div class="flex items-center gap-3 overflow-hidden">
-<div class="flex items-center justify-center rounded-md bg-slate-100 dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<div class="flex items-center justify-center rounded-md bg-surface-brighter dark:bg-slate-800 shrink-0 size-10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">terminal</span>
 </div>
 <div class="flex flex-col min-w-0">
-<p class="text-slate-900 dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; --help</p>
+<p class="text-foreground dark:text-white font-mono text-sm font-bold truncate group-hover:text-primary transition-colors">&gt; --help</p>
 <span class="text-slate-500 dark:text-slate-400 text-xs truncate">List all options</span>
 </div>
 </div>
@@ -227,7 +227,7 @@ export default function SystemPathNotFound() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -288,9 +288,11 @@ export default function SystemPathNotFound() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

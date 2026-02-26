@@ -46,17 +46,17 @@ export default function OnboardingSuccess() {
     </script>
 
 
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background dark:bg-background-dark">
 <!-- Background Pattern -->
 <div class="absolute inset-0 z-0 bg-circuit-pattern opacity-30 pointer-events-none"></div>
 <div class="relative z-10 flex h-full grow flex-col">
 <!-- Navigation -->
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#283239] px-6 py-4 lg:px-10">
-<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="flex items-center gap-4 text-foreground dark:text-white">
 <div class="size-8 text-primary">
 <span class="material-symbols-outlined text-[32px]">hexagon</span>
 </div>
-<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Promise Ayobami Nwhator</h2>
+<h2 class="text-foreground dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Promise Ayobami Nwhator</h2>
 </div>
 <div class="hidden md:flex flex-1 justify-end gap-8">
 <div class="flex items-center gap-9">
@@ -70,7 +70,7 @@ export default function OnboardingSuccess() {
 </button>
 </div>
 <!-- Mobile Menu Icon -->
-<div class="md:hidden text-slate-900 dark:text-white">
+<div class="md:hidden text-foreground dark:text-white">
 <span class="material-symbols-outlined">menu</span>
 </div>
 </header>
@@ -83,10 +83,10 @@ export default function OnboardingSuccess() {
 <div class="absolute inset-0 rounded-full bg-primary/20 blur-xl -z-10"></div>
 </div>
 <div class="flex flex-col gap-3 max-w-2xl">
-<h1 class="text-slate-900 dark:text-white tracking-tight text-4xl md:text-5xl font-bold leading-tight">
+<h1 class="text-foreground dark:text-white tracking-tight text-4xl md:text-5xl font-bold leading-tight">
                                 Welcome Aboard!
                             </h1>
-<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed">
+<p class="text-slate-400 dark:text-slate-400 text-lg font-normal leading-relaxed">
                                 Your inquiry has been successfully received. I'm excited to partner with you to build something exceptional. Here is the roadmap for our next steps.
                             </p>
 </div>
@@ -95,8 +95,8 @@ export default function OnboardingSuccess() {
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
 <!-- Left Column: Timeline -->
 <div class="lg:col-span-2 flex flex-col gap-6">
-<div class="rounded-xl border border-slate-200 dark:border-[#283239] bg-white dark:bg-[#1b2227]/50 backdrop-blur-sm p-6 sm:p-8">
-<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-6">Next Steps Timeline</h3>
+<div class="rounded-xl border border-slate-200 dark:border-[#283239] bg-surface dark:bg-[#1b2227]/50 backdrop-blur-sm p-6 sm:p-8">
+<h3 class="text-foreground dark:text-white text-xl font-bold mb-6">Next Steps Timeline</h3>
 <div class="relative pl-2">
 <!-- Vertical Line -->
 <div class="absolute left-[19px] top-2 bottom-4 w-[2px] bg-slate-200 dark:bg-[#283239]"></div>
@@ -106,7 +106,7 @@ export default function OnboardingSuccess() {
 <span class="material-symbols-outlined text-white text-xl">calendar_month</span>
 </div>
 <div class="flex flex-col pt-0.5">
-<h4 class="text-slate-900 dark:text-white text-lg font-bold">Project Kickoff Meeting</h4>
+<h4 class="text-foreground dark:text-white text-lg font-bold">Project Kickoff Meeting</h4>
 <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Step 1: Define goals, scope, and initial requirements.</p>
 <div class="mt-4">
 <button class="flex w-fit cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all shadow-[0_0_15px_rgba(37,157,244,0.3)] hover:shadow-[0_0_25px_rgba(37,157,244,0.5)] transform hover:-translate-y-0.5">
@@ -118,7 +118,7 @@ export default function OnboardingSuccess() {
 </div>
 <!-- Step 2: Pending -->
 <div class="relative flex gap-4 pb-8">
-<div class="relative z-10 flex-none bg-slate-100 dark:bg-[#283239] border border-slate-300 dark:border-[#3b4a54] rounded-full p-1.5 h-9 w-9 flex items-center justify-center">
+<div class="relative z-10 flex-none bg-surface-brighter dark:bg-[#283239] border border-slate-300 dark:border-[#3b4a54] rounded-full p-1.5 h-9 w-9 flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-lg">architecture</span>
 </div>
 <div class="flex flex-col pt-1 opacity-70">
@@ -128,7 +128,7 @@ export default function OnboardingSuccess() {
 </div>
 <!-- Step 3: Pending -->
 <div class="relative flex gap-4">
-<div class="relative z-10 flex-none bg-slate-100 dark:bg-[#283239] border border-slate-300 dark:border-[#3b4a54] rounded-full p-1.5 h-9 w-9 flex items-center justify-center">
+<div class="relative z-10 flex-none bg-surface-brighter dark:bg-[#283239] border border-slate-300 dark:border-[#3b4a54] rounded-full p-1.5 h-9 w-9 flex items-center justify-center">
 <span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-lg">code</span>
 </div>
 <div class="flex flex-col pt-1 opacity-70">
@@ -142,24 +142,24 @@ export default function OnboardingSuccess() {
 <!-- Right Column: Resources & Info -->
 <div class="flex flex-col gap-6">
 <!-- Download Card -->
-<div class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-[#283239] bg-slate-50 dark:bg-[#1b2227] p-6 shadow-sm">
+<div class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-[#283239] bg-surface dark:bg-[#1b2227] p-6 shadow-sm">
 <div class="flex items-center gap-3">
 <div class="flex items-center justify-center size-10 rounded-lg bg-emerald-500/10 text-emerald-500">
 <span class="material-symbols-outlined">description</span>
 </div>
-<h3 class="text-slate-900 dark:text-white text-base font-bold">Welcome Kit</h3>
+<h3 class="text-foreground dark:text-white text-base font-bold">Welcome Kit</h3>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-normal">
                                     Get a head start on our collaboration. This guide outlines how we work, communication channels, and what to expect.
                                 </p>
-<button class="flex w-full cursor-pointer items-center justify-between overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-[#283239] text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-[#323e47] transition-colors text-sm font-medium">
+<button class="flex w-full cursor-pointer items-center justify-between overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-[#283239] text-foreground dark:text-white hover:bg-slate-300 dark:hover:bg-[#323e47] transition-colors text-sm font-medium">
 <span>Download PDF</span>
 <span class="material-symbols-outlined text-sm">download</span>
 </button>
 </div>
 <!-- Contact Card -->
 <div class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-[#283239] bg-transparent p-6">
-<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider text-opacity-80">Need Help?</h3>
+<h3 class="text-foreground dark:text-white text-sm font-bold uppercase tracking-wider text-opacity-80">Need Help?</h3>
 <p class="text-slate-500 dark:text-slate-400 text-sm">
                                     If you have urgent questions before our call, feel free to reach out directly.
                                 </p>
@@ -184,7 +184,7 @@ export default function OnboardingSuccess() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -245,9 +245,11 @@ export default function OnboardingSuccess() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

@@ -73,17 +73,30 @@ function extractHeadAndBody(html) {
 function convertHtmlToTsx(htmlContent, componentName, slug) {
     const extracted = extractHeadAndBody(htmlContent);
     let cleanHtml = extracted.html
-        // Replace hardcoded legacy colors with the new premium theme variables
+        // More aggressive cleanup of light-mode leftovers
+        .replace(/bg-white/g, 'bg-surface')
+        .replace(/bg-\[#ffffff\]/gi, 'bg-surface')
+        .replace(/bg-\[#f8fafc\]/gi, 'bg-background')
+        .replace(/bg-background-light/g, 'bg-background')
+        .replace(/bg-slate-50/g, 'bg-surface')
+        .replace(/bg-slate-100/g, 'bg-surface-brighter')
+        .replace(/text-slate-900/g, 'text-foreground')
+        .replace(/text-gray-900/g, 'text-foreground')
+        .replace(/text-slate-600/g, 'text-slate-400')
+
+        // Standardize branding colors to match globals.css
         .replace(/"primary":\s*"#[^"]*"/gi, '"primary": "var(--primary)"')
-        .replace(/"primary-dark":\s*"#[^"]*"/gi, '"primary-dark": "var(--primary-dark)"')
+        .replace(/"primary-dark":\s*"#[^"]*"/gi, '"primary-dark": "var(--primary)"')
         .replace(/"background-dark":\s*"#[^"]*"/gi, '"background-dark": "var(--background)"')
         .replace(/"card-dark":\s*"#[^"]*"/gi, '"card-dark": "var(--surface)"')
         .replace(/"border-dark":\s*"#[^"]*"/gi, '"border-dark": "var(--border)"')
-        .replace(/"text-main":\s*"#[^"]*"/gi, '"text-main": "var(--foreground)"')
-        // Add extra premium styling to headers and common sections
-        .replace(/bg-background-dark\/90/g, 'glass-nav')
-        .replace(/bg-background-dark\/95/g, 'glass-nav')
+
+        // Premium styling and animations
+        .replace(/<section/g, '<section className="animate-fade-in"')
+        .replace(/bg-background-dark\/90/g, 'glass-nav sticky top-0 z-50')
+        .replace(/bg-background-dark\/95/g, 'glass-nav sticky top-0 z-50')
         .replace(/bg-card-dark/g, 'card-premium')
+
         // Replace links logic (simple normalisation)
         .replace(/href="https:\/\/github\.com\/?([^"]*)"/gi, 'href="https://github.com/nwhator"')
         .replace(/href="https:\/\/linkedin\.com\/?([^"]*)"/gi, 'href="https://linkedin.com/in/nwhator"');
@@ -111,9 +124,11 @@ export default function ${componentName}() {
     ${cleanHtml}
   \`;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

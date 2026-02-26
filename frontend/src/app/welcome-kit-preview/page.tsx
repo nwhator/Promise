@@ -169,12 +169,12 @@ export default function WelcomeKitPreview() {
 </div>
 <!-- Right Column: Document Preview (Hero) -->
 <div class="lg:col-span-7 flex justify-center perspective-container order-1 lg:order-2 py-8 lg:py-0">
-<div class="document-card relative w-full max-w-[500px] aspect-[4/5] rounded-2xl bg-white shadow-2xl overflow-hidden border-8 border-surface-dark">
+<div class="document-card relative w-full max-w-[500px] aspect-[4/5] rounded-2xl bg-surface shadow-2xl overflow-hidden border-8 border-surface-dark">
 <!-- PDF Document Visualization -->
 <div class="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-200 p-8 flex flex-col justify-between">
 <!-- Document Header -->
 <div class="flex justify-between items-start">
-<div class="flex items-center gap-2 text-slate-900">
+<div class="flex items-center gap-2 text-foreground">
 <span class="material-symbols-outlined text-primary text-3xl">diamond</span>
 <span class="font-bold tracking-tight">Promise Ayobami Nwhator</span>
 </div>
@@ -183,7 +183,7 @@ export default function WelcomeKitPreview() {
 <!-- Document Title -->
 <div class="space-y-4">
 <div class="w-16 h-1 bg-primary rounded-full"></div>
-<h1 class="text-4xl font-extrabold text-slate-900 leading-tight">
+<h1 class="text-4xl font-extrabold text-foreground leading-tight">
                                         Client Onboarding <br/>
 <span class="text-primary">&amp;</span> Project Roadmap
                                     </h1>
@@ -197,10 +197,10 @@ export default function WelcomeKitPreview() {
 <!-- Document Footer -->
 <div class="flex items-center justify-between border-t border-slate-200 pt-6">
 <div class="flex flex-col gap-1">
-<span class="text-xs font-bold text-slate-900 uppercase tracking-wider">Confidential</span>
+<span class="text-xs font-bold text-foreground uppercase tracking-wider">Confidential</span>
 <span class="text-[10px] text-slate-400">For internal use only</span>
 </div>
-<div class="h-10 w-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400">
+<div class="h-10 w-10 bg-surface-brighter rounded-full flex items-center justify-center text-slate-400">
 <span class="material-symbols-outlined text-sm">qr_code_2</span>
 </div>
 </div>
@@ -247,7 +247,7 @@ export default function WelcomeKitPreview() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -308,9 +308,11 @@ export default function WelcomeKitPreview() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

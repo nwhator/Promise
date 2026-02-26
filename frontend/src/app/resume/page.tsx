@@ -52,7 +52,7 @@ export default function Resume() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -94,10 +94,10 @@ export default function Resume() {
 </div>
 </div>
 
-<section>
+<section className="animate-fade-in">
 <h2 class="text-2xl font-bold mb-4">What I Do</h2>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
-<ul class="space-y-3 text-slate-600 dark:text-slate-300 list-disc pl-5 marker:text-primary">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<ul class="space-y-3 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Build backend systems and APIs that scale without breaking.</li>
 <li>Optimize performance, SEO, and structure for long-term growth.</li>
 <li>Design conversion-focused e-commerce and digital publishing platforms.</li>
@@ -106,63 +106,63 @@ export default function Resume() {
 </div>
 </section>
 
-<section>
+<section className="animate-fade-in">
 <h2 class="text-2xl font-bold mb-4">Core Expertise</h2>
 <div class="grid md:grid-cols-2 gap-4">
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="font-bold text-lg mb-3">Backend Engineering</h3>
-<p class="text-slate-600 dark:text-slate-300">C, Astro, Python & Django, Next.js, Node.js, Laravel PHP, RESTful API design, MySQL architecture, Docker and server management.</p>
+<p class="text-slate-400 dark:text-slate-300">C, Astro, Python & Django, Next.js, Node.js, Laravel PHP, RESTful API design, MySQL architecture, Docker and server management.</p>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="font-bold text-lg mb-3">WordPress Systems Development</h3>
-<p class="text-slate-600 dark:text-slate-300">Custom WordPress builds, WooCommerce integration, plugin customization, migration, security hardening, and performance optimization.</p>
+<p class="text-slate-400 dark:text-slate-300">Custom WordPress builds, WooCommerce integration, plugin customization, migration, security hardening, and performance optimization.</p>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="font-bold text-lg mb-3">Full Digital Stack</h3>
-<p class="text-slate-600 dark:text-slate-300">Flutter + Firebase mobile apps, SEO and technical optimization, deployment workflows with Git and Linux.</p>
+<p class="text-slate-400 dark:text-slate-300">Flutter + Firebase mobile apps, SEO and technical optimization, deployment workflows with Git and Linux.</p>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="font-bold text-lg mb-3">Business Impact</h3>
-<p class="text-slate-600 dark:text-slate-300">Analytics tracking, conversion optimization, brand support, and technical decisions aligned with business outcomes.</p>
+<p class="text-slate-400 dark:text-slate-300">Analytics tracking, conversion optimization, brand support, and technical decisions aligned with business outcomes.</p>
 </div>
 </div>
 </section>
 
-<section>
+<section className="animate-fade-in">
 <h2 class="text-2xl font-bold mb-6">Featured Experience</h2>
 <div class="space-y-6">
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">Lead Web Developer</h3>
 <p class="text-primary font-medium">Nigerian Dental Journal — Nigerian Dental Association</p>
-<ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-5 marker:text-primary">
+<ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Built and now maintain the official journal platform.</li>
 <li>Designed article submission, reviewer, and editorial workflow systems.</li>
 <li>Optimized publishing operations and platform reliability.</li>
 <li>Implemented security and backup-focused operations.</li>
 </ul>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">WordPress Systems Developer</h3>
 <p class="text-primary font-medium">Étrange Media Services (2023–2025)</p>
-<ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-5 marker:text-primary">
+<ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Delivered corporate, portfolio, and e-commerce websites.</li>
 <li>Handled SEO/performance optimization and hosting migrations.</li>
 <li>Built stable infrastructure for long-term maintainability.</li>
 </ul>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">Backend & Web Developer</h3>
 <p class="text-primary font-medium">Forth Creativity (2020–2023)</p>
-<ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-5 marker:text-primary">
+<ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Developed React + Node.js products and backend services.</li>
 <li>Improved user engagement by 30%.</li>
 <li>Reduced database retrieval time by 25%.</li>
 </ul>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">WordPress & E-commerce Developer (Volunteer)</h3>
 <p class="text-primary font-medium">Refillistic AB</p>
-<ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300 list-disc pl-5 marker:text-primary">
+<ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Built WooCommerce store with payment and shipping integrations.</li>
 <li>Optimized for conversion and performance with marketing alignment.</li>
 </ul>
@@ -170,21 +170,21 @@ export default function Resume() {
 </div>
 </section>
 
-<section class="grid md:grid-cols-2 gap-6">
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800 md:col-span-2">
+<section className="animate-fade-in" class="grid md:grid-cols-2 gap-6">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800 md:col-span-2">
 <h3 class="text-xl font-bold mb-3">Beyond Code</h3>
-<p class="text-slate-600 dark:text-slate-300">SEO implementation, analytics tracking, brand visual support (Canva), and IT networking/troubleshooting. I don’t just build — I optimize for growth and efficiency.</p>
+<p class="text-slate-400 dark:text-slate-300">SEO implementation, analytics tracking, brand visual support (Canva), and IT networking/troubleshooting. I don’t just build — I optimize for growth and efficiency.</p>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold mb-3">Education & Certification</h3>
-<p class="text-slate-600 dark:text-slate-300 mb-2"><strong>BSc. Computer Science & Engineering</strong> — Obafemi Awolowo University</p>
-<p class="text-slate-600 dark:text-slate-300"><strong>Certified Software Engineer</strong> — ALX (Backend Engineering, C, Python, Node.js, API architecture, Docker, Agile workflows)</p>
+<p class="text-slate-400 dark:text-slate-300 mb-2"><strong>BSc. Computer Science & Engineering</strong> — Obafemi Awolowo University</p>
+<p class="text-slate-400 dark:text-slate-300"><strong>Certified Software Engineer</strong> — ALX (Backend Engineering, C, Python, Node.js, API architecture, Docker, Agile workflows)</p>
 </div>
-<div class="bg-white dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
+<div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold mb-3">Mobile Development</h3>
-<p class="text-slate-600 dark:text-slate-300">Built cross-platform mobile products with Flutter + Firebase, including an academic tutoring application for Human Anatomy in Pidgin English.</p>
+<p class="text-slate-400 dark:text-slate-300">Built cross-platform mobile products with Flutter + Firebase, including an academic tutoring application for Human Anatomy in Pidgin English.</p>
 <h3 class="text-xl font-bold mt-5 mb-3">Languages</h3>
-<p class="text-slate-600 dark:text-slate-300">English – Fluent, German – A2, Yoruba – Conversational</p>
+<p class="text-slate-400 dark:text-slate-300">English – Fluent, German – A2, Yoruba – Conversational</p>
 </div>
 </section>
 </div>
@@ -196,7 +196,7 @@ export default function Resume() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -257,9 +257,11 @@ export default function Resume() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

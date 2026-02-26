@@ -67,7 +67,7 @@ export default function Technologies() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -94,7 +94,7 @@ export default function Technologies() {
 
 <main class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-10 py-8">
 <!-- Hero Section -->
-<section class="mb-16 mt-8 relative">
+<section className="animate-fade-in" class="mb-16 mt-8 relative">
 <div class="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
 <div class="flex flex-col gap-4 relative z-10">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-highlight border border-slate-700 w-fit">
@@ -288,7 +288,7 @@ export default function Technologies() {
 </div>
 </div>
 <!-- Terminal Output / CTA Section -->
-<section class="border-t border-slate-800 pt-10 mt-10">
+<section className="animate-fade-in" class="border-t border-slate-800 pt-10 mt-10">
 <div class="bg-[#0f1115] rounded-lg border border-slate-800 overflow-hidden max-w-3xl mx-auto shadow-2xl">
 <!-- Terminal Header -->
 <div class="bg-[#1e222a] px-4 py-2 flex items-center gap-2 border-b border-slate-700">
@@ -331,7 +331,7 @@ export default function Technologies() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -392,9 +392,11 @@ export default function Technologies() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

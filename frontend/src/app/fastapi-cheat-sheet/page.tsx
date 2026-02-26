@@ -89,7 +89,7 @@ export default function FastapiCheatSheet() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -116,17 +116,17 @@ export default function FastapiCheatSheet() {
 
 <main class="flex-grow w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
 <!-- Hero Section -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+<section className="animate-fade-in" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
 <div class="space-y-6">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wide">
 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                     Updated for v0.109.0+
                 </div>
-<h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight tracking-tight">
+<h1 class="text-5xl md:text-6xl font-bold text-foreground dark:text-white leading-tight tracking-tight">
                     FastAPI <br/>
 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple">Quick Reference</span>
 </h1>
-<p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+<p class="text-lg text-slate-400 dark:text-slate-400 max-w-lg">
                     A high-value cheat sheet for modern backend development. Master the basics, dependencies, and Pydantic models in minutes. Curated by Promise Ayobami Nwhator.
                 </p>
 <form class="flex flex-col sm:flex-row gap-3 max-w-md">
@@ -134,7 +134,7 @@ export default function FastapiCheatSheet() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-500">mail</span>
 </div>
-<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:card-premium border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your email for the PDF" type="email"/>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-surface dark:card-premium border border-slate-200 dark:border-slate-700 text-foreground dark:text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your email for the PDF" type="email"/>
 </div>
 <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-lg shadow-primary/25 whitespace-nowrap" type="button">
                         Send it to me
@@ -160,7 +160,7 @@ export default function FastapiCheatSheet() {
 </section>
 <!-- Cheat Sheet Grid -->
 <div class="mb-8 flex items-center justify-between">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<h2 class="text-2xl font-bold text-foreground dark:text-white flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">grid_view</span>
                 Reference Grid
             </h2>
@@ -175,9 +175,9 @@ export default function FastapiCheatSheet() {
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
 <!-- Card 1: Basic App Structure -->
-<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">rocket_launch</span>
                         Basic App Structure
                     </div>
@@ -202,41 +202,41 @@ export default function FastapiCheatSheet() {
 <span class="text-slate-500 select-none mr-3">12</span>    <span class="syntax-kw">return</span> {<span class="syntax-str">"item_id"</span>: item_id, <span class="syntax-str">"q"</span>: q}
 </pre>
 </div>
-<div class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-[#151e26] border-t border-slate-200 dark:border-slate-800">
+<div class="px-5 py-3 text-xs text-slate-500 dark:text-slate-400 bg-surface dark:bg-[#151e26] border-t border-slate-200 dark:border-slate-800">
                     Run with: <code class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-200 font-mono">fastapi dev main.py</code>
 </div>
 </div>
 <!-- Card 2: Common HTTP Methods -->
-<div class="col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">http</span>
                         HTTP Methods
                     </div>
 </div>
 <div class="p-4 flex flex-col gap-2 h-full">
-<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
 <span class="text-xs font-bold px-2 py-1 rounded bg-blue-500/20 text-blue-500 min-w-[60px] text-center font-mono">GET</span>
-<span class="text-sm text-slate-600 dark:text-slate-300">Read data</span>
+<span class="text-sm text-slate-400 dark:text-slate-300">Read data</span>
 </div>
-<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
 <span class="text-xs font-bold px-2 py-1 rounded bg-green-500/20 text-green-500 min-w-[60px] text-center font-mono">POST</span>
-<span class="text-sm text-slate-600 dark:text-slate-300">Create data</span>
+<span class="text-sm text-slate-400 dark:text-slate-300">Create data</span>
 </div>
-<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
 <span class="text-xs font-bold px-2 py-1 rounded bg-yellow-500/20 text-yellow-500 min-w-[60px] text-center font-mono">PUT</span>
-<span class="text-sm text-slate-600 dark:text-slate-300">Update data</span>
+<span class="text-sm text-slate-400 dark:text-slate-300">Update data</span>
 </div>
-<div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
+<div class="flex items-center gap-3 p-2 rounded-lg bg-surface dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50">
 <span class="text-xs font-bold px-2 py-1 rounded bg-red-500/20 text-red-500 min-w-[60px] text-center font-mono">DELETE</span>
-<span class="text-sm text-slate-600 dark:text-slate-300">Delete data</span>
+<span class="text-sm text-slate-400 dark:text-slate-300">Delete data</span>
 </div>
 </div>
 </div>
 <!-- Card 3: Pydantic Models -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 lg:col-span-1 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">data_object</span>
                         Pydantic Models
                     </div>
@@ -257,9 +257,9 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 4: Path & Query Parameters -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 lg:col-span-1 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">alt_route</span>
                         Path &amp; Query Params
                     </div>
@@ -281,9 +281,9 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 5: Dependency Injection -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 lg:col-span-1 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">hub</span>
                         Dependency Injection
                     </div>
@@ -307,9 +307,9 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 6: Common Status Codes -->
-<div class="col-span-1 lg:col-span-3 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
-<div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
+<div class="col-span-1 lg:col-span-3 bg-surface dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-surface dark:bg-[#151e26]">
+<div class="flex items-center gap-2 text-foreground dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">traffic</span>
                         Response Status Codes
                     </div>
@@ -341,7 +341,7 @@ export default function FastapiCheatSheet() {
 <!-- Sticky Bottom Bar / Watermark -->
 <div class="mt-16 border-t border-slate-200 dark:border-slate-800 pt-8 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 dark:text-slate-500 text-sm">
 <div class="flex items-center gap-2">
-<div class="size-6 text-slate-400 dark:text-slate-600">
+<div class="size-6 text-slate-400 dark:text-slate-400">
 <svg class="w-full h-full opacity-50" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
 </svg>
@@ -362,7 +362,7 @@ export default function FastapiCheatSheet() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -423,9 +423,11 @@ export default function FastapiCheatSheet() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

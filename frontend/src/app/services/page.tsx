@@ -65,7 +65,7 @@ export default function Services() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -93,7 +93,7 @@ export default function Services() {
 <!-- Main Content -->
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section className="animate-fade-in" class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
 <!-- Background Glow -->
 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -107,56 +107,56 @@ export default function Services() {
 </div>
 </section>
 <!-- Pricing Cards Section -->
-<section class="pb-24 px-4 sm:px-6 lg:px-8">
+<section className="animate-fade-in" class="pb-24 px-4 sm:px-6 lg:px-8">
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
 <!-- Card 1: MVP Development -->
-<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
+<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">MVP Development</h3>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">MVP Development</h3>
 <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Perfect for startups looking to validate ideas quickly with robust code.</p>
 <div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-slate-900 dark:text-white">\$5,000+</span>
+<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">\$5,000+</span>
 <span class="text-sm font-medium text-slate-500 dark:text-slate-400">/ project</span>
 </div>
 </div>
-<button class="w-full py-3 px-4 mb-8 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
+<button class="w-full py-3 px-4 mb-8 bg-surface-brighter dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-foreground dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
                             Get Started
                             <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
 </button>
 <div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>React/Next.js Setup</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Database Integration</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Deployment Pipeline</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Basic SEO Optimization</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>2 Weeks Post-Launch Support</span>
 </div>
 </div>
 </div>
 <!-- Card 2: API Audit (Highlighted) -->
-<div class="relative flex flex-col p-8 rounded-2xl border-2 border-primary bg-white dark:bg-surface-dark shadow-2xl shadow-primary/20 transform lg:-translate-y-4 z-10">
+<div class="relative flex flex-col p-8 rounded-2xl border-2 border-primary bg-surface dark:bg-surface-dark shadow-2xl shadow-primary/20 transform lg:-translate-y-4 z-10">
 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg">
                             Most Popular
                         </div>
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">API Architecture Audit</h3>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">API Architecture Audit</h3>
 <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Deep dive analysis to improve performance, security, and scalability.</p>
 <div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-slate-900 dark:text-white">\$2,500+</span>
+<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">\$2,500+</span>
 <span class="text-sm font-medium text-slate-500 dark:text-slate-400">/ audit</span>
 </div>
 </div>
@@ -165,60 +165,60 @@ export default function Services() {
                             <span class="material-symbols-outlined text-sm">bolt</span>
 </button>
 <div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Performance Analysis</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Security Vulnerability Review</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Refactoring Roadmap</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Documentation Update</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300 font-medium">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Best Practices Report</span>
 </div>
 </div>
 </div>
 <!-- Card 3: Enterprise Systems -->
-<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
+<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
 <div class="mb-6">
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Enterprise Systems</h3>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">Enterprise Systems</h3>
 <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Complex large-scale solutions tailored to organizational needs.</p>
 <div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-slate-900 dark:text-white">Custom</span>
+<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">Custom</span>
 <span class="text-sm font-medium text-slate-500 dark:text-slate-400">pricing</span>
 </div>
 </div>
-<button class="w-full py-3 px-4 mb-8 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
+<button class="w-full py-3 px-4 mb-8 bg-surface-brighter dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-foreground dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
                             Contact Sales
                             <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">mail</span>
 </button>
 <div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Microservices Architecture</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Legacy System Migration</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>SLA &amp; Dedicated Support</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>Dedicated Development Team</span>
 </div>
-<div class="flex gap-3 text-sm text-slate-600 dark:text-slate-300">
+<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
 <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
 <span>24/7 Monitoring &amp; Alerts</span>
 </div>
@@ -228,14 +228,14 @@ export default function Services() {
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark">
+<section className="animate-fade-in" class="py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800 bg-background dark:bg-background-dark">
 <div class="max-w-3xl mx-auto">
-<h2 class="text-2xl font-bold mb-8 text-center text-slate-900 dark:text-white">Frequently Asked Questions</h2>
+<h2 class="text-2xl font-bold mb-8 text-center text-foreground dark:text-white">Frequently Asked Questions</h2>
 <div class="flex flex-col gap-4">
 <!-- FAQ Item 1 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark overflow-hidden transition-all duration-300">
+<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
 <summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">What is your typical turnaround time?</span>
+<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">What is your typical turnaround time?</span>
 <span class="transition group-open:rotate-180">
 <span class="material-symbols-outlined text-slate-500">expand_more</span>
 </span>
@@ -245,9 +245,9 @@ export default function Services() {
                         </div>
 </details>
 <!-- FAQ Item 2 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark overflow-hidden transition-all duration-300">
+<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
 <summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">Do you offer post-launch support?</span>
+<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">Do you offer post-launch support?</span>
 <span class="transition group-open:rotate-180">
 <span class="material-symbols-outlined text-slate-500">expand_more</span>
 </span>
@@ -257,9 +257,9 @@ export default function Services() {
                         </div>
 </details>
 <!-- FAQ Item 3 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark overflow-hidden transition-all duration-300">
+<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
 <summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">How do payments work?</span>
+<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">How do payments work?</span>
 <span class="transition group-open:rotate-180">
 <span class="material-symbols-outlined text-slate-500">expand_more</span>
 </span>
@@ -269,9 +269,9 @@ export default function Services() {
                         </div>
 </details>
 <!-- FAQ Item 4 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark overflow-hidden transition-all duration-300">
+<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
 <summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">Do you work with existing teams?</span>
+<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">Do you work with existing teams?</span>
 <span class="transition group-open:rotate-180">
 <span class="material-symbols-outlined text-slate-500">expand_more</span>
 </span>
@@ -291,7 +291,7 @@ export default function Services() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -352,9 +352,11 @@ export default function Services() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

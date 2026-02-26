@@ -48,7 +48,7 @@ export default function InternalSystemError() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -73,10 +73,10 @@ export default function InternalSystemError() {
 
 
 <!-- Header / TopNavBar -->
-<div class="w-full border-b border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark">
+<div class="w-full border-b border-slate-200 dark:border-slate-800 bg-background dark:bg-background-dark">
 <div class="max-w-[1280px] mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
 <!-- Brand -->
-<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="flex items-center gap-3 text-foreground dark:text-white">
 <div class="size-6 text-primary">
 <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
@@ -114,13 +114,13 @@ export default function InternalSystemError() {
 <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                     System Critical
                 </div>
-<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 dark:text-white">
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-foreground dark:text-white">
                     500
                 </h1>
 <h2 class="text-xl md:text-2xl font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">
                     Internal_Server_Error
                 </h2>
-<p class="text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
+<p class="text-base md:text-lg text-slate-400 dark:text-slate-300 max-w-xl mx-auto leading-relaxed">
                     Our systems architect has been notified. We are resolving this immediately.
                 </p>
 </div>
@@ -141,31 +141,31 @@ export default function InternalSystemError() {
 <!-- Code content -->
 <div class="text-slate-400 space-y-1">
 <div class="flex gap-3">
-<span class="text-slate-600 select-none">[10:42:01]</span>
+<span class="text-slate-400 select-none">[10:42:01]</span>
 <span class="text-red-400">CRITICAL:</span>
 <span>Connection timeout at module_auth...</span>
 </div>
 <div class="flex gap-3 opacity-90">
-<span class="text-slate-600 select-none">[10:42:02]</span>
+<span class="text-slate-400 select-none">[10:42:02]</span>
 <span class="text-yellow-400">RETRY:</span>
 <span>Attempting handshake with primary_node_04...</span>
 </div>
 <div class="flex gap-3 opacity-80">
-<span class="text-slate-600 select-none">[10:42:02]</span>
+<span class="text-slate-400 select-none">[10:42:02]</span>
 <span class="text-red-400">ERROR:</span>
 <span>Stack trace overflow in process_daemon.js:204</span>
 </div>
 <div class="flex gap-3 opacity-70 blur-[1px]">
-<span class="text-slate-600 select-none">[10:42:03]</span>
+<span class="text-slate-400 select-none">[10:42:03]</span>
 <span class="text-blue-400">INFO:</span>
 <span>Dumping core memory to secure_logs...</span>
 </div>
 <div class="flex gap-3 opacity-50 blur-[2px]">
-<span class="text-slate-600 select-none">[10:42:03]</span>
+<span class="text-slate-400 select-none">[10:42:03]</span>
 <span>Initiating failover protocol seq_99...</span>
 </div>
 <div class="flex gap-3 opacity-30 blur-[3px]">
-<span class="text-slate-600 select-none">[10:42:04]</span>
+<span class="text-slate-400 select-none">[10:42:04]</span>
 <span>System_halt exception caught...</span>
 </div>
 </div>
@@ -185,7 +185,7 @@ export default function InternalSystemError() {
 <span class="material-symbols-outlined text-[20px]">refresh</span>
 <span>Refresh System</span>
 </button>
-<button class="flex items-center justify-center gap-2 h-12 px-8 w-full sm:w-auto min-w-[180px] rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold transition-all active:scale-95">
+<button class="flex items-center justify-center gap-2 h-12 px-8 w-full sm:w-auto min-w-[180px] rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-surface-brighter dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold transition-all active:scale-95">
 <span class="material-symbols-outlined text-[20px]">report_problem</span>
 <span>Report Issue</span>
 </button>
@@ -203,7 +203,7 @@ export default function InternalSystemError() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -264,9 +264,11 @@ export default function InternalSystemError() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

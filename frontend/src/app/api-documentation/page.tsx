@@ -84,7 +84,7 @@ export default function ApiDocumentation() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -246,7 +246,7 @@ export default function ApiDocumentation() {
 <div class="flex-1 px-4 py-3 font-mono text-sm text-text-primary overflow-x-auto whitespace-nowrap">
 <span class="text-text-secondary">https://api.nwhator.com/v1</span>/users/me
                         </div>
-<button class="px-4 hover:bg-white/5 transition-colors border-l border-border-dark text-text-secondary hover:text-white" title="Copy URL">
+<button class="px-4 hover:bg-surface/5 transition-colors border-l border-border-dark text-text-secondary hover:text-white" title="Copy URL">
 <span class="material-symbols-outlined text-[20px]">content_copy</span>
 </button>
 </div>
@@ -256,7 +256,7 @@ export default function ApiDocumentation() {
 <!-- Left Column: Params & Schema -->
 <div class="space-y-10">
 <!-- Headers Section -->
-<section>
+<section className="animate-fade-in">
 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
 <span class="material-symbols-outlined text-primary">security</span>
                                 Authorizations
@@ -281,7 +281,7 @@ export default function ApiDocumentation() {
 </div>
 </section>
 <!-- Query Params Section -->
-<section>
+<section className="animate-fade-in">
 <h3 class="text-lg font-bold text-white mb-4">Query Parameters</h3>
 <div class="bg-surface-dark rounded-lg border border-border-dark overflow-hidden">
 <table class="w-full text-left border-collapse">
@@ -320,7 +320,7 @@ export default function ApiDocumentation() {
 </div>
 </section>
 <!-- Response Schema Table -->
-<section>
+<section className="animate-fade-in">
 <h3 class="text-lg font-bold text-white mb-4">Response Attributes</h3>
 <div class="space-y-4">
 <div class="flex flex-col gap-1 pb-3 border-b border-border-dark/50">
@@ -450,7 +450,7 @@ export default function ApiDocumentation() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -511,9 +511,11 @@ export default function ApiDocumentation() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

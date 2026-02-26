@@ -45,7 +45,7 @@ export default function ProjectDetail() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -75,10 +75,10 @@ export default function ProjectDetail() {
 <div class="flex items-center gap-2 mb-8 text-sm text-slate-500 dark:text-slate-400">
 <a class="hover:text-primary transition-colors" href="#">Projects</a>
 <span class="material-symbols-outlined text-base">chevron_right</span>
-<span class="text-slate-900 dark:text-slate-100 font-medium">Plagiarism Detection System</span>
+<span class="text-foreground dark:text-slate-100 font-medium">Plagiarism Detection System</span>
 </div>
 <!-- Hero Section -->
-<section class="flex flex-col lg:flex-row gap-8 lg:items-start lg:justify-between mb-16">
+<section className="animate-fade-in" class="flex flex-col lg:flex-row gap-8 lg:items-start lg:justify-between mb-16">
 <div class="flex flex-col gap-6 max-w-2xl">
 <div>
 <div class="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4">
@@ -87,7 +87,7 @@ export default function ProjectDetail() {
 <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-4">
                         National Plagiarism Detection System
                     </h1>
-<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+<p class="text-lg text-slate-400 dark:text-slate-400 leading-relaxed">
                         A scalable, distributed system engineering solution using NLP and vector embeddings to detect anomalies in real-time. Designed to handle high-throughput academic submissions across multiple institutions.
                     </p>
 </div>
@@ -96,7 +96,7 @@ export default function ProjectDetail() {
 <span class="material-symbols-outlined text-lg">rocket_launch</span>
                         View Live Demo
                     </button>
-<button class="flex items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 px-6 py-3 text-sm font-bold text-slate-900 dark:text-white transition-colors">
+<button class="flex items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-surface-brighter dark:hover:bg-slate-800 px-6 py-3 text-sm font-bold text-foreground dark:text-white transition-colors">
 <span class="material-symbols-outlined text-lg">code</span>
                         View Source Code
                     </button>
@@ -114,7 +114,7 @@ export default function ProjectDetail() {
 </div>
 <!-- Impact Metrics (Hero Side) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 w-full lg:w-80 shrink-0">
-<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5">
+<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-slate-900/50 p-5">
 <div class="flex items-center gap-2 text-primary mb-1">
 <span class="material-symbols-outlined">check_circle</span>
 <p class="text-sm font-semibold uppercase tracking-wider">Accuracy Rate</p>
@@ -122,7 +122,7 @@ export default function ProjectDetail() {
 <p class="text-3xl font-bold tracking-tight">99.4%</p>
 <p class="text-xs text-slate-500">Validated against 10k test cases</p>
 </div>
-<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5">
+<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-slate-900/50 p-5">
 <div class="flex items-center gap-2 text-primary mb-1">
 <span class="material-symbols-outlined">group</span>
 <p class="text-sm font-semibold uppercase tracking-wider">Users</p>
@@ -130,7 +130,7 @@ export default function ProjectDetail() {
 <p class="text-3xl font-bold tracking-tight">50,000+</p>
 <p class="text-xs text-slate-500">Concurrent active sessions</p>
 </div>
-<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5">
+<div class="flex flex-col gap-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-slate-900/50 p-5">
 <div class="flex items-center gap-2 text-primary mb-1">
 <span class="material-symbols-outlined">timer</span>
 <p class="text-sm font-semibold uppercase tracking-wider">Efficiency</p>
@@ -145,32 +145,32 @@ export default function ProjectDetail() {
 <!-- Left Column: Narrative & Details -->
 <div class="xl:col-span-8 flex flex-col gap-16">
 <!-- Problem & Solution -->
-<section class="grid md:grid-cols-2 gap-8">
+<section className="animate-fade-in" class="grid md:grid-cols-2 gap-8">
 <div class="space-y-4">
-<h3 class="text-xl font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+<h3 class="text-xl font-bold flex items-center gap-2 text-foreground dark:text-white">
 <span class="flex h-8 w-8 items-center justify-center rounded bg-red-500/10 text-red-500">
 <span class="material-symbols-outlined text-sm">warning</span>
 </span>
                             The Problem
                         </h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+<p class="text-slate-400 dark:text-slate-400 leading-relaxed">
                             Educational institutions faced a 40% year-over-year rise in AI-generated plagiarism, overwhelming existing manual review processes. Legacy systems were too slow, often taking up to 48 hours to process submissions, and lacked the sophistication to detect rewritten or translated content effectively.
                         </p>
 </div>
 <div class="space-y-4">
-<h3 class="text-xl font-bold flex items-center gap-2 text-slate-900 dark:text-white">
+<h3 class="text-xl font-bold flex items-center gap-2 text-foreground dark:text-white">
 <span class="flex h-8 w-8 items-center justify-center rounded bg-green-500/10 text-green-500">
 <span class="material-symbols-outlined text-sm">check</span>
 </span>
                             The Solution
                         </h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+<p class="text-slate-400 dark:text-slate-400 leading-relaxed">
                             I engineered a high-availability distributed system leveraging custom NLP models and vector embeddings. By vectorizing text submissions, we could perform semantic similarity searches against a database of millions of documents in milliseconds, identifying not just copy-paste plagiarism but also conceptual paraphrasing.
                         </p>
 </div>
 </section>
 <!-- Screenshots Gallery -->
-<section class="space-y-6">
+<section className="animate-fade-in" class="space-y-6">
 <div class="flex items-center justify-between">
 <h3 class="text-2xl font-bold">Interface Preview</h3>
 <div class="flex gap-2">
@@ -184,7 +184,7 @@ export default function ProjectDetail() {
 </div>
 <div class="grid gap-6">
 <!-- Main Dashboard Shot -->
-<div class="group relative aspect-video w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800">
+<div class="group relative aspect-video w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface-brighter dark:bg-slate-800">
 <img alt="Dashboard showing plagiarism analytics graphs and user submission lists" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern dashboard interface with data visualization charts and tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoPHAYtQA7aTltjK4a0XQuEUujzqu-rb0C1igSBMkDa06SJpxRSUz3l_oJCi6XVWBqfFlKukJ15vkMLroMgCLDPgfzqeAsGQLQUdt-kKU6ORS2ggOb8-s1LiC4X7hNws8jy7I4nYqazJxqxaXC2DdKge0k09HrfBIrp4me0lSeNLZ114oDIDO2CnxeM13qmsEi_NaYIRValy0Rx0C-eJEjVp8x4PqUmVzjuEtYzEVB5VjvfbCu5X3ynZK6AWrK9iodyfUG93csw98"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
 <p class="text-white font-medium">Administrator Dashboard Overview</p>
@@ -192,17 +192,17 @@ export default function ProjectDetail() {
 </div>
 <!-- Secondary Shots -->
 <div class="grid grid-cols-2 gap-6">
-<div class="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800">
+<div class="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface-brighter dark:bg-slate-800">
 <img alt="Code comparison view highlighting similar text blocks side by side" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Detailed report view showing text comparison and highlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mToK-bRvZTKkKDv0UbxikClVM4dAvZJeVkl9IedoNJT9nC6i1iQV56bQMhW68ovru47SL_e1oLk-MJvuLczAMlhrgzgToZd5d4RwGOpjXLSoXumIo7iYUhfXdncC2ZtdKJHFF49abFYHC6Ffj-9GxIe5EBZBhOK9IQC0_6q5tv8N4cZYn_iLdu9N9ikWpN97yT6ohs3r6X2qCO5EwdEWOg3RI2QdVLVItLPFXdmI_Q5coDLWhRLrrjbwVfqvM-jwa-9ZQLv01rU"/>
 </div>
-<div class="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800">
+<div class="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface-brighter dark:bg-slate-800">
 <img alt="Settings panel for configuring sensitivity thresholds" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Settings configuration panel with sliders and toggles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU1F9_E39VOPxWg3s9m6fH577eVZx8IJoODHX7KY1lJ5AJ9Vhh6PayH-_XNsd1Ty6tR4607y-YWsAud9VnB2eo0RsEkdIuMAu8nCMiMuPt_0lwTNRnt34OhMr7XRkDn6v_p28jUYch2ZGpqtnTQtlxlT9iMZdQFPpgAmUwjA4jy2SCImTegNtI076L1yf-5-5lLfnZB1tDQi94ol9DyPaJAzwGoJS__lZjTKW4mNHCNsPdYn5FGgcopgPwfuU9F-tJpQuzIixT_5k"/>
 </div>
 </div>
 </div>
 </section>
 <!-- System Architecture -->
-<section class="space-y-6">
+<section className="animate-fade-in" class="space-y-6">
 <h3 class="text-2xl font-bold">System Architecture</h3>
 <div class="relative w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-[#0B0F15] p-8">
 <!-- Grid Background Pattern -->
@@ -230,7 +230,7 @@ export default function ProjectDetail() {
 </div>
 </section>
 <!-- Code Snippet -->
-<section class="space-y-6">
+<section className="animate-fade-in" class="space-y-6">
 <h3 class="text-2xl font-bold">Core Logic Snippet</h3>
 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-[#0d1117] p-6 font-mono text-sm overflow-x-auto">
 <pre><code class="language-python text-slate-300">
@@ -254,61 +254,61 @@ export default function ProjectDetail() {
 <!-- Right Column: Tech Stack & Meta -->
 <aside class="xl:col-span-4 flex flex-col gap-8">
 <!-- Tech Stack -->
-<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#161b22] p-6 shadow-sm">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#161b22] p-6 shadow-sm">
 <h3 class="text-lg font-bold mb-6">Technologies Used</h3>
 <div class="flex flex-wrap gap-3">
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="Python" class="w-4 h-4" data-alt="Python logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKWg08AMcN0KbD1VVdWs-SOh3w0otVcWWYFa6sLs_Rr7YPDrZw0T9eox8wmAZtlO8n3k_qxNzsgZ7nSx3GU2v5DfCcn7fTzT2-NR1MphkPADBAip0QSJRfoKmYFsaEFd8bbRIvdPtUngsU3estbrcX4RoyRwwMvj2D1fClc2QOsX652PyDE-Fbf_9O8jj8zD857cwsOqUJaYcXVHiur4rFXaBING7S-lKEjxDhJs3dh3UCwPstrD6ZiR_C6k_VbAhFOB5Zz2JAOk"/>
                             Python
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="React" class="w-4 h-4" data-alt="React logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnkVQ6ntLQ_OFKlOYX0yPKLf2OUOCnxBRSQXbSK1W_4gkhHa-9OGkpO82dmifRjIFgLoGV_aImDCvSfL2lDahFqZVJkeeBT6P02XX0_NeRFp6fYm4upatVElWUDe7zb93Q-W6k7UMrNpqzqPW2tGtBIVAoHRLg9O2QXwq3ELiJOyljG3sJNUPpAbjmbCld7uAz2Vdk-0OI7WhHjSIQ_iAeh-PqZVYoJ_X0QCU22xES0lo7I4VpAG5QKc_Gvpqr31Isw7TjnHo0Ij0"/>
                             React
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="TensorFlow" class="w-4 h-4" data-alt="TensorFlow logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrhbvQebjVLCA_qAVYNozE65GEEdpQ1q3zB6N2IKRLXdRRETMbj9A3pds2lD2rTr-YzJAqr5KPLDszxFwWb6799QAgAOqcyDCgh2HA6SFGytErpEeE8uFLp8CZO22JjJX-DshCxv6cW6mJdCsgQkpTPjhgFmy3HB_Nq0qWEt0iJpmEzkeof0h-2yUIO3rq4st--B4FVkNawkKvPAbPUVXHGoCf1NqiZ5qD_iJq9M9mvQO2pqo2UjiEvO6jREkWTAHs482gOROj0k"/>
                             TensorFlow
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="Docker" class="w-4 h-4" data-alt="Docker logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKs4zsE1alJ534Alu8vfVCicM_2C5PbyKVWpP8mVaVc8Cq2dyF6Uj6SDYqHfWC8hHE_SqwGsxOW0706AtcoS21wS1uYk6VDpRq6k4BC-gUfDzG7C8Ha0ijS0uZu8wmFKOsweZol0WmUxN0puYRCE-jbnbcL-fnlk91XLGhUjWPqTaK_3LDZNvaPjwG5Zfew9w3IfKX05ic2YyeSIXp3wxDpFg-6T7QpZ-QHoiiIOnCdd3_GKVd81LxPGuItsH6ay9_ZBLmjccyBpY"/>
                             Docker
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="PostgreSQL" class="w-4 h-4" data-alt="PostgreSQL logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeG_qD6-ZstsLWV-51euu_h5PWxKrZbkeBWNsmCd6CfVXE_4aBPVmfNUmdhRkboCJmYw3687sAj9z4Xrf1sq8_oY1OqJjrlmeEqhVeTEpoOrIwW_W3KVgvJ6lap0y-BS9AXq8-L3ejKHtWmUDwKPmJVnq9mN39V6OOCHRcM5MPWMDvaPxCIZ_YqN4_FoVwqH7OwJm1nT5QkQLpQoJKB3jsF9UnDFWM89vw0tVWOIXe-dxHuDVwCztfiEb0GSXBlaB-9-s870TgPsM"/>
                             PostgreSQL
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="AWS" class="w-4 h-4" data-alt="AWS logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcY5YRKZ5N484lckTxIkBzHt6vNsFHuD6bn_3niCrJfHq7CJGejMURVBR55JU4wveLRzPjJgMqpAZ7CxrlDXVy1nLvFEwj2_qKxSOb5OgEXDTxqj1Knr7_a49luOCagUWSHgzQ2y4bDXmmC1JQhPazs8a3NqYMCOGBZvnhonjCkE468XM-oqD4N2TDNBEEqKWYKGjhhXrCL3xXS_WZyZw6Zq9HoYQ9c2RYGRhm7GMHH6MxkrB_H-FdTFKEfuT81ntDoxZ255cSzOg"/>
                             AWS Lambda
                         </span>
-<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-surface dark:bg-slate-800 px-3 py-1.5 text-xs font-medium">
 <img alt="Redis" class="w-4 h-4" data-alt="Redis logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC_hZFbFnS77dz8H_05HhYBgizpyTs0IduIIa3OInpM4ZzbmP3Yr_LO9puj-lCclsOKmbsRVUc6whlKKMPNqXLgvuRybFLbC7HbJrFe1s7CiaJthjcc3VvvVsf41UGdtOA6J4c6VRZvBdcjeQuLdKhMRHld2jrbqmV_PAdzqemjP-G16vtQ8CUWoSZItYMKhdcdBmGTc1LHRX661twIFcXc7RE-7SkOLAZiJMEKdH2w-l9pbRbw4Kg8uypTXArzaZLw-nM-N_530w"/>
                             Redis
                         </span>
 </div>
 </div>
 <!-- Key Challenges -->
-<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#161b22] p-6 shadow-sm">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#161b22] p-6 shadow-sm">
 <h3 class="text-lg font-bold mb-4">Key Challenges</h3>
 <ul class="space-y-4">
 <li class="flex gap-3 text-sm">
 <span class="material-symbols-outlined text-primary shrink-0">psychology</span>
-<span class="text-slate-600 dark:text-slate-300">Handling 10GB+ of daily text data ingestion without latency spikes.</span>
+<span class="text-slate-400 dark:text-slate-300">Handling 10GB+ of daily text data ingestion without latency spikes.</span>
 </li>
 <li class="flex gap-3 text-sm">
 <span class="material-symbols-outlined text-primary shrink-0">security</span>
-<span class="text-slate-600 dark:text-slate-300">Ensuring PII data compliance and encryption at rest.</span>
+<span class="text-slate-400 dark:text-slate-300">Ensuring PII data compliance and encryption at rest.</span>
 </li>
 <li class="flex gap-3 text-sm">
 <span class="material-symbols-outlined text-primary shrink-0">scale</span>
-<span class="text-slate-600 dark:text-slate-300">Auto-scaling inference workers based on queue depth during exam seasons.</span>
+<span class="text-slate-400 dark:text-slate-300">Auto-scaling inference workers based on queue depth during exam seasons.</span>
 </li>
 </ul>
 </div>
 <!-- Learning Outcomes -->
 <div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-primary/20 to-transparent p-6 shadow-sm">
 <h3 class="text-lg font-bold mb-2 text-primary">Key Takeaways</h3>
-<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="text-sm text-slate-400 dark:text-slate-300 leading-relaxed">
                          This project solidified my understanding of event-driven architectures and the practical challenges of deploying ML models in production environments. I learned how to balance cost vs. performance when selecting vector database providers.
                      </p>
 </div>
@@ -316,10 +316,10 @@ export default function ProjectDetail() {
 </div>
 </main>
 <!-- Footer CTA -->
-<section class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B0F15] py-20 mt-12">
+<section className="animate-fade-in" class="border-t border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#0B0F15] py-20 mt-12">
 <div class="max-w-[960px] mx-auto px-6 text-center">
 <h2 class="text-3xl md:text-4xl font-black mb-6 tracking-tight">Need a robust system like this?</h2>
-<p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
+<p class="text-lg text-slate-400 dark:text-slate-400 mb-8 max-w-xl mx-auto">
                 I specialize in building scalable, secure, and high-performance software solutions. Let's discuss your engineering challenges.
             </p>
 <div class="flex justify-center gap-4">
@@ -335,7 +335,7 @@ export default function ProjectDetail() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -396,9 +396,11 @@ export default function ProjectDetail() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

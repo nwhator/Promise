@@ -34,12 +34,12 @@ export default function Home() {
                 extend: {
                     colors: {
                         "primary": "var(--primary)",
-                        "primary-dark": "var(--primary-dark)",
+                        "primary-dark": "var(--primary)",
                         "background-light": "#f6f6f8",
                         "background-dark": "var(--background)",
                         "card-dark": "var(--surface)",
                         "border-dark": "var(--border)",
-                        "text-main": "var(--foreground)",
+                        "text-main": "#f8fafc",
                         "text-muted": "#94a3b8",
                     },
                     fontFamily: {
@@ -70,7 +70,7 @@ export default function Home() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -99,7 +99,7 @@ export default function Home() {
 <!-- Main Content -->
 <main class="flex-grow pt-16">
 <!-- Hero Section -->
-<section class="relative min-h-[600px] flex items-center justify-center py-20 px-4 overflow-hidden">
+<section className="animate-fade-in" class="relative min-h-[600px] flex items-center justify-center py-20 px-4 overflow-hidden">
 <!-- Decorative Backgrounds -->
 <div class="absolute inset-0 code-bg opacity-20 pointer-events-none"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark pointer-events-none"></div>
@@ -146,7 +146,7 @@ class SystemArchitect(Engineer):
 </div>
 </section>
 <!-- Tech Stack Section -->
-<section class="py-12 border-y border-border-dark bg-[#0b0f16]" id="stack">
+<section className="animate-fade-in" class="py-12 border-y border-border-dark bg-[#0b0f16]" id="stack">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
 <div class="md:w-1/3">
@@ -173,7 +173,7 @@ class SystemArchitect(Engineer):
 </div>
 <!-- Django -->
 <div class="group flex flex-col items-center justify-center p-4 rounded-xl card-premium border border-border-dark hover:border-primary/50 hover:card-premium/80 transition-all duration-300 cursor-default">
-<div class="w-12 h-12 flex items-center justify-center text-text-muted group-hover:text-[#092E20] group-hover:bg-white/90 group-hover:rounded-full group-hover:p-1 transition-all mb-3">
+<div class="w-12 h-12 flex items-center justify-center text-text-muted group-hover:text-[#092E20] group-hover:bg-surface/90 group-hover:rounded-full group-hover:p-1 transition-all mb-3">
 <svg class="w-full h-full" fill="currentColor" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.143 0c-3.774 0-6.19 1.83-6.19 4.363 0 1.94 1.764 3.036 3.69 3.32v.065c-2.038.307-4.254 1.643-4.254 4.54 0 3.354 3.003 6.066 8.09 6.066 2.016 0 3.602-.285 4.982-.68V4.867C17.46 2.072 14.54 0 11.142 0zm6.32 17.67c-1.38.395-2.966.68-4.982.68-3.07 0-4.85-1.36-4.85-3.09 0-1.84 1.754-2.85 4.337-3.048v5.592c0 .022.022-.044.022-.132h5.473v.11c0 3.266 2.543 6.094 5.955 6.22h.9v-2.895h-.35c-1.776 0-2.434-1.25-2.434-2.894V5.723H24V3.07h-2.52v-.022c0-1.184-.964-1.95-2.477-1.95-1.95 0-3.157 1.25-3.157 3.31v13.264zM11.69 3.047c2.237 0 3.99.965 3.99 2.565v3.42c-2.016.154-3.536-.767-3.536-2.61 0-1.84 1.556-3.375-3.047-3.375h2.59z"></path></svg>
 </div>
 <span class="text-sm font-bold text-white">Django</span>
@@ -190,7 +190,7 @@ class SystemArchitect(Engineer):
 </div>
 </section>
 <!-- Projects Section -->
-<section class="py-24 bg-background-light dark:bg-background-dark relative" id="projects">
+<section className="animate-fade-in" class="py-24 bg-background dark:bg-background-dark relative" id="projects">
 <div class="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -271,7 +271,7 @@ class SystemArchitect(Engineer):
 </div>
 </section>
 <!-- CTA Section -->
-<section class="py-20 border-t border-border-dark bg-[#0b0f16]">
+<section className="animate-fade-in" class="py-20 border-t border-border-dark bg-[#0b0f16]">
 <div class="max-w-4xl mx-auto px-4 text-center">
 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to scale your next project?</h2>
 <p class="text-text-muted mb-8 text-lg">
@@ -296,7 +296,7 @@ class SystemArchitect(Engineer):
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -357,9 +357,11 @@ class SystemArchitect(Engineer):
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

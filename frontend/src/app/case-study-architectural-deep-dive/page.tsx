@@ -60,7 +60,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -88,7 +88,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 <!-- Main Wrapper -->
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative border-b border-surface-border bg-surface-dark">
+<section className="animate-fade-in" class="relative border-b border-surface-border bg-surface-dark">
 <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
 <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
 <div class="flex flex-col gap-6">
@@ -106,7 +106,7 @@ export default function CaseStudyArchitecturalDeepDive() {
                             Architecting a scalable, event-driven solution for the Federal Ministry of Education to ensure academic integrity across 50M+ records nationwide.
                         </p>
 <div class="flex gap-4 pt-4">
-<button class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-bold text-slate-900 hover:bg-slate-200 transition-colors">
+<button class="inline-flex items-center gap-2 rounded-lg bg-surface px-6 py-3 text-sm font-bold text-foreground hover:bg-slate-200 transition-colors">
 <span class="material-symbols-outlined text-[20px]">open_in_new</span>
                                 View Live Site
                             </button>
@@ -167,7 +167,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary ring-2 ring-surface-dark text-xs font-bold text-white">NP</div>
 <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 ring-2 ring-surface-dark text-xs font-bold text-white" title="Frontend Dev">FD</div>
 <div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-600 ring-2 ring-surface-dark text-xs font-bold text-white" title="DevOps">DO</div>
-<div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-500 ring-2 ring-surface-dark text-xs font-bold text-white">+2</div>
+<div class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface0 ring-2 ring-surface-dark text-xs font-bold text-white">+2</div>
 </div>
 </div>
 </div>
@@ -175,7 +175,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 <!-- Deep Dive Content -->
 <div class="lg:col-span-8 xl:col-span-9 space-y-16">
 <!-- 01 The Challenge -->
-<section class="scroll-mt-24" id="challenge">
+<section className="animate-fade-in" class="scroll-mt-24" id="challenge">
 <div class="flex items-center gap-4 mb-6">
 <span class="text-primary font-mono text-xl font-bold">01.</span>
 <h2 class="text-3xl font-bold text-white">The Challenge</h2>
@@ -196,7 +196,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 </div>
 </section>
 <!-- 02 The Architecture -->
-<section class="scroll-mt-24" id="architecture">
+<section className="animate-fade-in" class="scroll-mt-24" id="architecture">
 <div class="flex items-center gap-4 mb-6">
 <span class="text-primary font-mono text-xl font-bold">02.</span>
 <h2 class="text-3xl font-bold text-white">The Architecture</h2>
@@ -236,7 +236,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 </div>
 </section>
 <!-- 03 The Solution -->
-<section class="scroll-mt-24" id="solution">
+<section className="animate-fade-in" class="scroll-mt-24" id="solution">
 <div class="flex items-center gap-4 mb-6">
 <span class="text-primary font-mono text-xl font-bold">03.</span>
 <h2 class="text-3xl font-bold text-white">The Solution</h2>
@@ -277,7 +277,7 @@ export default function CaseStudyArchitecturalDeepDive() {
                         </p>
 </section>
 <!-- 04 The Results -->
-<section class="scroll-mt-24" id="results">
+<section className="animate-fade-in" class="scroll-mt-24" id="results">
 <div class="flex items-center gap-4 mb-8">
 <span class="text-primary font-mono text-xl font-bold">04.</span>
 <h2 class="text-3xl font-bold text-white">The Results</h2>
@@ -336,7 +336,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 </div>
 </div>
 <!-- Next Project Footer -->
-<section class="border-t border-surface-border bg-[#0a0c10] py-20">
+<section className="animate-fade-in" class="border-t border-surface-border bg-[#0a0c10] py-20">
 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 <div class="mb-10 flex items-center justify-between">
 <h2 class="text-2xl font-bold text-white">More Projects</h2>
@@ -373,7 +373,7 @@ export default function CaseStudyArchitecturalDeepDive() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -434,9 +434,11 @@ export default function CaseStudyArchitecturalDeepDive() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

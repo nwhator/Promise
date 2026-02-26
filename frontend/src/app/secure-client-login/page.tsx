@@ -77,14 +77,14 @@ export default function SecureClientLogin() {
 <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
 <span class="material-symbols-outlined text-white text-[24px]">verified_user</span>
 </div>
-<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Promise Ayobami Nwhator</h1>
+<h1 class="text-2xl font-bold tracking-tight text-foreground dark:text-white">Promise Ayobami Nwhator</h1>
 </div>
 </div>
 <!-- Login Card -->
-<div class="bg-white dark:bg-[#1A202C]/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 rounded-xl shadow-2xl overflow-hidden">
+<div class="bg-surface dark:bg-[#1A202C]/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 rounded-xl shadow-2xl overflow-hidden">
 <!-- Card Header -->
 <div class="px-8 pt-8 pb-4">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Client Portal Access</h2>
+<h2 class="text-2xl font-bold text-foreground dark:text-white mb-2">Client Portal Access</h2>
 <p class="text-slate-500 dark:text-slate-400 text-sm">Secure login for Promise Ayobami Nwhator clients</p>
 </div>
 <!-- Card Body -->
@@ -98,7 +98,7 @@ export default function SecureClientLogin() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
 <span class="material-symbols-outlined text-[20px]">person</span>
 </div>
-<input class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all shadow-sm" id="client-id" placeholder="Enter your Client ID or Email" type="text"/>
+<input class="w-full pl-10 pr-4 py-3 bg-surface dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all shadow-sm" id="client-id" placeholder="Enter your Client ID or Email" type="text"/>
 </div>
 </div>
 <!-- Input: Password -->
@@ -115,8 +115,8 @@ export default function SecureClientLogin() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
 <span class="material-symbols-outlined text-[20px]">lock</span>
 </div>
-<input class="w-full pl-10 pr-10 py-3 bg-slate-50 dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all shadow-sm" id="password" placeholder="Enter your password" type="password"/>
-<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer transition-colors focus:outline-none">
+<input class="w-full pl-10 pr-10 py-3 bg-surface dark:bg-[#282e39] border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-foreground dark:text-white placeholder-slate-400 dark:placeholder-slate-500 transition-all shadow-sm" id="password" placeholder="Enter your password" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 cursor-pointer transition-colors focus:outline-none">
 <span class="material-symbols-outlined text-[20px]">visibility</span>
 </button>
 </div>
@@ -129,7 +129,7 @@ export default function SecureClientLogin() {
 </button>
 </div>
 <!-- Card Footer / Additional Link -->
-<div class="px-8 py-4 bg-slate-50 dark:bg-[#161b25] border-t border-slate-200 dark:border-slate-700/50 flex justify-center">
+<div class="px-8 py-4 bg-surface dark:bg-[#161b25] border-t border-slate-200 dark:border-slate-700/50 flex justify-center">
 <p class="text-sm text-slate-500 dark:text-slate-400">
                     New client? <a class="text-primary font-semibold hover:underline" href="#">Activate account</a>
 </p>
@@ -139,9 +139,9 @@ export default function SecureClientLogin() {
 <div class="mt-8 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-300">
 <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200/50 dark:bg-slate-800/50 border border-slate-300/50 dark:border-slate-700/50 backdrop-blur-sm">
 <span class="material-symbols-outlined text-primary text-[16px]">shield_lock</span>
-<span class="text-xs font-medium text-slate-600 dark:text-slate-400 tracking-wide uppercase">Protected by Promise Ayobami Nwhator Systems</span>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-400 tracking-wide uppercase">Protected by Promise Ayobami Nwhator Systems</span>
 </div>
-<p class="text-[10px] text-slate-400 dark:text-slate-600">v2.4.0 • 256-bit Encryption</p>
+<p class="text-[10px] text-slate-400 dark:text-slate-400">v2.4.0 • 256-bit Encryption</p>
 </div>
 </div>
 
@@ -149,7 +149,7 @@ export default function SecureClientLogin() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -210,9 +210,11 @@ export default function SecureClientLogin() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

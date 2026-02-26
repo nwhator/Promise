@@ -64,7 +64,7 @@ export default function MessagesCollaborationHub() {
 
 
 <!-- Top Navigation -->
-<header class="flex shrink-0 items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318] px-6 py-3 h-16">
+<header class="flex shrink-0 items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#282e39] bg-surface dark:bg-[#111318] px-6 py-3 h-16">
 <div class="flex items-center gap-4">
 <div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
 <span class="material-symbols-outlined">hexagon</span>
@@ -73,10 +73,10 @@ export default function MessagesCollaborationHub() {
 </div>
 <div class="flex flex-1 justify-end gap-8">
 <div class="hidden md:flex items-center gap-9">
-<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-slate-400 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
 <a class="text-primary text-sm font-bold leading-normal relative after:content-[''] after:absolute after:-bottom-[22px] after:left-0 after:w-full after:h-[2px] after:bg-primary" href="#">Communication</a>
-<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Projects</a>
-<a class="text-slate-600 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Settings</a>
+<a class="text-slate-400 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-slate-400 dark:text-white text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Settings</a>
 </div>
 <div class="flex items-center gap-4">
 <button class="text-slate-400 hover:text-white transition-colors">
@@ -89,7 +89,7 @@ export default function MessagesCollaborationHub() {
 <!-- Main Layout: 3 Panes -->
 <div class="flex flex-1 overflow-hidden">
 <!-- Left Sidebar: Conversations -->
-<aside class="w-80 flex-shrink-0 flex flex-col border-r border-slate-200 dark:border-[#282e39] bg-slate-50 dark:bg-[#111318]">
+<aside class="w-80 flex-shrink-0 flex flex-col border-r border-slate-200 dark:border-[#282e39] bg-surface dark:bg-[#111318]">
 <div class="p-4 border-b border-slate-200 dark:border-[#282e39]">
 <div class="flex justify-between items-center mb-4">
 <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Projects</h3>
@@ -102,7 +102,7 @@ export default function MessagesCollaborationHub() {
 <div class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 group-focus-within:text-primary transition-colors">
 <span class="material-symbols-outlined text-[20px]">search</span>
 </div>
-<input class="block w-full rounded-lg border-0 py-1.5 pl-10 pr-3 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-[#282e39] dark:text-white dark:ring-[#282e39] dark:placeholder:text-[#9ca6ba] sm:text-sm sm:leading-6 bg-transparent" placeholder="Filter conversations..."/>
+<input class="block w-full rounded-lg border-0 py-1.5 pl-10 pr-3 text-foreground ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:bg-[#282e39] dark:text-white dark:ring-[#282e39] dark:placeholder:text-[#9ca6ba] sm:text-sm sm:leading-6 bg-transparent" placeholder="Filter conversations..."/>
 </div>
 </label>
 </div>
@@ -115,34 +115,34 @@ export default function MessagesCollaborationHub() {
 </div>
 <div class="flex flex-col min-w-0">
 <div class="flex justify-between items-baseline">
-<p class="text-slate-900 dark:text-white text-sm font-bold leading-normal truncate">Project Alpha</p>
+<p class="text-foreground dark:text-white text-sm font-bold leading-normal truncate">Project Alpha</p>
 <span class="text-[10px] text-primary font-medium">12:40</span>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-xs truncate">Last message: Deployment successful...</p>
 </div>
 </div>
 <!-- Inactive Item -->
-<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
+<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
 <div class="relative flex-shrink-0">
 <div class="bg-center bg-no-repeat bg-cover rounded-lg size-10 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all" data-alt="Abstract code screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn3cqot58xg_1X4UNyJJkTYHkpS126PFLoyu06UR-7YIde3n7bpECHR6dtS8y2lQ6XP91YlcuT24y0BYwVWhhx9A9Xk0ttqUOexL_xc-zgk7gQ7iEeTzXtnkG-6oX25rLMqXtBPhvjWOEfIMSLzMb4FSdH8eg_o_VnrS-F-j5cRmZ4rHLgpqJMz2yrl4RcOx3gfp6w8O622HkeHS6UtCgNpQ9qQaL73d14bqPBNrdDjujkXL11yqp0fl6setjAMTakndYL9wRMqp0");'></div>
 <div class="absolute -bottom-1 -right-1 size-3 rounded-full bg-amber-500 border-2 border-[#111318]"></div>
 </div>
 <div class="flex flex-col min-w-0">
 <div class="flex justify-between items-baseline">
-<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal truncate">API Audit</p>
+<p class="text-foreground dark:text-slate-300 text-sm font-medium leading-normal truncate">API Audit</p>
 <span class="text-[10px] text-slate-500">Yesterday</span>
 </div>
 <p class="text-slate-500 dark:text-slate-500 text-xs truncate font-mono">Pending review on PR #402</p>
 </div>
 </div>
 <!-- Inactive Item -->
-<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
+<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
 <div class="relative flex-shrink-0">
 <div class="bg-center bg-no-repeat bg-cover rounded-lg size-10 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all" data-alt="Colorful gradient blocks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQ7qhVWfidC8UygrXPKHwbNpcVDHPrxk34ybzAsBz8QPa5eWS6pLfo_Zh7HW6TWGqbaDTkgq7xYnQ2TD0dG3pZZwvKX72hSz4f-zKa6HRL5TbcTDgJWvU_9A0TQ6aV-EhiZ6c9w6MK4t4EZrBbjuzEePmVJjdoSX5IEfDRTUUC61WBVE0O42wHkdWhj6-BZuCWIyNMnV04SpV3nOlZV08lxGeL_9l9YZej0hudHtraVcpq4dHn9jM_VXKnB0AkMa-fPFjMPb2Na9M");'></div>
 </div>
 <div class="flex flex-col min-w-0">
 <div class="flex justify-between items-baseline">
-<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal truncate">Q3 Marketing Assets</p>
+<p class="text-foreground dark:text-slate-300 text-sm font-medium leading-normal truncate">Q3 Marketing Assets</p>
 <span class="text-[10px] text-slate-500">Tue</span>
 </div>
 <p class="text-slate-500 dark:text-slate-500 text-xs truncate">Final approval needed from design</p>
@@ -154,19 +154,19 @@ export default function MessagesCollaborationHub() {
 <div class="px-2 pb-2">
 <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Direct Messages</h3>
 </div>
-<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
+<div class="group flex items-center gap-3 p-3 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] cursor-pointer transition-all border-l-4 border-transparent">
 <div class="relative flex-shrink-0">
 <div class="bg-center bg-no-repeat bg-cover rounded-full size-8" data-alt="Portrait of man smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCECu3tiRSLCisAVG2ze55OjHrBlL3D5hq8JTWafu_kpIZ41djGR-K5iLe-zCT7Hap1rajZK3OYA9R7iOKrZr3bcP_pJsTPJ4UpkGtXGJ3Rmf_oduXNjiWIl5OLNR_0l1tRa_Nuh2gDJp-5ramBS0hzjddZXmbL6j-E0GxrAfrKaLZA-dmkMJbDAah00_2mkQn4y6JvVuKA6aH3P2c7-XX7DHi6wUTDgu8MJ-aFQK-piydXVhRz36dxaecp_gd3yNVxC1UB7thioYM");'></div>
 <div class="absolute -bottom-0.5 -right-0.5 size-2.5 rounded-full bg-slate-400 border-2 border-[#111318]"></div>
 </div>
-<p class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal truncate">Alex Chen</p>
+<p class="text-foreground dark:text-slate-300 text-sm font-medium leading-normal truncate">Alex Chen</p>
 </div>
 </div>
 </aside>
 <!-- Main Chat Area -->
-<main class="flex-1 flex flex-col bg-background-light dark:bg-background-dark min-w-0">
+<main class="flex-1 flex flex-col bg-background dark:bg-background-dark min-w-0">
 <!-- Chat Header -->
-<div class="h-16 px-6 border-b border-slate-200 dark:border-[#282e39] flex items-center justify-between bg-white/50 dark:bg-[#111318]/90 backdrop-blur-sm sticky top-0 z-10">
+<div class="h-16 px-6 border-b border-slate-200 dark:border-[#282e39] flex items-center justify-between bg-surface/50 dark:bg-[#111318]/90 backdrop-blur-sm sticky top-0 z-10">
 <div class="flex flex-col">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-[20px]">tag</span>
@@ -176,14 +176,14 @@ export default function MessagesCollaborationHub() {
 <p class="text-xs text-slate-500 dark:text-slate-400 pl-7">Deployment pipeline and infrastructure discussions</p>
 </div>
 <div class="flex items-center gap-2 text-slate-400">
-<button class="p-2 hover:bg-slate-100 dark:hover:bg-[#282e39] rounded-lg transition-colors" title="Pinned Items">
+<button class="p-2 hover:bg-surface-brighter dark:hover:bg-[#282e39] rounded-lg transition-colors" title="Pinned Items">
 <span class="material-symbols-outlined text-[20px]">push_pin</span>
 </button>
-<button class="p-2 hover:bg-slate-100 dark:hover:bg-[#282e39] rounded-lg transition-colors" title="Search in chat">
+<button class="p-2 hover:bg-surface-brighter dark:hover:bg-[#282e39] rounded-lg transition-colors" title="Search in chat">
 <span class="material-symbols-outlined text-[20px]">search</span>
 </button>
 <div class="h-6 w-px bg-slate-200 dark:bg-[#282e39] mx-2"></div>
-<button class="p-2 hover:bg-slate-100 dark:hover:bg-[#282e39] rounded-lg transition-colors text-primary" title="Details">
+<button class="p-2 hover:bg-surface-brighter dark:hover:bg-[#282e39] rounded-lg transition-colors text-primary" title="Details">
 <span class="material-symbols-outlined text-[20px]">info</span>
 </button>
 </div>
@@ -195,13 +195,13 @@ export default function MessagesCollaborationHub() {
 <div class="absolute inset-0 flex items-center">
 <div class="w-full border-t border-slate-200 dark:border-[#282e39]"></div>
 </div>
-<span class="relative bg-background-light dark:bg-background-dark px-4 text-xs font-mono text-slate-500 uppercase">Today</span>
+<span class="relative bg-background dark:bg-background-dark px-4 text-xs font-mono text-slate-500 uppercase">Today</span>
 </div>
 <!-- System Message -->
 <div class="flex justify-center">
-<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39]">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-brighter dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39]">
 <span class="material-symbols-outlined text-[16px] text-primary">rocket_launch</span>
-<span class="text-xs font-mono text-slate-600 dark:text-slate-400">Deployment Pipeline triggered by <strong class="text-slate-900 dark:text-slate-200">@Alex</strong></span>
+<span class="text-xs font-mono text-slate-400 dark:text-slate-400">Deployment Pipeline triggered by <strong class="text-foreground dark:text-slate-200">@Alex</strong></span>
 <span class="text-[10px] text-slate-400">10:23 AM</span>
 </div>
 </div>
@@ -215,7 +215,7 @@ export default function MessagesCollaborationHub() {
 <span class="text-sm font-bold dark:text-white">Alex Chen</span>
 <span class="text-[10px] text-slate-500">10:24 AM</span>
 </div>
-<div class="bg-white dark:bg-[#1e2430] p-4 rounded-r-lg rounded-bl-lg border border-slate-200 dark:border-transparent text-slate-700 dark:text-slate-200 text-sm leading-relaxed shadow-sm">
+<div class="bg-surface dark:bg-[#1e2430] p-4 rounded-r-lg rounded-bl-lg border border-slate-200 dark:border-transparent text-slate-700 dark:text-slate-200 text-sm leading-relaxed shadow-sm">
 <p class="mb-2">Hey team, just triggered the staging deployment. I've updated the schema for the client API to handle the new \`promsie_id\` field.</p>
 <p>Can someone review the JSON structure below?</p>
 </div>
@@ -251,7 +251,7 @@ export default function MessagesCollaborationHub() {
 <p>Looks good to me, Alex. The nested metadata object is exactly what we needed for the frontend render.</p>
 </div>
 <!-- File Attachment -->
-<div class="mt-1 flex items-center gap-3 p-3 bg-white dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39] rounded-lg w-64 hover:border-primary transition-colors cursor-pointer group">
+<div class="mt-1 flex items-center gap-3 p-3 bg-surface dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39] rounded-lg w-64 hover:border-primary transition-colors cursor-pointer group">
 <div class="bg-red-500/10 p-2 rounded text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
 </div>
@@ -273,7 +273,7 @@ export default function MessagesCollaborationHub() {
 <span class="text-sm font-bold dark:text-white">Alex Chen</span>
 <span class="text-[10px] text-slate-500">10:42 AM</span>
 </div>
-<div class="bg-white dark:bg-[#1e2430] p-4 rounded-r-lg rounded-bl-lg border border-slate-200 dark:border-transparent text-slate-700 dark:text-slate-200 text-sm leading-relaxed shadow-sm">
+<div class="bg-surface dark:bg-[#1e2430] p-4 rounded-r-lg rounded-bl-lg border border-slate-200 dark:border-transparent text-slate-700 dark:text-slate-200 text-sm leading-relaxed shadow-sm">
 <p>Great. I'll merge the PR and notify the QA team.</p>
 </div>
 </div>
@@ -290,16 +290,16 @@ export default function MessagesCollaborationHub() {
 </div>
 </div>
 <!-- Input Area -->
-<div class="p-6 pt-2 bg-background-light dark:bg-background-dark sticky bottom-0 z-10">
-<div class="bg-white dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39] rounded-xl shadow-lg flex flex-col focus-within:ring-2 focus-within:ring-primary/50 transition-all">
+<div class="p-6 pt-2 bg-background dark:bg-background-dark sticky bottom-0 z-10">
+<div class="bg-surface dark:bg-[#1e2430] border border-slate-200 dark:border-[#282e39] rounded-xl shadow-lg flex flex-col focus-within:ring-2 focus-within:ring-primary/50 transition-all">
 <!-- Formatting Toolbar -->
 <div class="flex items-center gap-1 p-2 border-b border-slate-100 dark:border-[#282e39]/50">
-<button class="p-1.5 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
-<button class="p-1.5 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
-<button class="p-1.5 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:bg-surface-brighter dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:bg-surface-brighter dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:bg-surface-brighter dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
 <div class="w-px h-4 bg-slate-200 dark:bg-[#282e39] mx-1"></div>
-<button class="p-1.5 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">code</span></button>
-<button class="p-1.5 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:bg-surface-brighter dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">code</span></button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-400 dark:hover:text-slate-200 hover:bg-surface-brighter dark:hover:bg-[#282e39] transition-colors"><span class="material-symbols-outlined text-[18px]">add_link</span></button>
 </div>
 <div class="flex items-end gap-2 p-3">
 <button class="p-2 rounded-full text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors self-end mb-1">
@@ -314,7 +314,7 @@ export default function MessagesCollaborationHub() {
 </div>
 </main>
 <!-- Right Sidebar: Context -->
-<aside class="w-72 flex-shrink-0 flex flex-col border-l border-slate-200 dark:border-[#282e39] bg-slate-50 dark:bg-[#161b26] hidden lg:flex">
+<aside class="w-72 flex-shrink-0 flex flex-col border-l border-slate-200 dark:border-[#282e39] bg-surface dark:bg-[#161b26] hidden lg:flex">
 <!-- Participants -->
 <div class="flex flex-col p-4 border-b border-slate-200 dark:border-[#282e39] gap-4">
 <div class="flex items-center justify-between">
@@ -361,7 +361,7 @@ export default function MessagesCollaborationHub() {
 <span class="text-xs text-primary font-medium hover:underline cursor-pointer">All files</span>
 </div>
 <div class="flex flex-col gap-2 overflow-y-auto max-h-[300px] pr-1">
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] group transition-colors" href="#">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] group transition-colors" href="#">
 <div class="size-8 rounded flex items-center justify-center bg-red-500/10 text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
 </div>
@@ -370,7 +370,7 @@ export default function MessagesCollaborationHub() {
 <span class="text-[10px] text-slate-500">Yesterday • 1.2 MB</span>
 </div>
 </a>
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] group transition-colors" href="#">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] group transition-colors" href="#">
 <div class="size-8 rounded flex items-center justify-center bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-[18px]">image</span>
 </div>
@@ -379,8 +379,8 @@ export default function MessagesCollaborationHub() {
 <span class="text-[10px] text-slate-500">Oct 24 • 450 KB</span>
 </div>
 </a>
-<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1e2430] group transition-colors" href="#">
-<div class="size-8 rounded flex items-center justify-center bg-slate-500/10 text-slate-500 group-hover:bg-slate-500 group-hover:text-white transition-colors">
+<a class="flex items-center gap-3 p-2 rounded-lg hover:bg-surface-brighter dark:hover:bg-[#1e2430] group transition-colors" href="#">
+<div class="size-8 rounded flex items-center justify-center bg-surface0/10 text-slate-500 group-hover:bg-surface0 group-hover:text-white transition-colors">
 <span class="material-symbols-outlined text-[18px]">data_object</span>
 </div>
 <div class="flex flex-col flex-1 min-w-0">
@@ -409,7 +409,7 @@ export default function MessagesCollaborationHub() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -470,9 +470,11 @@ export default function MessagesCollaborationHub() {
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>

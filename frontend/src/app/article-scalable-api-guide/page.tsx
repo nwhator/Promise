@@ -72,7 +72,7 @@ export default function ArticleScalableApiGuide() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -100,7 +100,7 @@ export default function ArticleScalableApiGuide() {
 <!-- Main Article Layout -->
 <main class="flex-grow">
 <!-- Hero Section -->
-<div class="relative w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#161b26]">
+<div class="relative w-full border-b border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#161b26]">
 <!-- Decorative gradient -->
 <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
 <div class="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
@@ -111,14 +111,14 @@ export default function ArticleScalableApiGuide() {
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 <a class="hover:text-primary transition-colors" href="#">Blog</a>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-slate-900 dark:text-white font-medium">API Guide</span>
+<span class="text-foreground dark:text-white font-medium">API Guide</span>
 </nav>
 <!-- Title -->
-<h1 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl mb-6 leading-[1.15]">
+<h1 class="text-4xl font-extrabold tracking-tight text-foreground dark:text-white sm:text-5xl lg:text-6xl mb-6 leading-[1.15]">
                         How to Build Scalable APIs with FastAPI
                     </h1>
 <!-- Description -->
-<p class="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl">
+<p class="text-xl text-slate-400 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl">
                         A comprehensive guide to building high-performance, asynchronous APIs using Python's modern web framework and best practices for production deployment.
                     </p>
 <!-- Meta Data Row -->
@@ -127,7 +127,7 @@ export default function ArticleScalableApiGuide() {
 <div class="flex items-center gap-4">
 <div class="h-12 w-12 overflow-hidden rounded-full ring-2 ring-primary/20 dark:ring-primary/40 bg-slate-800" data-alt="Promise Ayobami Nwhator Portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOSHuz7ZV7lzLuEtE8kuTYI78EC3_3-uiYVsNBidOQzoV1839yu_oZFUd6j6F9YrXvRtOYsAVrjSK-gb5Bipg8HdFOZ_FqcsqlzOIQZr8mDASTQcB_t531fh06nJ_X4tdNWgNbuls26GojXkIr09NFBM9k50gT62Jeec8Lm6qV8lSq--kZvNVj_MkvYXJPu6klu6l7KJv9c2XZSO2Cb4Q0JCrASH9Q2P5Rv5ydP-uWIVS738MGlKoEJNBSnf_pbuXaAJ0VlKIFb9I"); background-size: cover; background-position: center;'></div>
 <div>
-<div class="font-bold text-slate-900 dark:text-white text-base">Promise Ayobami Nwhator</div>
+<div class="font-bold text-foreground dark:text-white text-base">Promise Ayobami Nwhator</div>
 <div class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-2">
 <span>Oct 24, 2023</span>
 <span class="h-1 w-1 rounded-full bg-slate-400"></span>
@@ -138,13 +138,13 @@ export default function ArticleScalableApiGuide() {
 <!-- Social Share -->
 <div class="flex items-center gap-3">
 <span class="text-sm font-medium text-slate-500 dark:text-slate-400 hidden sm:block">Share:</span>
-<button aria-label="Share on Twitter" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#1DA1F2] transition-colors">
+<button aria-label="Share on Twitter" class="p-2 rounded-full hover:bg-surface-brighter dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#1DA1F2] transition-colors">
 <span class="material-symbols-outlined text-xl">ios_share</span>
 </button>
-<button aria-label="Share on LinkedIn" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] transition-colors">
+<button aria-label="Share on LinkedIn" class="p-2 rounded-full hover:bg-surface-brighter dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-[#0A66C2] transition-colors">
 <span class="material-symbols-outlined text-xl">link</span>
 </button>
-<button aria-label="Save to favorites" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-red-500 transition-colors">
+<button aria-label="Save to favorites" class="p-2 rounded-full hover:bg-surface-brighter dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-red-500 transition-colors">
 <span class="material-symbols-outlined text-xl">favorite</span>
 </button>
 </div>
@@ -162,21 +162,21 @@ export default function ArticleScalableApiGuide() {
 <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20">#API</span>
 <span class="inline-flex items-center rounded-md bg-primary/10 px-2.5 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/20">#FastAPI</span>
 </div>
-<p class="lead text-xl text-slate-600 dark:text-slate-300">
+<p class="lead text-xl text-slate-400 dark:text-slate-300">
                         When building modern web applications, the choice of backend framework can significantly impact your development velocity and application performance. FastAPI has emerged as a top contender for Python developers.
                     </p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6 scroll-mt-24" id="why-fastapi">Why FastAPI?</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-6">
+<h2 class="text-2xl font-bold text-foreground dark:text-white mt-12 mb-6 scroll-mt-24" id="why-fastapi">Why FastAPI?</h2>
+<p class="text-slate-400 dark:text-slate-300 mb-6">
                         FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. The key features include:
                     </p>
-<ul class="list-disc pl-6 space-y-2 text-slate-600 dark:text-slate-300 mb-8 marker:text-primary">
+<ul class="list-disc pl-6 space-y-2 text-slate-400 dark:text-slate-300 mb-8 marker:text-primary">
 <li><strong>Fast</strong>: Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic).</li>
 <li><strong>Fast to code</strong>: Increase the speed to develop features by about 200% to 300%.</li>
 <li><strong>Fewer bugs</strong>: Reduce about 40% of human (developer) induced errors.</li>
 <li><strong>Intuitive</strong>: Great editor support. Completion everywhere. Less time debugging.</li>
 </ul>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6 scroll-mt-24" id="project-setup">Project Setup &amp; Structure</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-6">
+<h2 class="text-2xl font-bold text-foreground dark:text-white mt-12 mb-6 scroll-mt-24" id="project-setup">Project Setup &amp; Structure</h2>
+<p class="text-slate-400 dark:text-slate-300 mb-6">
                         Let's start by setting up a robust project structure. Separation of concerns is crucial for scalability.
                     </p>
 <!-- Code Block Component -->
@@ -190,7 +190,7 @@ export default function ArticleScalableApiGuide() {
 </div>
 </div>
 <div class="relative group">
-<button class="absolute right-4 top-4 hidden items-center rounded bg-white/10 px-2 py-1 text-xs font-medium text-white backdrop-blur group-hover:flex hover:bg-white/20">
+<button class="absolute right-4 top-4 hidden items-center rounded bg-surface/10 px-2 py-1 text-xs font-medium text-white backdrop-blur group-hover:flex hover:bg-surface/20">
 <span class="material-symbols-outlined text-[14px] mr-1">content_copy</span> Copy
                             </button>
 <pre class="custom-scrollbar overflow-x-auto p-4 text-sm leading-relaxed text-slate-300"><code class="language-python"><span class="text-purple-400">from</span> fastapi <span class="text-purple-400">import</span> FastAPI, Depends, HTTPException
@@ -218,8 +218,8 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
     <span class="text-purple-400">return</span> crud.create_user(db=db, user=user)</code></pre>
 </div>
 </div>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6 scroll-mt-24" id="async-db">Async Database Operations</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-6">
+<h2 class="text-2xl font-bold text-foreground dark:text-white mt-12 mb-6 scroll-mt-24" id="async-db">Async Database Operations</h2>
+<p class="text-slate-400 dark:text-slate-300 mb-6">
                         One of the main advantages of FastAPI is its native support for asynchronous programming. When dealing with I/O bound operations like database queries, using <code>async</code> and <code>await</code> can dramatically improve throughput.
                     </p>
 <!-- Callout Component -->
@@ -227,16 +227,16 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-2xl">info</span>
 <div>
-<h4 class="text-base font-bold text-slate-900 dark:text-white">Performance Tip</h4>
-<p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Always ensure your database driver supports asyncio. For PostgreSQL, <code class="bg-slate-200 dark:bg-slate-700 rounded px-1 text-primary">asyncpg</code> is highly recommended over standard psycopg2 for async workloads.</p>
+<h4 class="text-base font-bold text-foreground dark:text-white">Performance Tip</h4>
+<p class="mt-2 text-sm text-slate-400 dark:text-slate-300">Always ensure your database driver supports asyncio. For PostgreSQL, <code class="bg-slate-200 dark:bg-slate-700 rounded px-1 text-primary">asyncpg</code> is highly recommended over standard psycopg2 for async workloads.</p>
 </div>
 </div>
 </div>
-<p class="text-slate-600 dark:text-slate-300 mb-6">
-                        By integrating <code class="text-sm font-mono bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-pink-500">SQLAlchemy 1.4+</code> or <code class="text-sm font-mono bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-pink-500">Tortoise ORM</code>, you can maintain clean code while leveraging non-blocking database calls.
+<p class="text-slate-400 dark:text-slate-300 mb-6">
+                        By integrating <code class="text-sm font-mono bg-surface-brighter dark:bg-slate-800 px-1 py-0.5 rounded text-pink-500">SQLAlchemy 1.4+</code> or <code class="text-sm font-mono bg-surface-brighter dark:bg-slate-800 px-1 py-0.5 rounded text-pink-500">Tortoise ORM</code>, you can maintain clean code while leveraging non-blocking database calls.
                     </p>
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6 scroll-mt-24" id="deployment">Deployment Strategies</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-6">
+<h2 class="text-2xl font-bold text-foreground dark:text-white mt-12 mb-6 scroll-mt-24" id="deployment">Deployment Strategies</h2>
+<p class="text-slate-400 dark:text-slate-300 mb-6">
                        For production, you should use Gunicorn with Uvicorn workers. This provides the process management of Gunicorn with the speed of Uvicorn.
                     </p>
 <!-- Subscribe Card Inline -->
@@ -247,7 +247,7 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 <h3 class="text-2xl font-bold text-white mb-3">Enjoying the article?</h3>
 <p class="text-slate-300 mb-8 max-w-lg mx-auto">Get notified about new articles on System Design, Python, and scalable architecture directly in your inbox.</p>
 <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-<input class="flex-1 rounded-lg border-0 bg-white/10 px-4 py-3 text-white placeholder-slate-400 ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Enter your email" type="email"/>
+<input class="flex-1 rounded-lg border-0 bg-surface/10 px-4 py-3 text-white placeholder-slate-400 ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Enter your email" type="email"/>
 <button class="rounded-lg bg-primary px-5 py-3 text-sm font-bold text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-slate-800" type="submit">Subscribe</button>
 </form>
 <p class="mt-4 text-xs text-slate-500">No spam, unsubscribe anytime.</p>
@@ -259,7 +259,7 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 <div class="sticky top-24 space-y-8">
 <!-- Table of Contents -->
 <div>
-<h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Table of Contents</h3>
+<h3 class="text-sm font-bold uppercase tracking-wider text-foreground dark:text-white mb-4">Table of Contents</h3>
 <nav class="border-l border-slate-200 dark:border-slate-800">
 <ul class="space-y-1">
 <li>
@@ -279,26 +279,26 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 </div>
 <!-- Related Articles -->
 <div>
-<h3 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Related Articles</h3>
+<h3 class="text-sm font-bold uppercase tracking-wider text-foreground dark:text-white mb-4">Related Articles</h3>
 <div class="flex flex-col gap-4">
 <a class="group flex gap-3 items-start" href="#">
 <div class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-800" data-alt="Abstract blue container pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCk4CM4pyuGBbPDsu4DoLflDTry75gGzisVSnO_tuce6qnEAHyxbxnXPklXzG_wJlRS97NLPZyxngSU3EmzZK1YdHb6RjNlJ0CdxyAYuntIAvXhUqoDvHiz7T22leCrKb1Z3IO8rsuQAUzG3OnZn6Ls_0Y6ttI_uZqlyYvxu1Dac9zmUxu6Ue2k6I9Vm4nSb-Ujsu55gzEFfwvlTlPg2RcerKk1Az92AzwwxikPIZ01s9xejuka2LKjQm1L4gMZPsAQ3W24AHToc4I"); background-size: cover;'></div>
 <div>
-<h4 class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">Containerizing Python Apps with Docker</h4>
+<h4 class="text-sm font-semibold text-foreground dark:text-white group-hover:text-primary transition-colors line-clamp-2">Containerizing Python Apps with Docker</h4>
 <p class="text-xs text-slate-500 mt-1">Sep 12 • 6 min read</p>
 </div>
 </a>
 <a class="group flex gap-3 items-start" href="#">
 <div class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-800" data-alt="Abstract grid lines" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMRqTj-LKGl0d_bXT977w-npFtDf6Q9EmKAvPk7fvEwVvzMu8R-8Wq_3qtD_9CsdxuJyvwYaF-oPj9HSiIABuSQDlCm6P1_bbcVUQQpg4U2G2NAst3qBPaXa5K9Vdy3gLlprWIeX_Ffdj05RfmwK7I_p3hJiWkKB7y-gKemhg108BuzMBIxisQeEd6OhLfmjuB6LPIFthXNikZxAMMr19LWGN5ZFM195-y3RIkymRl5o4GWcKGMC5kNsFNBS2pQ9bmR9zcQOXekZo"); background-size: cover;'></div>
 <div>
-<h4 class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">System Design Interview Guide: Load Balancers</h4>
+<h4 class="text-sm font-semibold text-foreground dark:text-white group-hover:text-primary transition-colors line-clamp-2">System Design Interview Guide: Load Balancers</h4>
 <p class="text-xs text-slate-500 mt-1">Aug 05 • 12 min read</p>
 </div>
 </a>
 <a class="group flex gap-3 items-start" href="#">
 <div class="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-800" data-alt="Code snippets on screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRgFDE32qcZLfSC0SOYHB2UeYyIHB_iW8ntszAjLPy47QujnmdeRy9doMmQm5pVjGWq0VyUgOMcdA5TeilVFF7MZ6d1x_U5F7_fFQWu5nJXnpa1p1AJ3dDCIqLlb2Nxy8hco-DIFyABSvac3tGHEIUwPz2K8z9nZRBfseL3CIoLQZNtNOcyq1UFmC8pJcXh_wNLzjb_phTSuimN52mTLyF6hMJO-v1B0shDFGMJa-vuXSbL1oUgGAyrjS0PtpWdJ7X8MshJ2Ibi-s"); background-size: cover;'></div>
 <div>
-<h4 class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2">Effective Unit Testing in Python</h4>
+<h4 class="text-sm font-semibold text-foreground dark:text-white group-hover:text-primary transition-colors line-clamp-2">Effective Unit Testing in Python</h4>
 <p class="text-xs text-slate-500 mt-1">Jul 22 • 5 min read</p>
 </div>
 </a>
@@ -309,56 +309,56 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 </div>
 </div>
 <!-- Read Next Section (Mobile/Bottom) -->
-<div class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#161b26] py-16">
+<div class="border-t border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#161b26] py-16">
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between mb-8">
-<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Read Next</h2>
+<h2 class="text-2xl font-bold text-foreground dark:text-white">Read Next</h2>
 <a class="text-sm font-medium text-primary hover:text-primary/80 flex items-center gap-1" href="#">View all posts <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
 </div>
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 <!-- Card 1 -->
-<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1">
+<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1">
 <div class="h-48 w-full bg-slate-800" data-alt="Abstract server rack illustration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEc9BudCbf9-LCm_bp0H4m8OOSB-ZHXzQqoCgpYlOnKDvpoyFxmm193VZQgmJ0ywG7w1mEVYZ94kf6n9N192eY3FyzeeDcN3ke5l51m3cUrMudxL8OH0l9eAwelARGRNlJpKFSXPPNi96Kx6ekXLwPLQKkwuTBfxzu8215poOwV2gIddnpvMBPB9XgQLINKjo5nxnLxneg_yKA39t0v_tPAKVbaWC-VlOp-HFNgDGCm9Vv62dhrcCKvDnkP0EK2yp07_mRhBNJCVU"); background-size: cover; background-position: center;'></div>
 <div class="flex flex-1 flex-col p-6">
 <div class="flex gap-2 mb-3">
 <span class="rounded bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Architecture</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Microservices vs Monoliths</h3>
-<p class="mb-4 flex-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">Understanding the trade-offs when choosing an architecture for your next big project.</p>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">Microservices vs Monoliths</h3>
+<p class="mb-4 flex-1 text-sm text-slate-400 dark:text-slate-400 line-clamp-3">Understanding the trade-offs when choosing an architecture for your next big project.</p>
 <div class="flex items-center gap-2 text-xs text-slate-500">
-<span class="font-medium text-slate-900 dark:text-white">Promise Ayobami Nwhator</span>
+<span class="font-medium text-foreground dark:text-white">Promise Ayobami Nwhator</span>
 <span>•</span>
 <span>Nov 02, 2023</span>
 </div>
 </div>
 </article>
 <!-- Card 2 -->
-<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1">
+<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1">
 <div class="h-48 w-full bg-slate-800" data-alt="Abstract gradient waves" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVGWvAF5q9UdYAjdMF6mLdB--CG1M-6bRyZKx6zCsDkrYn51gZVhmjJDJuHETozy-9EQxNQuHE-QswnZAhrcKTKzmGciLYm-_5iSIiNKpDuAub5gDoGqEmN4yKUnDyyVAX4vWNKV5-aiRo9B8xm4tTR1Lm4E385vPl2JpPJhZmxoGnkyBRDA7wYfGglQRQDCb4c3cGrW02ADVJtcmHryojO54VMDqhtDFywFTa_TM9KgWlwh26T0hHqaCODQyVhxFSJDxckStAmvg"); background-size: cover; background-position: center;'></div>
 <div class="flex flex-1 flex-col p-6">
 <div class="flex gap-2 mb-3">
 <span class="rounded bg-purple-500/10 px-2 py-0.5 text-xs font-medium text-purple-500">API</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">GraphQL vs REST: Which to choose?</h3>
-<p class="mb-4 flex-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">A deep dive into the pros and cons of GraphQL and REST APIs for frontend consumption.</p>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">GraphQL vs REST: Which to choose?</h3>
+<p class="mb-4 flex-1 text-sm text-slate-400 dark:text-slate-400 line-clamp-3">A deep dive into the pros and cons of GraphQL and REST APIs for frontend consumption.</p>
 <div class="flex items-center gap-2 text-xs text-slate-500">
-<span class="font-medium text-slate-900 dark:text-white">Promise Ayobami Nwhator</span>
+<span class="font-medium text-foreground dark:text-white">Promise Ayobami Nwhator</span>
 <span>•</span>
 <span>Oct 15, 2023</span>
 </div>
 </div>
 </article>
 <!-- Card 3 -->
-<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1 sm:hidden lg:flex">
+<article class="flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-[#111621] transition-all hover:shadow-lg hover:-translate-y-1 sm:hidden lg:flex">
 <div class="h-48 w-full bg-slate-800" data-alt="Keyboard and coffee setup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHzbUd_RWy63k3BoQCXVTCMsndkPYtp4-oC7UU3RXJrkT5C9TOpHd13qJk-HUEPXqU9pikPYO-IQZYRw3tNXLXffMSpxcOybUwjCAPpv9cXNAV5eWg3S3mRQUr_5o5IaY2xb4ZdPVQsRokYH6cb8Fd4TXeTIMb54na3JRotynvXaZInjZh7S9vt9hikWY-RFK3PGUk-sOJk13OZwdOFMIC6YCBEtcPEXKjXMEZP7TsTmq1F0BRNTusKnFgUpz49Lz1DhRdVI9dJzo"); background-size: cover; background-position: center;'></div>
 <div class="flex flex-1 flex-col p-6">
 <div class="flex gap-2 mb-3">
 <span class="rounded bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-500">Career</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">My Developer Productivity Stack</h3>
-<p class="mb-4 flex-1 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">Tools, plugins, and habits that help me stay focused and code faster.</p>
+<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">My Developer Productivity Stack</h3>
+<p class="mb-4 flex-1 text-sm text-slate-400 dark:text-slate-400 line-clamp-3">Tools, plugins, and habits that help me stay focused and code faster.</p>
 <div class="flex items-center gap-2 text-xs text-slate-500">
-<span class="font-medium text-slate-900 dark:text-white">Promise Ayobami Nwhator</span>
+<span class="font-medium text-foreground dark:text-white">Promise Ayobami Nwhator</span>
 <span>•</span>
 <span>Sep 28, 2023</span>
 </div>
@@ -375,7 +375,7 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav mt-8">
+<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -436,9 +436,11 @@ app = FastAPI(title=<span class="text-green-400">"Scalable App"</span>)
 
   `;
   return (
-    <div className="stitch-page-root">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
-      <div className="relative">
+    <div className="stitch-page-root overflow-hidden">
+      {/* Dynamic Background Glow */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
+      
+      <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
     </div>
