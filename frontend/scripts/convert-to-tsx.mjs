@@ -73,7 +73,18 @@ function extractHeadAndBody(html) {
 function convertHtmlToTsx(htmlContent, componentName, slug) {
     const extracted = extractHeadAndBody(htmlContent);
     let cleanHtml = extracted.html
-        // replace links logic (simple normalisation)
+        // Replace hardcoded legacy colors with the new premium theme variables
+        .replace(/"primary":\s*"#[^"]*"/gi, '"primary": "var(--primary)"')
+        .replace(/"primary-dark":\s*"#[^"]*"/gi, '"primary-dark": "var(--primary-dark)"')
+        .replace(/"background-dark":\s*"#[^"]*"/gi, '"background-dark": "var(--background)"')
+        .replace(/"card-dark":\s*"#[^"]*"/gi, '"card-dark": "var(--surface)"')
+        .replace(/"border-dark":\s*"#[^"]*"/gi, '"border-dark": "var(--border)"')
+        .replace(/"text-main":\s*"#[^"]*"/gi, '"text-main": "var(--foreground)"')
+        // Add extra premium styling to headers and common sections
+        .replace(/bg-background-dark\/90/g, 'glass-nav')
+        .replace(/bg-background-dark\/95/g, 'glass-nav')
+        .replace(/bg-card-dark/g, 'card-premium')
+        // Replace links logic (simple normalisation)
         .replace(/href="https:\/\/github\.com\/?([^"]*)"/gi, 'href="https://github.com/nwhator"')
         .replace(/href="https:\/\/linkedin\.com\/?([^"]*)"/gi, 'href="https://linkedin.com/in/nwhator"');
 
@@ -101,7 +112,10 @@ export default function ${componentName}() {
   \`;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

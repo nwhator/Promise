@@ -26,12 +26,12 @@ export default function Projects() {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#2463eb",
-                        "primary-dark": "#1d4ed8",
+                        "primary": "var(--primary)",
+                        "primary-dark": "var(--primary-dark)",
                         "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                        "card-dark": "#1a202c",
-                        "border-dark": "#2d3748",
+                        "background-dark": "var(--background)",
+                        "card-dark": "var(--surface)",
+                        "border-dark": "var(--border)",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"],
@@ -69,7 +69,7 @@ export default function Projects() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -305,7 +305,7 @@ export default function Projects() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -367,7 +367,10 @@ export default function Projects() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

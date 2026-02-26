@@ -31,12 +31,12 @@ export default function ClientDashboard() {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0d7ff2",
+                        "primary": "var(--primary)",
                         "primary-hover": "#0b6bcb",
                         "background-light": "#f5f7f8",
-                        "background-dark": "#101922",
-                        "card-dark": "#1a2430",
-                        "border-dark": "#2a3645",
+                        "background-dark": "var(--background)",
+                        "card-dark": "var(--surface)",
+                        "border-dark": "var(--border)",
                     },
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"]
@@ -115,7 +115,7 @@ export default function ClientDashboard() {
 <p class="mt-1 text-slate-400">Current Phase: <span class="text-primary font-medium">Backend Architecture</span></p>
 </div>
 <div class="flex gap-3">
-<button class="flex items-center gap-2 rounded-lg border border-border-dark bg-card-dark px-4 py-2 text-sm font-medium text-white hover:bg-border-dark transition-colors">
+<button class="flex items-center gap-2 rounded-lg border border-border-dark card-premium px-4 py-2 text-sm font-medium text-white hover:bg-border-dark transition-colors">
 <span class="material-symbols-outlined text-[20px]">description</span>
                             View Docs
                         </button>
@@ -130,7 +130,7 @@ export default function ClientDashboard() {
 <!-- Left Column (2/3 width) -->
 <div class="flex flex-col gap-6 lg:col-span-2">
 <!-- Main Status Card -->
-<div class="relative overflow-hidden rounded-xl border border-border-dark bg-card-dark p-6 shadow-sm">
+<div class="relative overflow-hidden rounded-xl border border-border-dark card-premium p-6 shadow-sm">
 <div class="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-primary/10 blur-3xl"></div>
 <div class="mb-6 flex items-end justify-between">
 <div>
@@ -158,7 +158,7 @@ export default function ClientDashboard() {
 </div>
 </div>
 <!-- Milestones Timeline -->
-<div class="rounded-xl border border-border-dark bg-card-dark p-6">
+<div class="rounded-xl border border-border-dark card-premium p-6">
 <div class="mb-6 flex items-center justify-between">
 <h3 class="text-lg font-semibold text-white">Milestones</h3>
 <button class="text-xs font-medium text-primary hover:text-primary-hover">View Full Roadmap</button>
@@ -225,7 +225,7 @@ export default function ClientDashboard() {
 <!-- Right Column (1/3 width) -->
 <div class="flex flex-col gap-6 lg:col-span-1">
 <!-- Recent Activity Feed -->
-<div class="flex flex-col rounded-xl border border-border-dark bg-card-dark">
+<div class="flex flex-col rounded-xl border border-border-dark card-premium">
 <div class="border-b border-border-dark p-4">
 <h3 class="font-semibold text-white">Recent Activity</h3>
 </div>
@@ -273,7 +273,7 @@ export default function ClientDashboard() {
 </div>
 </div>
 <!-- Quick Links / Resources -->
-<div class="rounded-xl border border-border-dark bg-card-dark p-5">
+<div class="rounded-xl border border-border-dark card-premium p-5">
 <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-400">Resources</h3>
 <ul class="space-y-3">
 <li>
@@ -332,7 +332,7 @@ export default function ClientDashboard() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -394,7 +394,10 @@ export default function ClientDashboard() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

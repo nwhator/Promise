@@ -26,10 +26,10 @@ export default function Contact() {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#2463eb",
+                        "primary": "var(--primary)",
                         "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                      "border-dark": "#282d39",
+                        "background-dark": "var(--background)",
+                      "border-dark": "var(--border)",
                       "text-muted": "#94a3b8",
                     },
                     fontFamily: {
@@ -43,7 +43,7 @@ export default function Contact() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -200,7 +200,7 @@ export default function Contact() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -262,7 +262,10 @@ export default function Contact() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

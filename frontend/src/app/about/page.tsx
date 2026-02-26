@@ -26,12 +26,12 @@ export default function About() {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#2463eb",
+                        "primary": "var(--primary)",
                         "background-light": "#f6f6f8",
-                        "background-dark": "#111318", // Matching the provided component bg
-                        "card-dark": "#1c1f27", // Slightly lighter for cards
-                        "border-dark": "#282d39", // Border color from component
-                        "text-main": "#f8fafc",
+                        "background-dark": "var(--background)", // Matching the provided component bg
+                        "card-dark": "var(--surface)", // Slightly lighter for cards
+                        "border-dark": "var(--border)", // Border color from component
+                        "text-main": "var(--foreground)",
                         "text-muted": "#9da6b9",
                     },
                     fontFamily: {
@@ -51,7 +51,7 @@ export default function About() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -85,7 +85,7 @@ export default function About() {
 <aside class="lg:col-span-4 xl:col-span-3">
 <div class="sticky top-24 space-y-6">
 <!-- Profile Card -->
-<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-6 shadow-sm">
+<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:card-premium p-6 shadow-sm">
 <div class="flex flex-col items-center text-center">
 <div class="relative mb-4 h-32 w-32 overflow-hidden rounded-full ring-4 ring-slate-100 dark:ring-border-dark">
 <img alt="Portrait of Promise Ayobami Nwhator" class="h-full w-full object-cover" data-alt="Professional headshot of a software engineer" src="/me.jpeg"/>
@@ -125,7 +125,7 @@ export default function About() {
 <span class="block text-2xl font-black text-primary">3+</span>
 <span class="text-xs font-medium uppercase tracking-wider text-slate-600 dark:text-text-muted">Years Exp.</span>
 </div>
-<div class="rounded-xl bg-slate-100 dark:bg-card-dark border border-slate-200 dark:border-border-dark p-4 text-center">
+<div class="rounded-xl bg-slate-100 dark:card-premium border border-slate-200 dark:border-border-dark p-4 text-center">
 <span class="block text-2xl font-black text-slate-900 dark:text-white">20+</span>
 <span class="text-xs font-medium uppercase tracking-wider text-slate-600 dark:text-text-muted">Projects</span>
 </div>
@@ -158,7 +158,7 @@ export default function About() {
                             </h3>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 <!-- Card 1 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
+<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">code</span>
 </div>
@@ -168,7 +168,7 @@ export default function About() {
                                     </p>
 </div>
 <!-- Card 2 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
+<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">bolt</span>
 </div>
@@ -178,7 +178,7 @@ export default function About() {
                                     </p>
 </div>
 <!-- Card 3 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:bg-card-dark p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
+<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-white dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
 <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
 <span class="material-symbols-outlined">layers</span>
 </div>
@@ -200,31 +200,31 @@ export default function About() {
 <div>
 <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Languages</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">C</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Astro</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Python</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Laravel PHP</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">RESTful API Design</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">C</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Astro</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Python</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Laravel PHP</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">RESTful API Design</span>
 </div>
 </div>
 <div>
 <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Infrastructure &amp; Tools</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">MyRESTful API Design</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Docker</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Flutter</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Firebase</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SEO Optimization</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Linux + Git Workflows</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">MyRESTful API Design</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Docker</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Flutter</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Firebase</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SEO Optimization</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Linux + Git Workflows</span>
 </div>
 </div>
 <div>
 <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Architecture Patterns</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WordPress Systems</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WooCommerce</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Hosting + Migration</span>
-<span class="px-4 py-2 rounded-md bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Security Hardening</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WordPress Systems</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WooCommerce</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Hosting + Migration</span>
+<span class="px-4 py-2 rounded-md bg-white dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Security Hardening</span>
 </div>
 </div>
 </div>
@@ -277,7 +277,7 @@ export default function About() {
 </section>
 <!-- CTA Footer inside main content -->
 <div class="rounded-2xl bg-gradient-to-r from-primary/20 to-transparent p-1">
-<div class="rounded-xl bg-slate-50 dark:bg-card-dark p-8 md:p-12 text-center">
+<div class="rounded-xl bg-slate-50 dark:card-premium p-8 md:p-12 text-center">
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Ready to build something robust?</h3>
 <p class="text-slate-600 dark:text-text-muted mb-8 max-w-xl mx-auto">
                                     I'm currently available for consulting and architectural reviews. Let's discuss how we can scale your infrastructure.
@@ -302,7 +302,7 @@ export default function About() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -364,7 +364,10 @@ export default function About() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

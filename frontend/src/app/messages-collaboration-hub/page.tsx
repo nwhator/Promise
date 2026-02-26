@@ -29,9 +29,9 @@ export default function MessagesCollaborationHub() {
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0d59f2",
+                        "primary": "var(--primary)",
                         "background-light": "#f5f6f8",
-                        "background-dark": "#101622",
+                        "background-dark": "var(--background)",
                         "surface-dark": "#161b26", // Slightly lighter than background-dark for panels
                         "surface-dark-active": "#1e2430", // Even lighter for active states
                     },
@@ -409,7 +409,7 @@ export default function MessagesCollaborationHub() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -471,7 +471,10 @@ export default function MessagesCollaborationHub() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }

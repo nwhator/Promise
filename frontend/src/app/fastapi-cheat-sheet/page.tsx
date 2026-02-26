@@ -29,8 +29,8 @@ export default function FastapiCheatSheet() {
                     colors: {
                         primary: "#259df4",
                         "background-light": "#f5f7f8",
-                        "background-dark": "#101a22",
-                        "card-dark": "#1b2631",
+                        "background-dark": "var(--background)",
+                        "card-dark": "var(--surface)",
                         "code-bg": "#0d1318",
                         "accent-purple": "#a855f7",
                         "accent-green": "#22c55e",
@@ -89,7 +89,7 @@ export default function FastapiCheatSheet() {
 
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/90 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
@@ -134,7 +134,7 @@ export default function FastapiCheatSheet() {
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-500">mail</span>
 </div>
-<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-card-dark border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your email for the PDF" type="email"/>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:card-premium border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your email for the PDF" type="email"/>
 </div>
 <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-lg shadow-primary/25 whitespace-nowrap" type="button">
                         Send it to me
@@ -146,7 +146,7 @@ export default function FastapiCheatSheet() {
 </div>
 <div class="relative hidden lg:block group">
 <div class="absolute -inset-1 bg-gradient-to-r from-primary to-accent-purple rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-<div class="relative bg-card-dark rounded-xl border border-slate-800 p-2 shadow-2xl overflow-hidden aspect-video flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Abstract code on a dark screen representing backend development">
+<div class="relative card-premium rounded-xl border border-slate-800 p-2 shadow-2xl overflow-hidden aspect-video flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Abstract code on a dark screen representing backend development">
 <div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
 <div class="relative z-10 text-center p-8">
 <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-primary mb-4">
@@ -175,7 +175,7 @@ export default function FastapiCheatSheet() {
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
 <!-- Card 1: Basic App Structure -->
-<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="col-span-1 md:col-span-2 lg:col-span-2 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">rocket_launch</span>
@@ -207,7 +207,7 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 2: Common HTTP Methods -->
-<div class="col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+<div class="col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">http</span>
@@ -234,7 +234,7 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 3: Pydantic Models -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">data_object</span>
@@ -257,7 +257,7 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 4: Path & Query Parameters -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">alt_route</span>
@@ -281,7 +281,7 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 5: Dependency Injection -->
-<div class="col-span-1 lg:col-span-1 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="col-span-1 lg:col-span-1 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">hub</span>
@@ -307,7 +307,7 @@ export default function FastapiCheatSheet() {
 </div>
 </div>
 <!-- Card 6: Common Status Codes -->
-<div class="col-span-1 lg:col-span-3 bg-white dark:bg-card-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+<div class="col-span-1 lg:col-span-3 bg-white dark:card-premium rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
 <div class="px-5 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-[#151e26]">
 <div class="flex items-center gap-2 text-slate-900 dark:text-white font-semibold">
 <span class="material-symbols-outlined text-primary text-[20px]">traffic</span>
@@ -362,7 +362,7 @@ export default function FastapiCheatSheet() {
 
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark bg-background-dark/95 mt-8">
+<footer class="border-t border-border-dark glass-nav mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
     <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
@@ -424,7 +424,10 @@ export default function FastapiCheatSheet() {
   `;
   return (
     <div className="stitch-page-root">
-      {parse(htmlContent)}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.08)_0%,transparent_50%)] pointer-events-none" />
+      <div className="relative">
+        {parse(htmlContent)}
+      </div>
     </div>
   );
 }
