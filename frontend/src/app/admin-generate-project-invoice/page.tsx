@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Admin Generate Project Invoice - PROMISE NWHATOR',
+  title: 'Admin - Generate Project Invoice',
   description: 'Admin Generate Project Invoice page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/admin-generate-project-invoice',

@@ -34,8 +34,19 @@ const mapFolderToSlug = {
 function extractHeadAndBody(html) {
     const headMatch = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
     let headContent = "";
+    let title = "";
+    let description = "";
+
     if (headMatch) {
-        headContent = headMatch[1]
+        const rawHead = headMatch[1];
+        const titleMatch = rawHead.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+        if (titleMatch) title = titleMatch[1].trim();
+
+        const descMatch = rawHead.match(/<meta[^>]*name="description"[^>]*content="([\s\S]*?)"[^>]*>/i) ||
+            rawHead.match(/<meta[^>]*content="([\s\S]*?)"[^>]*name="description"[^>]*>/i);
+        if (descMatch) description = descMatch[1].trim();
+
+        headContent = rawHead
             .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")
             .replace(/<meta[^>]*>/gi, "");
     }
@@ -52,12 +63,16 @@ function extractHeadAndBody(html) {
         }
     }
 
-    return headContent + "\n" + bodyContent;
+    return {
+        html: headContent + "\n" + bodyContent,
+        title,
+        description
+    };
 }
 
 function convertHtmlToTsx(htmlContent, componentName, slug) {
     const extracted = extractHeadAndBody(htmlContent);
-    let cleanHtml = extracted
+    let cleanHtml = extracted.html
         // replace links logic (simple normalisation)
         .replace(/href="https:\/\/github\.com\/?([^"]*)"/gi, 'href="https://github.com/nwhator"')
         .replace(/href="https:\/\/linkedin\.com\/?([^"]*)"/gi, 'href="https://linkedin.com/in/nwhator"');
@@ -65,13 +80,16 @@ function convertHtmlToTsx(htmlContent, componentName, slug) {
     // Escape backticks formatting for string literal
     cleanHtml = cleanHtml.replace(/`/g, '\\`').replace(/\$/g, '\\$');
 
+    const pageTitle = extracted.title || `${componentName.replace(/([A-Z])/g, ' $1').trim()} - PROMISE NWHATOR`;
+    const pageDescription = extracted.description || `${componentName.replace(/([A-Z])/g, ' $1').trim()} page for PROMISE NWHATOR.`;
+
     const finalTsx = `
 import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '${componentName.replace(/([A-Z])/g, ' $1').trim()} - PROMISE NWHATOR',
-  description: '${componentName.replace(/([A-Z])/g, ' $1').trim()} page for PROMISE NWHATOR.',
+  title: '${pageTitle.replace(/'/g, "\\'")}',
+  description: '${pageDescription.replace(/'/g, "\\'")}',
   alternates: {
     canonical: '${slug === 'home' ? '/' : '/' + slug}',
   },

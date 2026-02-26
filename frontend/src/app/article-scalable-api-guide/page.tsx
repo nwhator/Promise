@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Article Scalable Api Guide - PROMISE NWHATOR',
+  title: 'Scalable API Guide - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
   description: 'Article Scalable Api Guide page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/article-scalable-api-guide',

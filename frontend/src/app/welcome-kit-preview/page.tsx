@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Welcome Kit Preview - PROMISE NWHATOR',
+  title: 'Welcome Kit Preview - Client Success',
   description: 'Welcome Kit Preview page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/welcome-kit-preview',

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { getBlogPosts } from "@/lib/blogApi";
-import { PAGE_ENTRIES } from "@/lib/pages";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -12,17 +11,35 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${baseUrl}/pages`,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/blog`,
       changeFrequency: "daily",
       priority: 0.9,
     },
-    ...PAGE_ENTRIES.filter((page) => page.slug !== "home").map((page) => ({
-      url: `${baseUrl}/${page.slug}`,
+    // We can add other routes manually here or dynamically loop if we kept the array, but we'll add the main ones
+    ...[
+      "about",
+      "projects",
+      "project-detail",
+      "services",
+      "technologies",
+      "resume",
+      "contact",
+      "secure-client-login",
+      "client-dashboard",
+      "admin-dashboard",
+      "admin-generate-project-invoice",
+      "invoicing-payment-history",
+      "messages-collaboration-hub",
+      "onboarding-success",
+      "welcome-kit-preview",
+      "api-documentation",
+      "article-scalable-api-guide",
+      "case-study-architectural-deep-dive",
+      "blog-engineering-insights-list-1",
+      "blog-engineering-insights-list-2",
+      "fastapi-cheat-sheet"
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),

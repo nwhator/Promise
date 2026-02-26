@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Internal System Error - PROMISE NWHATOR',
+  title: '500 - Internal Server Error - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
   description: 'Internal System Error page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/internal-system-error',

@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'System Path Not Found - PROMISE NWHATOR',
+  title: '404 - System Path Not Found',
   description: 'System Path Not Found page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/system-path-not-found',

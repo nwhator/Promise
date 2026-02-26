@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fastapi Cheat Sheet - PROMISE NWHATOR',
+  title: 'FastAPI Cheat Sheet - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
   description: 'Fastapi Cheat Sheet page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/fastapi-cheat-sheet',

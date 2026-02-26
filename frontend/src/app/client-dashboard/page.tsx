@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Client Dashboard - PROMISE NWHATOR',
+  title: 'Client Dashboard - Project Tracker',
   description: 'Client Dashboard page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/client-dashboard',

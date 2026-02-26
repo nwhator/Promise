@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Case Study Architectural Deep Dive - PROMISE NWHATOR',
+  title: 'National Plagiarism Detection System - Case Study',
   description: 'Case Study Architectural Deep Dive page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/case-study-architectural-deep-dive',

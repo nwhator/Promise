@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Messages Collaboration Hub - PROMISE NWHATOR',
+  title: 'Promise Ayobami Nwhator Portal - Messages',
   description: 'Messages Collaboration Hub page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/messages-collaboration-hub',

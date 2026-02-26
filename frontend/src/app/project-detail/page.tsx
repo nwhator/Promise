@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Project Detail - PROMISE NWHATOR',
+  title: 'Project Detail - National Plagiarism Detection System',
   description: 'Project Detail page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/project-detail',

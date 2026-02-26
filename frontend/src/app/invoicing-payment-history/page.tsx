@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invoicing Payment History - PROMISE NWHATOR',
+  title: 'Invoicing &amp; Payment History - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
   description: 'Invoicing Payment History page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/invoicing-payment-history',

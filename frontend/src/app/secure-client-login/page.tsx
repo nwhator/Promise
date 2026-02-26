@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Secure Client Login - PROMISE NWHATOR',
+  title: 'Secure Client Login - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
   description: 'Secure Client Login page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/secure-client-login',

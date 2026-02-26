@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About - PROMISE NWHATOR',
+  title: 'About - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator | Backend Engineer',
   description: 'About page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/about',
