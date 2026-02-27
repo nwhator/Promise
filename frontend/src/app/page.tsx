@@ -104,6 +104,49 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* Tech Arsenal Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-5xl font-black mb-4">Tech <span className="text-gradient-primary">Arsenal</span></h2>
+              <p className="text-slate-400 font-light">The core technologies powering my high-performance systems.</p>
+            </motion.div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                { name: "Next.js", icon: "terminal" },
+                { name: "Node.js", icon: "dns" },
+                { name: "PostgreSQL", icon: "database" },
+                { name: "TypeScript", icon: "javascript" },
+                { name: "Supabase", icon: "cloud" },
+                { name: "PHP", icon: "code" },
+                { name: "Tailwind", icon: "palette" },
+                { name: "AWS", icon: "memory" },
+                { name: "OJS", icon: "menu_book" },
+                { name: "Python", icon: "smart_toy" }
+              ].map((tech, i) => (
+                <motion.div
+                  key={tech.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  whileHover={{ y: -5, borderColor: "rgba(139, 92, 246, 0.5)" }}
+                  className="px-6 py-4 bg-surface border border-white/5 rounded-2xl flex items-center gap-3 transition-all cursor-default"
+                >
+                  <span className="material-symbols-outlined text-primary text-xl">{tech.icon}</span>
+                  <span className="text-sm font-bold text-slate-300">{tech.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section className="py-32 px-4 relative" id="projects">
           <div className="max-w-7xl mx-auto">

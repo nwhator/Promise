@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { BlogPost } from "@/lib/blogApi";
+import parse from "html-react-parser";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -56,6 +57,7 @@ export default function AdminDashboard() {
     const [editPost, setEditPost] = useState<Partial<BlogPost> | null>(null);
     const [saving, setSaving] = useState(false);
     const [saveMsg, setSaveMsg] = useState("");
+    const [previewMode, setPreviewMode] = useState(false);
 
     // ── Auth handlers ────────────────────────────────────────────────────────
 
@@ -805,6 +807,22 @@ export default function AdminDashboard() {
                                 </p>
                             </div>
 
+                            {/* Editor Mode Selection */}
+                            <div className="flex gap-1 p-1 bg-[#101922] border border-slate-700 rounded-lg w-fit">
+                                <button
+                                    onClick={() => setPreviewMode(false)}
+                                    className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all ${!previewMode ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    Write
+                                </button>
+                                <button
+                                    onClick={() => setPreviewMode(true)}
+                                    className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all ${previewMode ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    Preview
+                                </button>
+                            </div>
+
                             {saveMsg && (
                                 <div
                                     className={`rounded-lg p-3 text-sm ${saveMsg.startsWith("Error")
@@ -866,18 +884,111 @@ export default function AdminDashboard() {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-slate-300">
-                                        Content *
-                                    </label>
-                                    <textarea
-                                        value={editPost?.content ?? ""}
-                                        onChange={(e) =>
-                                            setEditPost((p) => ({ ...p, content: e.target.value }))
-                                        }
-                                        rows={14}
-                                        className="w-full px-4 py-3 bg-[#101922] border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y font-mono text-sm"
-                                        placeholder="Write your full article here…"
-                                    />
+                                    <div className="flex items-center justify-between">
+                                        <label className="block text-sm font-medium text-slate-300">
+                                            Content *
+                                        </label>
+                                        {!previewMode && (
+                                            <div className="flex gap-2">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const textarea = document.getElementById('content-area') as HTMLTextAreaElement;
+                                                        const start = textarea.selectionStart;
+                                                        const end = textarea.selectionEnd;
+                                                        const text = editPost?.content ?? "";
+                                                        const selected = text.substring(start, end);
+                                                        const newText = text.substring(0, start) + `<strong>${selected}</strong>` + text.substring(end);
+                                                        setEditPost((p) => ({ ...p, content: newText }));
+                                                    }}
+                                                    className="px-2 py-1 bg-[#101922] border border-slate-700 rounded text-xs text-slate-400 hover:text-white"
+                                                    title="Bold"
+                                                >
+                                                    <b>B</b>
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const textarea = document.getElementById('content-area') as HTMLTextAreaElement;
+                                                        const start = textarea.selectionStart;
+                                                        const end = textarea.selectionEnd;
+                                                        const text = editPost?.content ?? "";
+                                                        const selected = text.substring(start, end);
+                                                        const newText = text.substring(0, start) + `<em>${selected}</em>` + text.substring(end);
+                                                        setEditPost((p) => ({ ...p, content: newText }));
+                                                    }}
+                                                    className="px-2 py-1 bg-[#101922] border border-slate-700 rounded text-xs text-slate-400 hover:text-white"
+                                                    title="Italic"
+                                                >
+                                                    <i>I</i>
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const textarea = document.getElementById('content-area') as HTMLTextAreaElement;
+                                                        const start = textarea.selectionStart;
+                                                        const end = textarea.selectionEnd;
+                                                        const text = editPost?.content ?? "";
+                                                        const selected = text.substring(start, end);
+                                                        const newText = text.substring(0, start) + `<h3>${selected}</h3>` + text.substring(end);
+                                                        setEditPost((p) => ({ ...p, content: newText }));
+                                                    }}
+                                                    className="px-2 py-1 bg-[#101922] border border-slate-700 rounded text-xs text-slate-400 hover:text-white font-bold"
+                                                    title="Heading"
+                                                >
+                                                    H
+                                                </button>
+                                                <button
+                                                    onClick={() => {
+                                                        const textarea = document.getElementById('content-area') as HTMLTextAreaElement;
+                                                        const start = textarea.selectionStart;
+                                                        const end = textarea.selectionEnd;
+                                                        const text = editPost?.content ?? "";
+                                                        const selected = text.substring(start, end);
+                                                        const newText = text.substring(0, start) + `<ul>\n  <li>${selected}</li>\n</ul>` + text.substring(end);
+                                                        setEditPost((p) => ({ ...p, content: newText }));
+                                                    }}
+                                                    className="px-2 py-1 bg-[#101922] border border-slate-700 rounded text-xs text-slate-400 hover:text-white"
+                                                    title="Bullet List"
+                                                >
+                                                    List
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        const textarea = document.getElementById('content-area') as HTMLTextAreaElement;
+                                                        const start = textarea.selectionStart;
+                                                        const end = textarea.selectionEnd;
+                                                        const text = editPost?.content ?? "";
+                                                        const selected = text.substring(start, end);
+                                                        const newText = text.substring(0, start) + `<ol>\n  <li>${selected}</li>\n</ol>` + text.substring(end);
+                                                        setEditPost((p) => ({ ...p, content: newText }));
+                                                    }}
+                                                    className="px-2 py-1 bg-[#101922] border border-slate-700 rounded text-xs text-slate-400 hover:text-white"
+                                                    title="Numbered List"
+                                                >
+                                                    Numbers
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {previewMode ? (
+                                        <div className="w-full min-h-[350px] px-4 py-3 bg-[#101922] border border-slate-600 rounded-lg text-slate-300 prose prose-invert prose-sm max-w-none">
+                                            {parse(editPost?.content ?? "No content to preview.")}
+                                        </div>
+                                    ) : (
+                                        <textarea
+                                            id="content-area"
+                                            value={editPost?.content ?? ""}
+                                            onChange={(e) =>
+                                                setEditPost((p) => ({ ...p, content: e.target.value }))
+                                            }
+                                            rows={14}
+                                            className="w-full px-4 py-3 bg-[#101922] border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-y font-mono text-sm"
+                                            placeholder="Write your full article here (Supports HTML tags like <strong>, <em>, <p>, <h3>, etc)…"
+                                        />
+                                    )}
                                 </div>
 
                                 <div className="space-y-2">

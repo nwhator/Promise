@@ -126,17 +126,23 @@ export default function About() {
                   {
                     title: "Senior Backend Architect",
                     company: "Consulting & SaaS Projects",
-                    period: "2021 — PRESENT",
+                    period: "2024 — PRESENT",
                     desc: "Lead architect for The Lum Studios booking engine and Agricyclers UK e-commerce platform. Developed custom OJS integration plugins and secure hosting architectures."
                   },
                   {
                     title: "System Infrastructure Engineer",
                     company: "Academic Journal Networks",
-                    period: "2020 — 2021",
+                    period: "2023 — PRESENT",
                     desc: "Designed and deployed OJS infrastructures for national journals including NDJ and NHSJ. Integrated automated SMTP flows and security hardening protocols."
                   },
                   {
-                    title: "Software Engineering Student",
+                    title: "WordPress Developer",
+                    company: "Technical Content & SEO",
+                    period: "2021 — PRESENT",
+                    desc: "Developing and optimizing high-performance WordPress themes and plugins for professional blogs including Userank and Webfixvilla. Focused on Core Web Vitals and advanced SEO."
+                  },
+                  {
+                    title: "B.Sc Computer Science and Engineering",
                     company: "Obafemi Awolowo University",
                     period: "Graduate",
                     desc: "Focused on computer science fundamentals, system design, and database management."
