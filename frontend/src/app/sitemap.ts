@@ -35,6 +35,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       "api-documentation",
       "article-scalable-api-guide",
       "case-study-architectural-deep-dive",
+      "case-study-lum-studios",
+      "case-study-agricyclers",
+      "case-study-ojs-infrastructure",
       "blog-engineering-insights-list-1",
       "blog-engineering-insights-list-2",
       "fastapi-cheat-sheet"

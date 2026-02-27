@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Promise Ayobami Nwhator - Backend Engineer | WordPress Systems Architect',
-  description: 'Home page for PROMISE NWHATOR.',
+  title: 'Promise Ayobami Nwhator | Senior Backend Engineer & Systems Architect',
+  description: 'Specializing in building scalable Node.js/Next.js SaaS, complex PHP/MySQL architectures, and OJS journal infrastructure. Expert in production-ready digital systems.',
   alternates: {
     canonical: '/',
   },
@@ -99,49 +99,51 @@ export default function Home() {
 <!-- Main Content -->
 <main class="flex-grow pt-16">
 <!-- Hero Section -->
-<section className="animate-fade-in" class="relative min-h-[600px] flex items-center justify-center py-20 px-4 overflow-hidden">
-<!-- Decorative Backgrounds -->
-<div class="absolute inset-0 code-bg opacity-20 pointer-events-none"></div>
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark pointer-events-none"></div>
+<section className="animate-fade-in" class="relative min-h-[700px] flex items-center justify-center py-24 px-4 overflow-hidden bg-background-dark">
+<!-- Floating Ambient Light -->
+<div class="absolute top-[10%] left-[10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none animate-float"></div>
+<div class="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px] pointer-events-none animate-float" style="animation-delay: -2s"></div>
+
 <!-- Abstract Code Snippet (Visual Decoration) -->
-<div class="absolute right-0 top-1/4 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] opacity-[0.03] rotate-12 pointer-events-none hidden lg:block text-primary font-mono text-sm leading-relaxed whitespace-pre select-none">
+<div class="absolute right-[-5%] top-1/4 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.05] rotate-12 pointer-events-none hidden lg:block text-primary font-mono text-sm leading-relaxed whitespace-pre select-none animate-float">
 class SystemArchitect(Engineer):
     def __init__(self):
-        self.stack = ['Python', 'FastAPI']
-        self.focus = 'Scalability'
+        self.stack = ['Node.js', 'Next.js', 'PostgreSQL', 'PHP']
+        self.focus = 'Infrastructure & Scalability'
     
     def build_solution(self, problem):
+        # Engineering for 10x growth
         analysis = self.analyze(problem)
         architecture = self.design(analysis)
         return self.deploy(architecture)
         
     async def optimize(self, system):
-        while True:
-            await system.improve_performance()
-            await system.refactor_code()
-                </div>
-<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-medium">
-<span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                        Available for new projects
-                    </div>
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-black tracking-tight text-white leading-tight">
-                        Building Scalable <br class="hidden md:block"/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Digital Systems</span> <br/>
-                        That Solve Real Problems
-                    </h1>
-<p class="max-w-2xl text-lg text-text-muted leading-relaxed">
-                        Hi, I’m <span class="text-white font-semibold">Promise Ayobami Nwhator</span> — Backend Engineer, WordPress Systems Architect, and scalable platform builder. I build secure, scalable, and revenue-driven digital platforms.
-                    </p>
-<div class="flex flex-wrap justify-center gap-4 mt-4">
-<button class="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5">
-<span class="material-symbols-outlined text-[20px]">description</span>
-                            View Resume
-                        </button>
-<button class="flex items-center gap-2 px-6 py-3 card-premium hover:bg-border-dark text-white border border-border-dark font-bold rounded-lg transition-all hover:-translate-y-0.5">
-<span class="material-symbols-outlined text-[20px]">mail</span>
-                            Contact Me
-                        </button>
+        # Continuous performance tuning
+        while system.has_bottlenecks():
+            await system.improve_throughput()
+            await system.harden_security()
+</div>
+
+<div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-brighter border border-border-dark text-slate-300 text-xs font-mono font-medium shadow-2xl">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+Platform Systems Online // Available for Consultations
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight text-white leading-[0.9] lg:leading-[0.85]">
+    Architecting <br class="hidden md:block"/>
+    <span class="text-gradient-primary">Infrastructure</span> <br/>
+    for High-Impact SaaS.
+</h1>
+<p class="max-w-2xl text-xl text-slate-400 leading-relaxed font-light">
+    Hi, I’m <span class="text-white font-medium">Promise Ayobami Nwhator</span> — I build secure, scalable backend architectures, e-commerce systems, and academic journal infrastructure designed for production at scale.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-5 mt-4">
+<a href="/contact" class="flex items-center justify-center gap-2 px-10 py-4 bg-primary hover:bg-violet-600 text-white font-black rounded-xl transition-all shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1">
+    BUILD YOUR SOLUTION <span class="material-symbols-outlined text-lg">bolt</span>
+</a>
+<a href="/projects" class="flex items-center justify-center gap-2 px-10 py-4 glass text-white font-bold rounded-xl transition-all hover:bg-white/10 hover:-translate-y-1">
+    VIEW PORTFOLIO <span class="material-symbols-outlined text-lg">grid_view</span>
+</a>
 </div>
 </div>
 </section>
@@ -189,101 +191,113 @@ class SystemArchitect(Engineer):
 </div>
 </div>
 </section>
-<!-- Projects Section -->
+<!-- Flagship Projects Section -->
 <section className="animate-fade-in" class="py-24 bg-background dark:bg-background-dark relative" id="projects">
 <div class="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-<div>
-<span class="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Portfolio</span>
-<h2 class="text-3xl md:text-4xl font-bold text-white">Featured Projects</h2>
+<div class="mb-16">
+<h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tighter">Engineering Masterpieces</h2>
+<p class="text-slate-400 max-w-2xl text-lg">Production environments where performance, security, and business logic converge.</p>
 </div>
-<a class="flex items-center gap-2 text-text-muted hover:text-white transition-colors group" href="https://github.com/nwhator" target="_blank">
-<span>View all on GitHub</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Project 1: Lum Studios -->
+<div class="group relative flex flex-col bg-[#0a0a0c] border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-video relative overflow-hidden">
+<img src="/lum_studios.png" alt="Lum Studios" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent"></div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded border border-primary/20 uppercase">SaaS & Booking</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">The Lum Studios</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Advanced booking engine for photography with automated SMTP notifications and real-time scheduling.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex gap-2">
+<span class="text-[10px] font-mono text-slate-500">Next.js</span>
+<span class="text-[10px] font-mono text-slate-500">Node</span>
+</div>
+<a href="/case-study-lum-studios" class="text-white text-sm font-bold flex items-center gap-1 hover:text-primary transition-colors">
+Explore Case <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Project Card 1 -->
-<div class="group card-premium rounded-xl border border-border-dark overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 flex flex-col">
-<div class="h-48 bg-gradient-to-br from-[#1e293b] to-[#0f172a] relative overflow-hidden">
-<img alt="Code on a screen showing backend architecture" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" data-alt="Code on a screen showing backend architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP2k1Tx38Mh1xnOx8eADfMRyEkRkepTX8HziwptHQ6ipbzpmhqKEgN-5-vQpveFrrximKpoChR3m-yJs5JNDn-wwShzXrvte5vfpheCm5pwbOdrs5momKolhrYNCpmFmn3YuAIRj9eJNVuqTgWuCX8B7Kss6xJH4ZhVZPneVVdx6eSpYfczUin0uHtPi_69QtluP_v6qwZ78pd3dIUlluadTTbdZpvJfeO8ENMhR_B8BEY5qwU778JEgrumRkizenwIB0UriTxkno"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-</div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex items-center justify-between mb-3">
-<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">E-commerce Microservices</h3>
-<a class="text-text-muted hover:text-white" href="#"><span class="material-symbols-outlined">open_in_new</span></a>
-</div>
-<p class="text-text-muted text-sm mb-6 line-clamp-3">
-                                    A high-performance microservices architecture handling 10k+ concurrent requests. Built with event-driven design patterns for scalability.
-                                </p>
-<div class="mt-auto flex flex-wrap gap-2">
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">Python</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">Docker</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">RabbitMQ</span>
 </div>
 </div>
+
+<!-- Project 2: Agricyclers -->
+<div class="group relative flex flex-col bg-[#0a0a0c] border border-white/5 rounded-2xl overflow-hidden hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10">
+<div class="aspect-video relative overflow-hidden">
+<img src="/agricyclers.png" alt="Agricyclers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent"></div>
 </div>
-<!-- Project Card 2 -->
-<div class="group card-premium rounded-xl border border-border-dark overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 flex flex-col">
-<div class="h-48 bg-gradient-to-br from-[#1e293b] to-[#0f172a] relative overflow-hidden">
-<img alt="Data dashboard analytics charts on dark screen" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" data-alt="Data dashboard analytics charts on dark screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM9rwfnKvT5WC88CDomyYnnmsFlsTm9gUEnbH5sQo4OIFt1-K3hOrAPrRz0KiHj1r7LDj6o63GYub3jFfTR0BLk9sJWOz_9j907ZBJfSlq7NIPtgogHNQnZ48bYGWcvGm28IIy8VkEhun3JCNNZ48ivWK7QxESInlPoLPMJb8gtDSW19_grTpJigIJiZNWm1BcwQryuSBqrxu7kfSDzsw3VJlwHskUykDUdUiAm9Q1cHeUYlsY9ATQndgkIOpVSNMea4QwT5Z-o50"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-accent/10 text-accent text-[10px] font-bold rounded border border-accent/20 uppercase">E-commerce</span>
 </div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex items-center justify-between mb-3">
-<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Real-time Analytics</h3>
-<a class="text-text-muted hover:text-white" href="#"><span class="material-symbols-outlined">open_in_new</span></a>
+<h3 class="text-2xl font-bold text-white mb-3">Agricyclers UK</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">High-conversion storefront for agricultural supplies with complex variation logic and custom checkout flows.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex gap-2">
+<span class="text-[10px] font-mono text-slate-500">PHP</span>
+<span class="text-[10px] font-mono text-slate-500">Tailwind</span>
 </div>
-<p class="text-text-muted text-sm mb-6 line-clamp-3">
-                                    Live data visualization dashboard processing websocket streams for financial market analysis with sub-millisecond latency.
-                                </p>
-<div class="mt-auto flex flex-wrap gap-2">
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">FastAPI</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">React</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">WebSockets</span>
+<a href="/case-study-agricyclers" class="text-white text-sm font-bold flex items-center gap-1 hover:text-accent transition-colors">
+Explore Case <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
-<!-- Project Card 3 -->
-<div class="group card-premium rounded-xl border border-border-dark overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 flex flex-col">
-<div class="h-48 bg-gradient-to-br from-[#1e293b] to-[#0f172a] relative overflow-hidden">
-<img alt="Abstract server room lights in dark blue" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" data-alt="Abstract server room lights in dark blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOO0N_xwC8WlXBPpqE41RVTM3pmaU5-9gUdRqmDOWjAgwdnvuUGEjkwqfSdglzebcq6Vml5aEM3v14zvjGJ5TcfzE1j1rcu5JvPWLE54c0cgHrSD2DzMji5Te0ZDyTkwoxQuOM0aytdjfqKgytqwT4dh-gr8MmPeSMJPygIhQ4oWmhgglka9pz0JvqzA5hlTMmlWKArscRH2Mpp8nSutdAcHk-BP3t3UbWydroaZ010dl2Q3KgaQ9IJNGLOh_aTwcQSAwhuQ8GDKA"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+
+<!-- Project 3: OJS -->
+<div class="group relative flex flex-col bg-[#0a0a0c] border border-white/5 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/10">
+<div class="aspect-video relative overflow-hidden">
+<img src="/ojs_journals.png" alt="Journals" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent"></div>
 </div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex items-center justify-between mb-3">
-<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Legacy Migration</h3>
-<a class="text-text-muted hover:text-white" href="#"><span class="material-symbols-outlined">open_in_new</span></a>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded border border-emerald-500/20 uppercase">Infrastructure</span>
 </div>
-<p class="text-text-muted text-sm mb-6 line-clamp-3">
-                                    Successfully migrated a monolithic PHP application to a modern Django REST Framework backend with zero downtime.
-                                </p>
-<div class="mt-auto flex flex-wrap gap-2">
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">Django</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">MySQL</span>
-<span class="px-2 py-1 text-xs font-medium text-primary bg-primary/10 rounded border border-primary/20">AWS</span>
+<h3 class="text-2xl font-bold text-white mb-3">Medical Journal Network</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">Scalable academic infrastructure for journals like NDJ, NHSJ, and NJBCS. Hardened security and SMTP integration.</p>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex gap-2">
+<span class="text-[10px] font-mono text-slate-500">OJS</span>
+<span class="text-[10px] font-mono text-slate-500">Linux</span>
+</div>
+<a href="/case-study-ojs-infrastructure" class="text-white text-sm font-bold flex items-center gap-1 hover:text-emerald-500 transition-colors">
+Explore Case <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
+</div>
+
+<div class="mt-16 text-center">
+<a href="/projects" class="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white font-bold rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+View Full Portfolio <span class="material-symbols-outlined">grid_view</span>
+</a>
 </div>
 </div>
 </section>
 <!-- CTA Section -->
-<section className="animate-fade-in" class="py-20 border-t border-border-dark bg-[#0b0f16]">
-<div class="max-w-4xl mx-auto px-4 text-center">
-<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to scale your next project?</h2>
-<p class="text-text-muted mb-8 text-lg">
-                        I'm currently available for freelance projects and full-time opportunities. Let's discuss how we can build something great together.
-                    </p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<button class="flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20">
-                            Hire Me Now
-                        </button>
-<button class="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-border-dark hover:border-white text-white font-bold rounded-lg transition-all">
-                            Download Resume
-                        </button>
+<section className="animate-fade-in" class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+<div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+<h2 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">Ready to build something <span class="text-gradient-primary">legendary</span>?</h2>
+<p class="text-slate-400 mb-12 text-xl font-light leading-relaxed">
+    I am currently accepting select project consultations. Whether you need a scalable backend, a high-conversion storefront, or mission-critical infrastructure, I'm ready to architect it.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer" class="flex items-center justify-center gap-2 px-10 py-5 bg-[#25D366] hover:bg-[#1ebd5e] text-black font-black text-lg rounded-2xl transition-all shadow-2xl shadow-[#25D366]/20 hover:-translate-y-1">
+    START A CONVERSATION <span class="material-symbols-outlined font-black">chat</span>
+</a>
+<a href="/resume" class="flex items-center justify-center gap-2 px-10 py-5 glass text-white font-bold text-lg rounded-2xl transition-all hover:bg-white/10 hover:-translate-y-1">
+    GO TO RESUME <span class="material-symbols-outlined text-lg">description</span>
+</a>
 </div>
 </div>
 </section>
@@ -360,7 +374,8 @@ class SystemArchitect(Engineer):
     <div className="stitch-page-root overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+
       <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>

@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact - Let\'s Build Together',
-  description: 'Contact page for PROMISE NWHATOR.',
+  title: 'Contact Promise Ayobami Nwhator | Engineering Consultations',
+  description: 'Available for consultations on backend architecture, e-commerce systems, and academic journal infrastructure. Let\'s build your next scalable solution together.',
   alternates: {
     canonical: '/contact',
   },
@@ -107,12 +107,12 @@ export default function Contact() {
 </div>
 </div>
 <div class="flex items-start gap-4 group">
-<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
-<span class="material-symbols-outlined">location_on</span>
+<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300 shrink-0 shadow-lg group-hover:shadow-[#25D366]/20">
+<span class="material-symbols-outlined">chat</span>
 </div>
 <div>
-<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">Based in</h3>
-<p class="text-slate-400 dark:text-slate-400 text-sm">Nigeria</p>
+<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">WhatsApp</h3>
+<a class="text-slate-400 dark:text-slate-400 hover:text-[#25D366] dark:hover:text-[#25D366] transition-colors text-sm break-all" href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer">+234 704 881 2719</a>
 </div>
 </div>
 </div>
@@ -120,16 +120,13 @@ export default function Contact() {
 <div class="border-t border-slate-200 dark:border-slate-800 pt-8 mt-auto">
 <p class="text-sm font-medium text-slate-500 dark:text-slate-500 uppercase tracking-wider mb-4">Connect on Socials</p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
-<!-- GitHub Icon using Material Symbol substitute for generic branding -->
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all shadow-sm hover:shadow-primary/10" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
 <span class="material-symbols-outlined text-[1.25rem]">code</span>
 </a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
-<!-- LinkedIn Icon substitute -->
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all shadow-sm hover:shadow-primary/10" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
 <span class="material-symbols-outlined text-[1.25rem]">work</span>
 </a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all" href="#">
-<!-- WhatsApp Icon substitute -->
+<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-[#25D366] hover:text-[#25D366] transition-all shadow-sm hover:shadow-[#25D366]/10" href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer">
 <span class="material-symbols-outlined text-[1.25rem]">chat</span>
 </a>
 </div>
@@ -264,7 +261,8 @@ export default function Contact() {
     <div className="stitch-page-root overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+
       <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>

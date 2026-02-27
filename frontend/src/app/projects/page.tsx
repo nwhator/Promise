@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Projects - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator Portfolio',
-  description: 'Projects page for PROMISE NWHATOR.',
+  title: 'Project Portfolio | Promise Ayobami Nwhator',
+  description: 'Explore my diverse portfolio of production-ready digital solutions, including SaaS platforms, e-commerce systems, and scalable academic publishing infrastructure.',
   alternates: {
     canonical: '/projects',
   },
@@ -110,175 +110,206 @@ export default function Projects() {
 <div class="mb-10 overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
 <div class="flex items-center gap-3 min-w-max">
 <button class="group flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition-all hover:bg-primary-dark">
-<span>All Projects</span>
+<span>All Solutions</span>
 <span class="flex h-5 w-5 items-center justify-center rounded-full bg-surface/20 text-xs">12</span>
 </button>
-<button class="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-gray-700 bg-surface dark:bg-[#1a202c] px-4 py-2 text-sm font-medium text-slate-400 dark:text-slate-300 transition-all hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary hover:bg-surface dark:hover:bg-gray-800">
-<span>Web Apps</span>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface/50 px-4 py-2 text-sm font-medium text-slate-400 transition-all hover:border-primary hover:text-primary">
+<span>SaaS & Web Apps</span>
 </button>
-<button class="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-gray-700 bg-surface dark:bg-[#1a202c] px-4 py-2 text-sm font-medium text-slate-400 dark:text-slate-300 transition-all hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary hover:bg-surface dark:hover:bg-gray-800">
-<span>Backend Systems</span>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface/50 px-4 py-2 text-sm font-medium text-slate-400 transition-all hover:border-accent hover:text-accent">
+<span>E-commerce</span>
 </button>
-<button class="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-gray-700 bg-surface dark:bg-[#1a202c] px-4 py-2 text-sm font-medium text-slate-400 dark:text-slate-300 transition-all hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary hover:bg-surface dark:hover:bg-gray-800">
-<span>WordPress</span>
-</button>
-<button class="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-gray-700 bg-surface dark:bg-[#1a202c] px-4 py-2 text-sm font-medium text-slate-400 dark:text-slate-300 transition-all hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary hover:bg-surface dark:hover:bg-gray-800">
-<span>Government Projects</span>
-</button>
-<button class="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-gray-700 bg-surface dark:bg-[#1a202c] px-4 py-2 text-sm font-medium text-slate-400 dark:text-slate-300 transition-all hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary hover:bg-surface dark:hover:bg-gray-800">
-<span>API Systems</span>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface/50 px-4 py-2 text-sm font-medium text-slate-400 transition-all hover:border-emerald-500 hover:text-emerald-500">
+<span>Infrastructure</span>
 </button>
 </div>
 </div>
 <!-- Project Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-<!-- Card 1 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<!-- Image Overlay Gradient -->
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="Data dashboard interface with charts" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract data visualization dashboard screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnLd_HZ-ns03c94iM5cDvkggBbXD-jhPVl9s3Kl8xQHv3fGl0xIkqctkurRNnn2gYfUgj0TLF8n5WF9dRD0wZoAV89S_C19UICWZkVMMdZXgt-m5piOTgXCcQC8GBF9rAE_I4mdf54G8FDNSVR6u_Rkh8iAxz04Z7GiQE_TsD3oQU9jsg_vD9RMN8h7ABQSP77RPNaW_bQGiLYin23fzCT06VS4f9KgHaYC45DRMMeFyVolAKC-S5KRXmXE1iqw2i5Aah3yvifMNg"/>
-<div class="absolute top-4 right-4 z-20">
-<span class="inline-flex items-center rounded-full bg-black/50 backdrop-blur-md px-2.5 py-0.5 text-xs font-medium text-white ring-1 ring-inset ring-white/20">
-                                Government Project
-                            </span>
+<!-- 1. The Lum Studios -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-primary/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="The Lum Studios" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="/lum_studios.png"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase tracking-tighter">SaaS & Booking</span>
 </div>
 </div>
 <div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">National Data Portal</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">The Lum Studios</h3>
+<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">Advanced photography booking engine with automated SMTP notifications and real-time scheduling management.</p>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Next.js</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Node.js</span>
 </div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            Secure government data distribution handling 1M+ requests daily. Implemented strict role-based access control and audit logging.
-                        </p>
-<div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">FastAPI</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">PostgreSQL</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Docker</span>
+<a href="/case-study-lum-studios" class="text-xs font-bold text-white hover:text-primary flex items-center gap-1 transition-colors relative z-40">
+Case Study <span class="material-symbols-outlined text-xs">arrow_outward</span>
+</a>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="https://thelumstudios.com/" target="_blank"></a>
 </article>
-<!-- Card 2 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="E-commerce mobile app interface" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Digital shopping cart on mobile screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg1HlgFKCfNH8bCZEzfl2zdon3eV2RF4zvUcYHXritiA_JoJmLkgpD06j-DR4hhbCgQ99xPubFDx98DIqUBvbh4oS-DYTRJkR0jIUZYmZSjRZOMqvwzYibEzWCdbP4LYPILQQsiXfwh1i8Q43ENYiceSlsdXLZ2eDV9mnJUjEQAKIwWtTE5h4KGrshLm5ED3g30hdP3XyyXO9kNKn9VMdC76zP1Pgm0R_dflB-74SZIkeE0ECEjFCu8gAoY9USAf2Raz0PpK-FsTo"/>
+
+<!-- 2. Agricyclers UK -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-accent/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="Agricyclers UK" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="/agricyclers.png"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-accent/20 text-accent text-[10px] font-bold rounded border border-accent/30 uppercase tracking-tighter">E-commerce</span>
+</div>
 </div>
 <div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">E-Commerce Microservices</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
+<h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Agricyclers UK</h3>
+<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">High-conversion e-commerce storefront for agricultural supplies with complex variation logic and custom checkout flows.</p>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">PHP</span>
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">Tailwind</span>
 </div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            Scalable microservices architecture for high-volume retail. Optimized for peak traffic loads during sales events.
-                        </p>
-<div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">Node.js</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">React</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">AWS Lambda</span>
+<a href="/case-study-agricyclers" class="text-xs font-bold text-white hover:text-accent flex items-center gap-1 transition-colors relative z-40">
+Case Study <span class="material-symbols-outlined text-xs">arrow_outward</span>
+</a>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="https://agricyclers.co.uk/" target="_blank"></a>
 </article>
-<!-- Card 3 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="Code editor showing backend logic" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Complex code structure on monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNLaNSzTFWBBccKThNMOHcmcA1OcI9fej_ED6Cb5T3Bv7MEQu5GfKGAOuGQojM431N_IIhkbZ2EWlTeWSdnGcJikoaRTQNYR2L0UUSeig7jvEv5lscVz1I21FKypaBSbVZWo_leuBL0V6D9BfBHfulg9g7qSmlju6KuFRCW11fyacALVO1voYq38fuNN-9Om7ZNk5EyJJHc-h2BMXa7rImMgKsxZFkJa59o7DDDUSnnGKOn7apKtecSk2PQFtSAqB89MnFNvdkCAY"/>
-<div class="absolute top-4 right-4 z-20">
-<span class="inline-flex items-center rounded-full bg-black/50 backdrop-blur-md px-2.5 py-0.5 text-xs font-medium text-white ring-1 ring-inset ring-white/20">
-                                Migration
-                            </span>
+
+<!-- 3. Medical Journal OJS -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-emerald-500/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="OJS Journals" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" src="/ojs_journals.png"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-emerald-500/20 text-emerald-500 text-[10px] font-bold rounded border border-emerald-500/30 uppercase tracking-tighter">Infrastructure</span>
 </div>
 </div>
 <div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">Legacy System Migration</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
+<h3 class="text-xl font-bold text-white group-hover:text-emerald-500 transition-colors">Journal Network OJS</h3>
+<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400">Scalable academic infrastructure for journals like NDJ, NHSJ, and NJBCS. Hardened security and SMTP integration.</p>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-emerald-500 bg-emerald-500/10 rounded">OJS</span>
+<span class="px-2 py-1 text-[10px] font-mono text-emerald-500 bg-emerald-500/10 rounded">Linux</span>
 </div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            Modernizing enterprise mainframes to cloud-native solutions. Reduced operational costs by 40% while improving uptime.
-                        </p>
-<div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">Java</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Spring Boot</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Kubernetes</span>
+<a href="/case-study-ojs-infrastructure" class="text-xs font-bold text-white hover:text-emerald-500 flex items-center gap-1 transition-colors relative z-40">
+Case Study <span class="material-symbols-outlined text-xs">arrow_outward</span>
+</a>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="/case-study-ojs-infrastructure"></a>
 </article>
-<!-- Card 4 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="Data analytics dashboard graphs" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract graphs and charts ui" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG0kTtYcXivr36BrHbOqPWJKy-Zgz9ThHUgVuFGlcHJjJ-V8PzBf1xHMNE_T8IGumYVg6GClYuMN5HnJynw39JVqpQFzaJEtVe0NYC12RxWCOqG1cyBJlOIaGVfcNI7PaHCgd3cIQXml-gcjpNhJlBTjRX6YNMZZadQgHpzpJ0ryDEazz0yj7Bd5Dfol5hR4Y3k0JzX-3h6x_sOBpfdmJ-1CLRDELL54E_EYAjP1mVz92qIK2EUwk3_AnWYuBfSSIfpJ9ScOdJGMs"/>
+
+<!-- 4. Health World -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-primary/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="Health World hospitals app" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM9rwfnKvT5WC88CDomyYnnmsFlsTm9gUEnbH5sQo4OIFt1-K3hOrAPrRz0KiHj1r7LDj6o63GYub3jFfTR0BLk9sJWOz_9j907ZBJfSlq7NIPtgogHNQnZ48bYGWcvGm28IIy8VkEhun3JCNNZ48ivWK7QxESInlPoLPMJb8gtDSW19_grTpJigIJiZNWm1BcwQryuSBqrxu7kfSDzsw3VJlwHskUykDUdUiAm9Q1cHeUYlsY9ATQndgkIOpVSNMea4QwT5Z-o50"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase tracking-tighter">HealthTech</span>
 </div>
-<div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">Real-time Analytics API</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
 </div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            Low-latency data processing pipeline for financial markets. Delivering sub-millisecond response times.
-                        </p>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-primary">Health World Platform</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">A comprehensive hospital management and patient engagement platform with real-time data tracking.</p>
 <div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">Go</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Kafka</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Redis</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Next.js</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Node.js</span>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="https://health-world-psi.vercel.app/hospitals" target="_blank"></a>
 </article>
-<!-- Card 5 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="Wordpress admin dashboard concept" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Wordpress cms interface abstract" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBazO9u_VCVnXQlqt25qGyjjWXbWMQeWGzw285Uy7QiJHaMYXzvUhwftR7OApcuum4ud4Fm5391aXBPklHyvWcgWsK0SzNzLmyD3wiysEcrpAhF8V2londut2bfAlzudelYieBlk_PLDmeKWG2EZDT-ajUpINymANSLYNK4aACGrTzl1BMfbH-lc-XRusNq-GjbWBAyaFZyl3lisRKj1IQuM-TPXsbOX_p4tyujPs4GWEsFwcP3F9JxlTgf0psOTqHdcTGFxRggKbg"/>
+
+<!-- 5. EventPal -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-primary/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="EventPal" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP2k1Tx38Mh1xnOx8eADfMRyEkRkepTX8HziwptHQ6ipbzpmhqKEgN-5-vQpveFrrximKpoChR3m-yJs5JNDn-wwShzXrvte5vfpheCm5pwbOdrs5momKolhrYNCpmFmn3YuAIRj9eJNVuqTgWuCX8B7Kss6xJH4ZhVZPneVVdx6eSpYfczUin0uHtPi_69QtluP_v6qwZ78pd3dIUlluadTTbdZpvJfeO8ENMhR_B8BEY5qwU778JEgrumRkizenwIB0UriTxkno"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase tracking-tighter">Event SaaS</span>
 </div>
-<div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">WordPress Plugin Suite</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
 </div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            Custom payment gateways and database optimization tools. Used by over 500+ active installations.
-                        </p>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-primary">EventPal</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">Dynamic event ticketing and management system with secure payment processing and seat reservation.</p>
 <div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">PHP</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">MySQL</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">React</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Next.js</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Node.js</span>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="https://eventpal-indol.vercel.app/" target="_blank"></a>
 </article>
-<!-- Card 6 -->
-<article class="group relative flex flex-col rounded-xl border border-slate-200 dark:border-gray-800 bg-surface dark:bg-[#1a202c] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 dark:hover:border-primary/50">
-<div class="aspect-video w-full overflow-hidden bg-surface-brighter dark:bg-gray-800 relative">
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 z-10 transition-opacity group-hover:opacity-40"></div>
-<img alt="Smart city dashboard with map" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Map based interface with data points" data-location="Smart City Interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-b365-Knl6lGIeux_DeldnnHL9wywNeuuDJU_AozWjoqJz9OqweTE6D_vvjnMmooFVtTFDo8mQ47y-oO_QIfDCQfrAWVOVWr7V3QFQZB6I1VHy1m7xMMPx8M5HFeET485qMacR7MRlsAXlDMsgbZfMBttshGrAyE3Vuz7_CVnebITzKyRqlv_iPMntHdwxSNYV7nMDW3nFcEkNVIMEv-tDjbdVTAafbNGyhcKwTx0XaFHUXtK3PZViMXI43KT_9UuDuDGqNUE5NM"/>
-<div class="absolute top-4 right-4 z-20">
-<span class="inline-flex items-center rounded-full bg-black/50 backdrop-blur-md px-2.5 py-0.5 text-xs font-medium text-white ring-1 ring-inset ring-white/20">
-                                IoT
-                            </span>
+
+<!-- 6. PulseSafe -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-primary/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="PulseSafe" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOO0N_xwC8WlXBPpqE41RVTM3pmaU5-9gUdRqmDOWjAgwdnvuUGEjkwqfSdglzebcq6Vml5aEM3v14zvjGJ5TcfzE1j1rcu5JvPWLE54c0cgHrSD2DzMji5Te0ZDyTkwoxQuOM0aytdjfqKgytqwT4dh-gr8MmPeSMJPygIhQ4oWmhgglka9pz0JvqzA5hlTMmlWKArscRH2Mpp8nSutdAcHk-BP3t3UbWydroaZ010dl2Q3KgaQ9IJNGLOh_aTwcQSAwhuQ8GDKA"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded border border-primary/30 uppercase tracking-tighter">Personal Venture</span>
 </div>
 </div>
-<div class="flex flex-1 flex-col p-6">
-<div class="flex items-start justify-between">
-<h3 class="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors">City Infrastructure Dashboard</h3>
-<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
-</div>
-<p class="mt-3 flex-1 text-sm leading-relaxed text-slate-400 dark:text-slate-400">
-                            IoT integration for smart city management. Visualizing sensor data for traffic, weather, and energy usage.
-                        </p>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-primary">PulseSafe</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">A startup initiative focused on digital safety and verification systems. Currently in continuous production phase.</p>
 <div class="mt-6 flex flex-wrap gap-2">
-<span class="inline-flex items-center rounded bg-primary/10 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">Python</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Django</span>
-<span class="inline-flex items-center rounded bg-surface-brighter dark:bg-slate-800 px-2 py-1 text-xs font-medium text-slate-400 dark:text-slate-300 ring-1 ring-inset ring-slate-500/10">Vue.js</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Next.js</span>
+<span class="px-2 py-1 text-[10px] font-mono text-primary bg-primary/10 rounded">Node.js</span>
 </div>
 </div>
-<a class="absolute inset-0 z-30" href="#"><span class="sr-only">View Details</span></a>
+<a class="absolute inset-0 z-30" href="https://pulsesafe.vercel.app/" target="_blank"></a>
+</article>
+
+<!-- 7. StrataCore -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-accent/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="StrataCore Engineering" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNLaNSzTFWBBccKThNMOHcmcA1OcI9fej_ED6Cb5T3Bv7MEQu5GfKGAOuGQojM431N_IIhkbZ2EWlTeWSdnGcJikoaRTQNYR2L0UUSeig7jvEv5lscVz1I21FKypaBSbVZWo_leuBL0V6D9BfBHfulg9g7qSmlju6KuFRCW11fyacALVO1voYq38fuNN-9Om7ZNk5EyJJHc-h2BMXa7rImMgKsxZFkJa59o7DDDUSnnGKOn7apKtecSk2PQFtSAqB89MnFNvdkCAY"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-accent/20 text-accent text-[10px] font-bold rounded border border-accent/30 uppercase tracking-tighter">Engineering</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">StrataCore Engineering</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">Professional engineering solutions portal with robust project display and client interaction modules.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">PHP</span>
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">Tailwind</span>
+</div>
+</div>
+<a class="absolute inset-0 z-30" href="https://stratacore.gobrand.now/" target="_blank"></a>
+</article>
+
+<!-- 8. Biskas Kitchen -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-accent/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="Biskas Kitchen" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG0kTtYcXivr36BrHbOqPWJKy-Zgz9ThHUgVuFGlcHJjJ-V8PzBf1xHMNE_T8IGumYVg6GClYuMN5HnJynw39JVqpQFzaJEtVe0NYC12RxWCOqG1cyBJlOIaGVfcNI7PaHCgd3cIQXml-gcjpNhJlBTjRX6YNMZZadQgHpzpJ0ryDEazz0yj7Bd5Dfol5hR4Y3k0JzX-3h6x_sOBpfdmJ-1CLRDELL54E_EYAjP1mVz92qIK2EUwk3_AnWYuBfSSIfpJ9ScOdJGMs"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-accent/20 text-accent text-[10px] font-bold rounded border border-accent/30 uppercase tracking-tighter">Gastronomy</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-accent transition-colors">Biskas Kitchen</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">Food service platform featuring dynamic menus and internal order tracking systems.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">PHP</span>
+<span class="px-2 py-1 text-[10px] font-mono text-accent bg-accent/10 rounded">Tailwind</span>
+</div>
+</div>
+<a class="absolute inset-0 z-30" href="http://www.biskaskitchen.com" target="_blank"></a>
+</article>
+
+<!-- 9. Music By Code -->
+<article class="group relative flex flex-col rounded-xl border border-border-dark bg-surface/30 overflow-hidden transition-all duration-300 hover:border-emerald-500/50">
+<div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
+<img alt="Music By Code" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-b365-Knl6lGIeux_DeldnnHL9wywNeuuDJU_AozWjoqJz9OqweTE6D_vvjnMmooFVtTFDo8mQ47y-oO_QIfDCQfrAWVOVWr7V3QFQZB6I1VHy1m7xMMPx8M5HFeET485qMacR7MRlsAXlDMsgbZfMBttshGrAyE3Vuz7_CVnebITzKyRqlv_iPMntHdwxSNYV7nMDW3nFcEkNVIMEv-tDjbdVTAafbNGyhcKwTx0XaFHUXtK3PZViMXI43KT_9UuDuDGqNUE5NM"/>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-2 py-1 bg-emerald-500/20 text-emerald-500 text-[10px] font-bold rounded border border-emerald-500/30 uppercase tracking-tighter">Hobby Project</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-white group-hover:text-emerald-500 transition-colors">Music By Code</h3>
+<p class="text-sm text-slate-400 mt-3 leading-relaxed">Experimental audio-visual project built with Astro and Tone.js for generative music sequences.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-2 py-1 text-[10px] font-mono text-emerald-500 bg-emerald-500/10 rounded">Astro</span>
+<span class="px-2 py-1 text-[10px] font-mono text-emerald-500 bg-emerald-500/10 rounded">Tone.js</span>
+</div>
+</div>
+<a class="absolute inset-0 z-30" href="https://music-by-code.vercel.app/" target="_blank"></a>
 </article>
 </div>
 <!-- Empty State (Hidden by default, structure provided for robustness) -->
@@ -369,7 +400,8 @@ export default function Projects() {
     <div className="stitch-page-root overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+
       <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>

@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Technologies - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator | Backend & WordPress Stack',
-  description: 'Technologies page for PROMISE NWHATOR.',
+  title: 'Tech Arsenal | Promise Ayobami Nwhator',
+  description: 'Deep dive into my technical stack: specializing in Next.js/Node.js SaaS architecture, custom PHP e-commerce systems, and mission-critical OJS journal infrastructure.',
   alternates: {
     canonical: '/technologies',
   },
@@ -28,11 +28,11 @@ export default function Technologies() {
             theme: {
                 extend: {
                     colors: {
-                        primary: "#2463eb",
-                        "background-light": "#f6f6f8",
+                        primary: "var(--primary)",
+                        accent: "var(--accent)",
                         "background-dark": "var(--background)",
-                        "surface-dark": "#1c212c",
-                        "surface-highlight": "#282d39",
+                        "surface-dark": "var(--surface)",
+                        "surface-highlight": "var(--surface-brighter)",
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
@@ -111,179 +111,136 @@ export default function Technologies() {
 </section>
 <!-- Tech Stack Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-<!-- Backend Cluster -->
-<div class="group relative bg-surface-dark border border-slate-800 rounded-xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-primary">dns</span>
+<!-- SaaS & Fullstack Cluster -->
+<div class="group relative bg-surface-dark border border-border-dark rounded-xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary">dynamic_form</span>
 </div>
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-3xl text-primary">storage</span>
-<h2 class="text-2xl font-bold text-white">Backend Engineering</h2>
+<span class="material-symbols-outlined text-3xl text-primary">deployed_code</span>
+<h2 class="text-2xl font-bold text-white">SaaS & Modern Web</h2>
 </div>
-<p class="text-slate-400 mb-8 h-12">Production backend systems designed for speed, reliability, and long-term maintainability.</p>
+<p class="text-slate-400 mb-8 h-12">Building scalable, performant SaaS products and booking engines using modern React ecosystems.</p>
 <div class="space-y-6">
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-primary/30 transition-colors">
+<!-- Next.js -->
+<div class="bg-surface-highlight/30 rounded-lg p-4 border border-border-dark hover:border-primary/30 transition-colors">
 <div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-yellow-500 text-sm">code</span> Python &amp; Django
-                            </span>
-<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">CORE</span>
+<span class="font-bold text-white flex items-center gap-2">Next.js & React</span>
+<span class="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded">MASTER</span>
 </div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-primary h-1.5 rounded-full" style="width: 95%"></div>
+<div class="w-full bg-slate-800 rounded-full h-1 mb-2">
+<div class="bg-primary h-1 rounded-full" style="width: 98%"></div>
 </div>
-<p class="text-xs text-slate-500 font-mono">Django • DRF • Architecture Patterns</p>
+<p class="text-[10px] text-slate-500 font-mono">App Router • SSR • Server Actions • Performance Opt</p>
 </div>
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-primary/30 transition-colors">
+<!-- Node.js -->
+<div class="bg-surface-highlight/30 rounded-lg p-4 border border-border-dark hover:border-primary/30 transition-colors">
 <div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-green-500 text-sm">bolt</span> Node.js APIs
-                            </span>
-<span class="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-1 rounded">API</span>
+<span class="font-bold text-white flex items-center gap-2">Node.js Ecosystem</span>
+<span class="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded">CORE</span>
 </div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-primary h-1.5 rounded-full" style="width: 90%"></div>
+<div class="w-full bg-slate-800 rounded-full h-1 mb-2">
+<div class="bg-primary h-1 rounded-full" style="width: 95%"></div>
 </div>
-<p class="text-xs text-slate-500 font-mono">RESTful Services • Auth • Integrations</p>
-</div>
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-primary/30 transition-colors">
-<div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-teal-500 text-sm">layers</span> Laravel PHP + MySQL
-                            </span>
-<span class="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-1 rounded">FRAMEWORK</span>
-</div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-primary h-1.5 rounded-full" style="width: 85%"></div>
-</div>
-<p class="text-xs text-slate-500 font-mono">Laravel • Data Performance • Data Design</p>
+<p class="text-[10px] text-slate-500 font-mono">Express • REST APIs • JWT Auth • SMTP Systems</p>
 </div>
 </div>
 </div>
-<!-- Frontend Cluster -->
-<div class="group relative bg-surface-dark border border-slate-800 rounded-xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-pink-500">web</span>
+
+<!-- PHP & E-commerce Cluster -->
+<div class="group relative bg-surface-dark border border-border-dark rounded-xl p-6 md:p-8 hover:border-accent/50 transition-all duration-300">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-accent">shopping_bag</span>
 </div>
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-3xl text-pink-500">devices</span>
-<h2 class="text-2xl font-bold text-white">Platform Interfaces</h2>
+<span class="material-symbols-outlined text-3xl text-accent">database</span>
+<h2 class="text-2xl font-bold text-white">High-Performance PHP</h2>
 </div>
-<p class="text-slate-400 mb-8 h-12">Performance-focused interfaces for product dashboards, journal systems, and user-facing web experiences.</p>
+<p class="text-slate-400 mb-8 h-12">Custom e-commerce engines and business logic processors built on stable PHP/MySQL foundations.</p>
 <div class="space-y-6">
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-pink-500/30 transition-colors">
+<!-- PHP -->
+<div class="bg-surface-highlight/30 rounded-lg p-4 border border-border-dark hover:border-accent/30 transition-colors">
 <div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-orange-500 text-sm">html</span> Next.js
-                            </span>
-<span class="text-xs font-mono text-pink-500 bg-pink-500/10 px-2 py-1 rounded">BASE</span>
+<span class="font-bold text-white flex items-center gap-2">Native PHP & Tailwind</span>
+<span class="text-[10px] font-mono text-accent bg-accent/10 px-2 py-1 rounded">EXPERT</span>
 </div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-pink-500 h-1.5 rounded-full" style="width: 98%"></div>
+<div class="w-full bg-slate-800 rounded-full h-1 mb-2">
+<div class="bg-accent h-1 rounded-full" style="width: 95%"></div>
 </div>
-<p class="text-xs text-slate-500 font-mono">App Router • SEO • Production Build</p>
+<p class="text-[10px] text-slate-500 font-mono">Custom CMS • Variation Logic • Stripe/PayPal • Speed</p>
 </div>
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-pink-500/30 transition-colors">
+<!-- MySQL -->
+<div class="bg-surface-highlight/30 rounded-lg p-4 border border-border-dark hover:border-accent/30 transition-colors">
 <div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-yellow-300 text-sm">javascript</span> React + JavaScript
-                            </span>
-<span class="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-1 rounded">LOGIC</span>
+<span class="font-bold text-white flex items-center gap-2">MySQL Architecture</span>
+<span class="text-[10px] font-mono text-accent bg-accent/10 px-2 py-1 rounded">SCHEMA</span>
 </div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-pink-500 h-1.5 rounded-full" style="width: 90%"></div>
+<div class="w-full bg-slate-800 rounded-full h-1 mb-2">
+<div class="bg-accent h-1 rounded-full" style="width: 90%"></div>
 </div>
-<p class="text-xs text-slate-500 font-mono">Components • State Flow • Fetch APIs</p>
-</div>
-<!-- Tech Item -->
-<div class="bg-surface-highlight/50 rounded-lg p-4 border border-slate-700/50 hover:border-pink-500/30 transition-colors">
-<div class="flex justify-between items-center mb-2">
-<span class="font-bold text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-cyan-400 text-sm">code_blocks</span> Astro + NextJS
-                            </span>
-<span class="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-1 rounded">STACK</span>
-</div>
-<div class="w-full bg-slate-700 rounded-full h-1.5 mb-2">
-<div class="bg-pink-500 h-1.5 rounded-full" style="width: 85%"></div>
-</div>
-<p class="text-xs text-slate-500 font-mono">Frontend Architecture • SEO • Speed</p>
+<p class="text-[10px] text-slate-500 font-mono">Optimization • Relational Design • Data Integrity</p>
 </div>
 </div>
 </div>
-<!-- CMS & Content -->
-<div class="group relative bg-surface-dark border border-slate-800 rounded-xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-indigo-500">article</span>
-</div>
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-3xl text-indigo-500">publish</span>
-<h2 class="text-2xl font-bold text-white">WordPress &amp; E-Commerce Systems</h2>
-</div>
-<p class="text-slate-400 mb-8 h-12">Custom WordPress platforms and WooCommerce systems optimized for conversion, performance, and reliability.</p>
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-highlight/50 p-4 rounded-lg border border-slate-700/50 flex flex-col items-center justify-center text-center hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined text-3xl text-white mb-2">php</span>
-<span class="font-bold text-white mb-1">WordPress</span>
-<span class="text-xs text-slate-500 font-mono">Custom Builds</span>
-</div>
-<div class="bg-surface-highlight/50 p-4 rounded-lg border border-slate-700/50 flex flex-col items-center justify-center text-center hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined text-3xl text-white mb-2">shopping_cart</span>
-<span class="font-bold text-white mb-1">WooCommerce</span>
-<span class="text-xs text-slate-500 font-mono">Checkout + Payments</span>
-</div>
-<div class="bg-surface-highlight/50 p-4 rounded-lg border border-slate-700/50 flex flex-col items-center justify-center text-center hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined text-3xl text-white mb-2">php</span>
-<span class="font-bold text-white mb-1">PHP</span>
-<span class="text-xs text-slate-500 font-mono">Custom Functionality</span>
-</div>
-<div class="bg-surface-highlight/50 p-4 rounded-lg border border-slate-700/50 flex flex-col items-center justify-center text-center hover:bg-slate-800 transition-colors">
-<span class="material-symbols-outlined text-3xl text-white mb-2">database</span>
-<span class="font-bold text-white mb-1">MySQL</span>
-<span class="text-xs text-slate-500 font-mono">Data Performance</span>
-</div>
-</div>
-</div>
-<!-- DevOps & Tools -->
-<div class="group relative bg-surface-dark border border-slate-800 rounded-xl p-6 md:p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+
+<!-- Infrastructure Cluster -->
+<div class="group relative bg-surface-dark border border-border-dark rounded-xl p-6 md:p-8 hover:border-emerald-500/50 transition-all duration-300">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
 <span class="material-symbols-outlined text-8xl text-emerald-500">terminal</span>
 </div>
 <div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-3xl text-emerald-500">settings_system_daydream</span>
-<h2 class="text-2xl font-bold text-white">DevOps, Mobile &amp; Delivery</h2>
+<span class="material-symbols-outlined text-3xl text-emerald-500">lan</span>
+<h2 class="text-2xl font-bold text-white">Publishing & Infrastructure</h2>
 </div>
-<p class="text-slate-400 mb-8 h-12">Delivery workflows across Linux servers, containers, Git pipelines, and mobile app integrations.</p>
-<div class="space-y-3 font-mono text-sm">
+<p class="text-slate-400 mb-8 h-12">Managing complex digital ecosystems including Academic Journals (OJS) and deep WordPress integrations.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-highlight/20 p-4 rounded-lg border border-border-dark text-center hover:bg-emerald-500/5 transition-colors">
+<span class="font-bold text-white block mb-1">OJS</span>
+<span class="text-[10px] text-emerald-500 font-mono">Academic Systems</span>
+</div>
+<div class="bg-surface-highlight/20 p-4 rounded-lg border border-border-dark text-center hover:bg-emerald-500/5 transition-colors">
+<span class="font-bold text-white block mb-1">WordPress</span>
+<span class="text-[10px] text-emerald-500 font-mono">Advanced Core</span>
+</div>
+<div class="bg-surface-highlight/20 p-4 rounded-lg border border-border-dark text-center hover:bg-emerald-500/5 transition-colors">
+<span class="font-bold text-white block mb-1">Linux/SSH</span>
+<span class="text-[10px] text-emerald-500 font-mono">Server Ops</span>
+</div>
+<div class="bg-surface-highlight/20 p-4 rounded-lg border border-border-dark text-center hover:bg-emerald-500/5 transition-colors">
+<span class="font-bold text-white block mb-1">DevOps</span>
+<span class="text-[10px] text-emerald-500 font-mono">Vercel & CI/CD</span>
+</div>
+</div>
+</div>
+
+<!-- Project Insights Cluster -->
+<div class="group relative bg-surface-dark border border-border-dark rounded-xl p-6 md:p-8 hover:border-white/50 transition-all duration-300">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-white">insights</span>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-3xl text-white">auto_awesome</span>
+<h2 class="text-2xl font-bold text-white">Continuous Growth</h2>
+</div>
+<p class="text-slate-400 mb-8 h-12">Always expanding horizons into newer frameworks and creative coding explorations.</p>
+<div class="space-y-3 font-mono text-xs">
 <div class="flex items-center gap-3 text-slate-300">
-<span class="text-emerald-500">root@server:~#</span>
-<span>git commit -m "Version Control"</span>
+<span class="text-emerald-500">$</span>
+<span>exp --stack astro-tonejs</span>
 </div>
 <div class="flex items-center gap-3 text-slate-300">
-<span class="text-emerald-500">root@server:~#</span>
-<span>docker compose up -d</span>
+<span class="text-emerald-500">$</span>
+<span>echo "Exploring Edge Runtime"</span>
 </div>
 <div class="flex items-center gap-3 text-slate-300">
-<span class="text-emerald-500">root@server:~#</span>
-<span>systemctl status nginx</span>
-</div>
-<div class="flex items-center gap-3 text-slate-300">
-<span class="text-emerald-500">root@server:~#</span>
-<span>flutter build && firebase deploy</span>
+<span class="text-emerald-500">$</span>
+<span>optimize --all --seo --ux</span>
 </div>
 </div>
 <div class="mt-6 flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Linux</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Git/GitHub</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Nginx</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">CI/CD</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Docker</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Flutter</span>
-<span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-xs font-mono">Firebase</span>
+<span class="px-2 py-1 bg-white/5 text-white/50 border border-white/10 rounded text-[10px] font-mono">Astro</span>
+<span class="px-2 py-1 bg-white/5 text-white/50 border border-white/10 rounded text-[10px] font-mono">TensorFlow.js (Exp)</span>
+<span class="px-2 py-1 bg-white/5 text-white/50 border border-white/10 rounded text-[10px] font-mono">Web Audio API</span>
 </div>
 </div>
 </div>
@@ -395,7 +352,8 @@ export default function Technologies() {
     <div className="stitch-page-root overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+
       <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>

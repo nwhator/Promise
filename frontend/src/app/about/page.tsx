@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator | Backend Engineer',
-  description: 'About page for PROMISE NWHATOR.',
+  title: 'About Promise Ayobami Nwhator | Backend Engineer & Systems Architect',
+  description: 'Learn about my journey from Obafemi Awolowo University to architecting scalable backend systems, e-commerce platforms, and academic journal infrastructure.',
   alternates: {
     canonical: '/about',
   },
@@ -198,33 +198,33 @@ export default function About() {
 <div class="rounded-2xl border border-slate-200 dark:border-border-dark bg-surface dark:bg-background-dark/50 p-6 md:p-8">
 <div class="space-y-8">
 <div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Languages</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Core Languages</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">C</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Astro</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">TypeScript / JavaScript</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">PHP (Modern / Vanilla)</span>
 <span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Python</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Laravel PHP</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">RESTful API Design</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SQL (PostgreSQL/MySQL)</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">REST API Design</span>
 </div>
 </div>
 <div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Infrastructure &amp; Tools</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Ecosystems & Infrastructure</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">MyRESTful API Design</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Docker</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Flutter</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Firebase</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SEO Optimization</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Linux + Git Workflows</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Next.js / React</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Docker & Containerization</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">OJS Academic Systems</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WordPress / WooCommerce</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SEO & Performance</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Linux / Git Workflows</span>
 </div>
 </div>
 <div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Architecture Patterns</h4>
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Strategic Architecture</h4>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WordPress Systems</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WooCommerce</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Hosting + Migration</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">System Scalability</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Database Optimization</span>
 <span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Security Hardening</span>
+<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Business Logic Automation</span>
 </div>
 </div>
 </div>
@@ -265,12 +265,12 @@ export default function About() {
 <div class="relative pl-8">
 <span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600 ring-4 ring-white dark:ring-background-dark"></span>
 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-<h4 class="text-lg font-bold text-foreground dark:text-white">MyRESTful API Design Certified Solutions Architect</h4>
-<span class="text-xs font-bold text-slate-500 bg-surface-brighter dark:bg-border-dark px-2 py-1 rounded">2021</span>
+<h4 class="text-lg font-bold text-foreground dark:text-white">AWS Certified Solutions Architect</h4>
+<span class="text-xs font-bold text-slate-500 bg-surface-brighter dark:bg-border-dark px-2 py-1 rounded">Focus: Cloud Infrastructure</span>
 </div>
 <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2">Amazon Web Services</p>
 <p class="text-sm text-slate-400 dark:text-text-muted">
-                                        Professional certification validation expertise in designing distributed systems on MyRESTful API Design.
+                                        Professional validation in designing distributed, highly available, and fault-tolerant systems on AWS.
                                     </p>
 </div>
 </div>
@@ -366,7 +366,8 @@ export default function About() {
     <div className="stitch-page-root overflow-hidden">
       {/* Dynamic Background Glow */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+
       <div className="relative animate-fade-in">
         {parse(htmlContent)}
       </div>
