@@ -1,5 +1,6 @@
 import { getBlogPosts } from "@/lib/blogApi";
 import Link from "next/link";
+import Image from "next/image";
 import { BlogChrome } from "@/components/BlogChrome";
 import parse from 'html-react-parser';
 
@@ -42,12 +43,11 @@ export default async function BlogPage() {
   return (
     <BlogChrome>
       <section className="px-4 py-8 max-w-4xl mx-auto w-full">
-        <h1 className="text-3xl font-bold mb-2 text-white">
-          Engineering Blog
+        <h1 className="text-4xl md:text-5xl font-black mb-3 text-white tracking-tight">
+          Insights & <span className="text-primary">Publications</span>
         </h1>
-        <p className="text-white/70 mb-8 text-sm">
-          Insights, architecture notes, and technical write-ups by Promise
-          Nwhator.
+        <p className="text-white/60 mb-10 text-base md:text-lg max-w-2xl font-light leading-relaxed">
+          Deep dives into backend architecture, system design patterns, and engineering excellence by Promise Nwhator.
         </p>
 
         {posts.length === 0 ? (
@@ -62,34 +62,47 @@ export default async function BlogPage() {
             {posts.map((post) => (
               <li
                 key={post.id}
-                className="rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-200 overflow-hidden group"
+                className="rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-200 overflow-hidden group flex flex-col"
               >
-                <Link href={`/blog/${post.slug}`} className="block p-6">
-                  <h2 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors mb-2 line-clamp-2">
-                    {post.title}
-                  </h2>
-                  {post.excerpt && (
-                    <p className="text-white/60 text-sm line-clamp-3 mb-4">
-                      {typeof post.excerpt === 'string'
-                        ? parse(post.excerpt.replace(/<[^>]+>/g, '').slice(0, 200))
-                        : post.excerpt}
-                    </p>
+                <Link href={`/blog/${post.slug}`} className="block flex-1">
+                  {post.cover_image_path && (
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        src={post.cover_image_path}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        unoptimized
+                      />
+                    </div>
                   )}
-                  <div className="flex items-center gap-2 text-xs text-white/40">
-                    <span>
-                      {post.published_at
-                        ? new Date(post.published_at).toLocaleDateString(
-                          "en-GB",
-                          {
-                            day: "numeric",
-                            month: "short",
-                            year: "numeric",
-                          }
-                        )
-                        : "Draft"}
-                    </span>
-                    <span>·</span>
-                    <span className="text-blue-400/70">Read →</span>
+                  <div className="p-6">
+                    <h2 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors mb-2 line-clamp-2">
+                      {post.title}
+                    </h2>
+                    {post.excerpt && (
+                      <p className="text-white/60 text-sm line-clamp-3 mb-4">
+                        {typeof post.excerpt === 'string'
+                          ? parse(post.excerpt.replace(/<[^>]+>/g, '').slice(0, 200))
+                          : post.excerpt}
+                      </p>
+                    )}
+                    <div className="flex items-center gap-2 text-xs text-white/40">
+                      <span>
+                        {post.published_at
+                          ? new Date(post.published_at).toLocaleDateString(
+                            "en-GB",
+                            {
+                              day: "numeric",
+                              month: "short",
+                              year: "numeric",
+                            }
+                          )
+                          : "Draft"}
+                      </span>
+                      <span>·</span>
+                      <span className="text-blue-400/70 group-hover:underline">Read →</span>
+                    </div>
                   </div>
                 </Link>
               </li>
