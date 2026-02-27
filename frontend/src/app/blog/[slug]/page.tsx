@@ -73,13 +73,13 @@ export default async function BlogDetailPage({ params }: Props) {
         <div className="mb-6">
           <Link
             href="/blog"
-            className="text-blue-300 hover:text-blue-200 text-sm inline-flex items-center gap-1"
+            className="text-primary hover:text-primary-glow text-sm inline-flex items-center gap-1"
           >
             ← Back to blog
           </Link>
         </div>
 
-        <article className="rounded-xl border border-white/10 bg-white/5 overflow-hidden">
+        <article className="rounded-xl border border-border bg-surface overflow-hidden">
           {post.cover_image_path ? (
             <div className="relative w-full h-64 overflow-hidden">
               <Image
@@ -94,20 +94,20 @@ export default async function BlogDetailPage({ params }: Props) {
 
           <div className="p-6 sm:p-8">
             <header className="mb-6">
-              <h1 className="text-3xl font-bold text-white mb-3">
+              <h1 className="text-3xl font-bold text-foreground mb-3">
                 {post.title}
               </h1>
               {publishedDate && (
-                <time className="text-white/40 text-sm">{publishedDate}</time>
+                <time className="text-foreground/40 text-sm">{publishedDate}</time>
               )}
               {post.excerpt && (
-                <p className="text-white/70 text-base mt-4 leading-relaxed border-l-2 border-blue-500/50 pl-4">
+                <p className="text-foreground/70 text-base mt-4 leading-relaxed border-l-2 border-primary/50 pl-4">
                   {parse(post.excerpt)}
                 </p>
               )}
             </header>
 
-            <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-400 prose-strong:text-white prose-li:text-white/80 max-w-none text-white/80 leading-relaxed">
+            <div className="prose prose-slate prose-headings:text-foreground prose-a:text-primary prose-strong:text-foreground prose-li:text-foreground/80 max-w-none text-foreground/80 leading-relaxed">
               {parse(post.content ?? '')}
             </div>
           </div>

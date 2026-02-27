@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 type BlogChromeProps = {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white flex flex-col">
+    <main className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-500">
       {/* Dynamic Background Glow (Matching Homepage) */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
 
@@ -39,17 +40,21 @@ export function BlogChrome({ children }: BlogChromeProps) {
               <Link href="/technologies" className="text-slate-400 hover:text-primary transition-colors">Technologies</Link>
               <Link href="/resume" className="text-slate-400 hover:text-primary transition-colors">Resume</Link>
               <Link href="/contact" className="text-slate-400 hover:text-primary transition-colors">Contact</Link>
-              <Link href="/blog" className="text-white font-bold">Blog</Link>
+              <Link href="/blog" className="text-foreground font-bold">Blog</Link>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
-            </button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden text-foreground p-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle mobile menu"
+              >
+                <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
+              </button>
+            </div>
           </div>
         </div>
 

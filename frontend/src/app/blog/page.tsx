@@ -43,17 +43,17 @@ export default async function BlogPage() {
   return (
     <BlogChrome>
       <section className="px-4 py-8 max-w-4xl mx-auto w-full">
-        <h1 className="text-4xl md:text-5xl font-black mb-3 text-white tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-black mb-3 text-foreground tracking-tight">
           Insights & <span className="text-primary">Publications</span>
         </h1>
-        <p className="text-white/60 mb-10 text-base md:text-lg max-w-2xl font-light leading-relaxed">
+        <p className="text-foreground/60 mb-10 text-base md:text-lg max-w-2xl font-light leading-relaxed">
           Deep dives into backend architecture, system design patterns, and engineering excellence by Promise Nwhator.
         </p>
 
         {posts.length === 0 ? (
           <div className="text-center py-16">
-            <p className="text-white/50 text-lg mb-2">No posts yet.</p>
-            <p className="text-white/30 text-sm">
+            <p className="text-foreground/50 text-lg mb-2">No posts yet.</p>
+            <p className="text-foreground/30 text-sm">
               Check back soon for engineering insights and updates.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default async function BlogPage() {
             {posts.map((post) => (
               <li
                 key={post.id}
-                className="rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-200 overflow-hidden group flex flex-col"
+                className="rounded-xl border border-border bg-surface hover:bg-surface-brighter hover:border-primary/30 transition-all duration-200 overflow-hidden group flex flex-col"
               >
                 <Link href={`/blog/${post.slug}`} className="block flex-1">
                   {post.cover_image_path && (
@@ -77,17 +77,17 @@ export default async function BlogPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <h2 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors mb-2 line-clamp-2">
+                    <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
                       {post.title}
                     </h2>
                     {post.excerpt && (
-                      <p className="text-white/60 text-sm line-clamp-3 mb-4">
+                      <p className="text-foreground/60 text-sm line-clamp-3 mb-4">
                         {typeof post.excerpt === 'string'
                           ? parse(post.excerpt.replace(/<[^>]+>/g, '').slice(0, 200))
                           : post.excerpt}
                       </p>
                     )}
-                    <div className="flex items-center gap-2 text-xs text-white/40">
+                    <div className="flex items-center gap-2 text-xs text-foreground/40">
                       <span>
                         {post.published_at
                           ? new Date(post.published_at).toLocaleDateString(
@@ -101,7 +101,7 @@ export default async function BlogPage() {
                           : "Draft"}
                       </span>
                       <span>·</span>
-                      <span className="text-blue-400/70 group-hover:underline">Read →</span>
+                      <span className="text-primary group-hover:underline">Read →</span>
                     </div>
                   </div>
                 </Link>

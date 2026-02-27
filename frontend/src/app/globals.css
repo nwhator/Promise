@@ -17,7 +17,25 @@
   --border: #334155;
   --success: #10b981;
   --error: #ef4444;
+  --nav-bg: rgba(2, 6, 23, 0.75);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #7c3aed;
+  --primary-glow: rgba(124, 58, 237, 0.15);
+  --accent: #0891b2;
+  --accent-glow: rgba(8, 145, 178, 0.15);
+  --surface: #ffffff;
+  --surface-brighter: #f1f5f9;
+  --border: #e2e8f0;
+  --success: #059669;
+  --error: #dc2626;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -104,6 +122,23 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  /* Bug Scatter Animation */
+  @keyframes bug-scatter {
+    0% {
+      opacity: 0.8;
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(var(--tw-translate-x, 100px), var(--tw-translate-y, 100px)) scale(0.5) rotate(720deg);
+    }
+  }
+
+  .animate-bug-scatter {
+    animation: bug-scatter 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+
   /* Grid Pattern Background */
   .bg-grid-pattern {
     background-image: radial-gradient(circle, #334155 1px, transparent 1px);
@@ -112,17 +147,17 @@
 
   /* Premium Components */
   .glass {
-    background: rgba(15, 23, 42, 0.7);
+    background: var(--nav-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    border: 1px solid var(--border);
   }
 
   .glass-nav {
-    background: rgba(2, 6, 23, 0.75);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    border-bottom: 1px solid var(--border);
   }
 
   .card-premium {
@@ -140,7 +175,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(to right, #ffffff, #94a3b8);
+    background: linear-gradient(to right, var(--foreground), var(--border));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -212,7 +247,7 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  color: #f8fafc;
+  color: var(--foreground);
   font-weight: 700;
   line-height: 1.3;
   margin-top: 1.75em;
@@ -234,7 +269,8 @@
 }
 
 .prose p {
-  color: rgba(248, 250, 252, 0.8);
+  color: var(--foreground);
+  opacity: 0.8;
   line-height: 1.8;
   margin-bottom: 1.2em;
 }
