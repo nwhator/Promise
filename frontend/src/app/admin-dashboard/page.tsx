@@ -146,7 +146,12 @@ export default function AdminDashboard() {
             : await supabase.from("blog_posts").insert(payload);
 
         if (error) {
-            setSaveMsg("Error: " + error.message);
+            console.error("Supabase Error:", error);
+            if (error.code === "42501") {
+                setSaveMsg("Security Error (RLS): Your Supabase account doesn't have permission to save to 'blog_posts'. Please run the SQL schema to fix policies.");
+            } else {
+                setSaveMsg("Error: " + error.message);
+            }
         } else {
             setSaveMsg("Saved successfully!");
             setTab("blog");

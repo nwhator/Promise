@@ -1,55 +1,10 @@
+"use client";
 
+import { motion } from 'framer-motion';
 import parse from 'html-react-parser';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'About Promise Ayobami Nwhator | Backend Engineer & Systems Architect',
-  description: 'Learn about my journey from Obafemi Awolowo University to architecting scalable backend systems, e-commerce platforms, and academic journal infrastructure.',
-  alternates: {
-    canonical: '/about',
-  },
-};
 
 export default function About() {
-  const htmlContent = `
-    
-
-
-
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "var(--primary)",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "var(--background)", // Matching the provided component bg
-                        "card-dark": "var(--surface)", // Slightly lighter for cards
-                        "border-dark": "var(--border)", // Border color from component
-                        "text-main": "#f8fafc",
-                        "text-muted": "#9da6b9",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"],
-                        "sans": ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
-<style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-
-
+  const htmlHeader = `
 <!-- PROMISE_SHARED_HEADER_START -->
 <header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +14,7 @@ export default function About() {
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
+        <a class="text-white font-bold" href="/about" target="_top">About</a>
         <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
         <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
         <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
@@ -71,236 +26,9 @@ export default function About() {
   </div>
 </header>
 <!-- PROMISE_SHARED_HEADER_END -->
+  `;
 
-
-
-<div class="min-h-screen flex flex-col">
-<!-- Navbar -->
-
-<!-- Main Layout -->
-<main class="flex-grow">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-<!-- Sidebar (Sticky) -->
-<aside class="lg:col-span-4 xl:col-span-3">
-<div class="sticky top-24 space-y-6">
-<!-- Profile Card -->
-<div class="rounded-xl border border-slate-200 dark:border-border-dark bg-surface dark:card-premium p-6 shadow-sm">
-<div class="flex flex-col items-center text-center">
-<div class="relative mb-4 h-32 w-32 overflow-hidden rounded-full ring-4 ring-slate-100 dark:ring-border-dark">
-<img alt="Portrait of Promise Ayobami Nwhator" class="h-full w-full object-cover" data-alt="Professional headshot of a software engineer" src="/me.jpeg"/>
-<div class="absolute bottom-0 right-0 h-4 w-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-card-dark"></div>
-</div>
-<h1 class="text-xl font-bold text-foreground dark:text-white">Promise Ayobami Nwhator</h1>
-<p class="mt-1 text-sm font-medium text-primary">Backend Engineer • WordPress Systems Architect</p>
-<p class="mt-4 text-sm text-slate-400 dark:text-text-muted leading-relaxed">
-                                        I build secure, scalable, and revenue-driven digital platforms. From backend APIs to full WordPress journal systems and e-commerce platforms, I help organizations turn ideas into stable, production-ready solutions.
-                                    </p>
-<div class="mt-6 flex gap-3">
-<a class="group flex h-10 w-10 items-center justify-center rounded-full bg-surface-brighter dark:bg-border-dark text-slate-400 dark:text-text-muted transition-all hover:bg-primary hover:text-white" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
-<span class="material-symbols-outlined text-[20px]">code</span> <!-- Github metaphor -->
-</a>
-<a class="group flex h-10 w-10 items-center justify-center rounded-full bg-surface-brighter dark:bg-border-dark text-slate-400 dark:text-text-muted transition-all hover:bg-primary hover:text-white" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
-<span class="material-symbols-outlined text-[20px]">work</span> <!-- LinkedIn metaphor -->
-</a>
-<a class="group flex h-10 w-10 items-center justify-center rounded-full bg-surface-brighter dark:bg-border-dark text-slate-400 dark:text-text-muted transition-all hover:bg-primary hover:text-white" href="mailto:nwhator@gmail.com">
-<span class="material-symbols-outlined text-[20px]">alternate_email</span> <!-- Twitter metaphor -->
-</a>
-</div>
-<div class="mt-6 w-full pt-6 border-t border-slate-200 dark:border-border-dark">
-<div class="flex items-center gap-3 text-sm text-slate-400 dark:text-text-muted mb-2">
-<span class="material-symbols-outlined text-[18px]">location_on</span>
-<span>Nigeria</span>
-</div>
-<div class="flex items-center gap-3 text-sm text-slate-400 dark:text-text-muted">
-<span class="material-symbols-outlined text-[18px]">mail</span>
-<span>nwhator@gmail.com</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Quick Stats (Optional for sidebar) -->
-<div class="grid grid-cols-2 gap-3">
-<div class="rounded-xl bg-primary/10 p-4 text-center border border-primary/20">
-<span class="block text-2xl font-black text-primary">3+</span>
-<span class="text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-text-muted">Years Exp.</span>
-</div>
-<div class="rounded-xl bg-surface-brighter dark:card-premium border border-slate-200 dark:border-border-dark p-4 text-center">
-<span class="block text-2xl font-black text-foreground dark:text-white">20+</span>
-<span class="text-xs font-medium uppercase tracking-wider text-slate-400 dark:text-text-muted">Projects</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Area -->
-<div class="lg:col-span-8 xl:col-span-9 space-y-16">
-<!-- Introduction / Philosophy Header -->
-<section className="animate-fade-in">
-<div class="mb-6 inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-<span class="mr-1 h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-                                Engineering Philosophy
-                            </div>
-<h2 class="text-4xl font-black tracking-tight text-foreground dark:text-white sm:text-5xl mb-6">
-                                Structure drives growth.<br/>
-<span class="text-slate-400 dark:text-slate-400">Performance keeps it sustainable.</span>
-</h2>
-<div class="prose prose-lg dark:prose-invert max-w-none text-slate-400 dark:text-text-muted">
-<p>
-                                    Whether it’s a backend system, a journal platform, or an e-commerce website — I focus on performance, structure, and long-term sustainability.
-                                </p>
-</div>
-</section>
-<!-- Methodology Grid -->
-<section className="animate-fade-in">
-<h3 class="text-2xl font-bold text-foreground dark:text-white mb-8 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">architecture</span>
-                                The Methodology
-                            </h3>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Card 1 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-surface dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-surface-brighter dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">code</span>
-</div>
-<h4 class="mb-2 text-lg font-bold text-foreground dark:text-white">Clean Code</h4>
-<p class="text-sm leading-relaxed text-slate-400 dark:text-text-muted">
-                                        Writing self-documenting code with clear separation of concerns using Domain-Driven Design principles.
-                                    </p>
-</div>
-<!-- Card 2 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-surface dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-surface-brighter dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">bolt</span>
-</div>
-<h4 class="mb-2 text-lg font-bold text-foreground dark:text-white">Performance First</h4>
-<p class="text-sm leading-relaxed text-slate-400 dark:text-text-muted">
-                                        Optimizing for low latency and high throughput from the start. Database indexing and caching strategies are not afterthoughts.
-                                    </p>
-</div>
-<!-- Card 3 -->
-<div class="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-border-dark bg-surface dark:card-premium p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-surface-brighter dark:bg-background-dark text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">layers</span>
-</div>
-<h4 class="mb-2 text-lg font-bold text-foreground dark:text-white">Scalable Systems</h4>
-<p class="text-sm leading-relaxed text-slate-400 dark:text-text-muted">
-                                        Designing distributed systems that handle growth gracefully. WordPress Systems when needed, Monoliths when practical.
-                                    </p>
-</div>
-</div>
-</section>
-<!-- Core Strengths -->
-<section className="animate-fade-in">
-<h3 class="text-2xl font-bold text-foreground dark:text-white mb-8 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">psychology</span>
-                                Core Strengths
-                            </h3>
-<div class="rounded-2xl border border-slate-200 dark:border-border-dark bg-surface dark:bg-background-dark/50 p-6 md:p-8">
-<div class="space-y-8">
-<div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Core Languages</h4>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">TypeScript / JavaScript</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">PHP (Modern / Vanilla)</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Python</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SQL (PostgreSQL/MySQL)</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">REST API Design</span>
-</div>
-</div>
-<div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Ecosystems & Infrastructure</h4>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Next.js / React</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Docker & Containerization</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">OJS Academic Systems</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">WordPress / WooCommerce</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">SEO & Performance</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Linux / Git Workflows</span>
-</div>
-</div>
-<div>
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Strategic Architecture</h4>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">System Scalability</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Database Optimization</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Security Hardening</span>
-<span class="px-4 py-2 rounded-md bg-surface dark:card-premium border border-slate-200 dark:border-border-dark text-sm font-medium text-slate-700 dark:text-slate-200 shadow-sm">Business Logic Automation</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Education Timeline -->
-<section className="animate-fade-in">
-<h3 class="text-2xl font-bold text-foreground dark:text-white mb-8 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">school</span>
-                                Education &amp; Certifications
-                            </h3>
-<div class="relative border-l border-slate-200 dark:border-border-dark ml-3 space-y-10 pb-4">
-<!-- Timeline Item 1 -->
-<div class="relative pl-8">
-<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark"></span>
-<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-<h4 class="text-lg font-bold text-foreground dark:text-white">BSc. Computer Science & Engineering</h4>
-<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Completed</span>
-</div>
-<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2">Obafemi Awolowo University</p>
-<p class="text-sm text-slate-400 dark:text-text-muted">
-                                        Focused on Distributed Systems and Machine Learning algorithms. Thesis on "Optimizing Load Balancing in WordPress Systems Architectures."
-                                    </p>
-</div>
-<!-- Timeline Item 2 -->
-<div class="relative pl-8">
-<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600 ring-4 ring-white dark:ring-background-dark"></span>
-<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-<h4 class="text-lg font-bold text-foreground dark:text-white">Certified Software Engineer - ALX</h4>
-<span class="text-xs font-bold text-slate-500 bg-surface-brighter dark:bg-border-dark px-2 py-1 rounded">Backend Engineering Program</span>
-</div>
-<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2">ALX</p>
-<p class="text-sm text-slate-400 dark:text-text-muted">
-                                        Intensive training in C programming, Python backend development, Node.js systems, API architecture, Docker containerization, and agile collaboration.
-                                    </p>
-</div>
-<!-- Timeline Item 3 -->
-<div class="relative pl-8">
-<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600 ring-4 ring-white dark:ring-background-dark"></span>
-<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-<h4 class="text-lg font-bold text-foreground dark:text-white">AWS Certified Solutions Architect</h4>
-<span class="text-xs font-bold text-slate-500 bg-surface-brighter dark:bg-border-dark px-2 py-1 rounded">Focus: Cloud Infrastructure</span>
-</div>
-<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2">Amazon Web Services</p>
-<p class="text-sm text-slate-400 dark:text-text-muted">
-                                        Professional validation in designing distributed, highly available, and fault-tolerant systems on AWS.
-                                    </p>
-</div>
-</div>
-</section>
-<!-- CTA Footer inside main content -->
-<div class="rounded-2xl bg-gradient-to-r from-primary/20 to-transparent p-1">
-<div class="rounded-xl bg-surface dark:card-premium p-8 md:p-12 text-center">
-<h3 class="text-2xl font-bold text-foreground dark:text-white mb-4">Ready to build something robust?</h3>
-<p class="text-slate-400 dark:text-text-muted mb-8 max-w-xl mx-auto">
-                                    I'm currently available for consulting and architectural reviews. Let's discuss how we can scale your infrastructure.
-                                </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button class="w-full sm:w-auto px-8 py-3 bg-primary hover:bg-blue-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-primary/25">
-                                        Get in Touch
-                                    </button>
-<button class="w-full sm:w-auto px-8 py-3 bg-transparent border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-white font-bold rounded-lg hover:bg-surface-brighter dark:hover:bg-border-dark transition-colors">
-                                        View Portfolio
-                                    </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-
-
-
-
+  const htmlFooter = `
 <!-- PROMISE_SHARED_FOOTER_START -->
 <footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -311,66 +39,164 @@ export default function About() {
     </div>
   </div>
 </footer>
-<script>
-(function () {
-  const yearNode = document.getElementById('copyright-year');
-  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
-
-  const routeMap = {
-    home: '/',
-    about: '/about',
-    work: '/projects',
-    project: '/projects',
-    projects: '/projects',
-    services: '/services',
-    technologies: '/technologies',
-    resume: '/resume',
-    contact: '/contact',
-    blog: '/blog'
-  };
-
-  document.querySelectorAll('a').forEach(function (anchor) {
-    const rawHref = (anchor.getAttribute('href') || '').trim();
-    const label = (anchor.textContent || '').trim().toLowerCase();
-
-    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
-      anchor.setAttribute('href', 'https://github.com/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
-      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref !== '#') return;
-
-    for (const key in routeMap) {
-      if (label.includes(key)) {
-        anchor.setAttribute('href', routeMap[key]);
-        anchor.setAttribute('target', '_top');
-        break;
-      }
-    }
-  });
-})();
-</script>
 <!-- PROMISE_SHARED_FOOTER_END -->
-
   `;
-  return (
-    <div className="stitch-page-root overflow-hidden">
-      {/* Dynamic Background Glow */}
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
 
-      <div className="relative animate-fade-in">
-        {parse(htmlContent)}
-      </div>
+  return (
+    <div className="stitch-page-root bg-background-dark min-h-screen text-white overflow-x-hidden">
+      {/* Background Elements */}
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] pointer-events-none" />
+
+      {parse(htmlHeader)}
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+          {/* Sidebar */}
+          <motion.aside
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-4"
+          >
+            <div className="sticky top-24 space-y-8">
+              <div className="glass rounded-3xl p-8 border border-white/5 text-center">
+                <div className="relative inline-block mb-6">
+                  <div className="w-32 h-32 rounded-full ring-4 ring-primary/20 overflow-hidden bg-surface">
+                    <img src="/me.jpeg" alt="Promise Nwhator" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-4 border-background-dark" />
+                </div>
+                <h1 className="text-2xl font-black mb-2">Promise Nwhator</h1>
+                <p className="text-primary font-mono text-sm tracking-tighter mb-4">Systems Architect & Backend Lead</p>
+                <p className="text-slate-400 text-sm font-light leading-relaxed mb-8">
+                  Engineering secure, scalable, and high-performance digital infrastructure for the modern web.
+                </p>
+                <div className="flex justify-center gap-4">
+                  <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all">
+                    <span className="material-symbols-outlined">code</span>
+                  </a>
+                  <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" className="w-10 h-10 glass rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all">
+                    <span className="material-symbols-outlined">work</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="glass rounded-3xl p-8 border border-white/5">
+                <h3 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-6 font-mono">Core Arsenal</h3>
+                <div className="flex flex-wrap gap-2">
+                  {["System Architecture", "Next.js", "Node.js", "PHP", "AWS", "Supabase", "OJS", "PostgreSQL", "Tailwind"].map((skill, i) => (
+                    <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-slate-300">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.aside>
+
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-8 space-y-16"
+          >
+            {/* Bio Section */}
+            <section className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-black tracking-tight"><span className="text-gradient-primary">Architecting</span> the future of digital systems.</h2>
+              <div className="prose prose-invert prose-lg">
+                <p className="text-slate-300 font-light leading-relaxed">
+                  I specialize in turning complex business requirements into elegant, high-performance technical architectures. With deep expertise in backend systems, I've architected everything from high-conversion e-commerce engines to national academic journal infrastructures.
+                </p>
+                <p className="text-slate-300 font-light leading-relaxed">
+                  My approach focuses on three pillars: **Security**, **Scalability**, and **Speed**. I believe that a system shouldn't just work; it should be ready to scale 10x without flinching.
+                </p>
+              </div>
+            </section>
+
+            {/* Career Timeline */}
+            <section className="space-y-10">
+              <h3 className="text-2xl font-bold flex items-center gap-4">
+                <span className="w-8 h-[1px] bg-primary" /> Career Trajectory
+              </h3>
+              <div className="space-y-8">
+                {[
+                  {
+                    title: "Senior Backend Architect",
+                    company: "Consulting & SaaS Projects",
+                    period: "2021 — PRESENT",
+                    desc: "Lead architect for The Lum Studios booking engine and Agricyclers UK e-commerce platform. Developed custom OJS integration plugins and secure hosting architectures."
+                  },
+                  {
+                    title: "System Infrastructure Engineer",
+                    company: "Academic Journal Networks",
+                    period: "2020 — 2021",
+                    desc: "Designed and deployed OJS infrastructures for national journals including NDJ and NHSJ. Integrated automated SMTP flows and security hardening protocols."
+                  },
+                  {
+                    title: "Software Engineering Student",
+                    company: "Obafemi Awolowo University",
+                    period: "Graduate",
+                    desc: "Focused on computer science fundamentals, system design, and database management."
+                  }
+                ].map((job, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ x: 10 }}
+                    className="group flex gap-6 relative"
+                  >
+                    <div className="flex flex-col items-center">
+                      <div className="w-4 h-4 rounded-full border-2 border-primary bg-background-dark z-10" />
+                      <div className="w-[2px] h-full bg-white/5" />
+                    </div>
+                    <div className="pb-8">
+                      <p className="text-xs font-bold text-primary mb-1">{job.period}</p>
+                      <h4 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{job.title}</h4>
+                      <p className="text-sm text-slate-500 mb-3">{job.company}</p>
+                      <p className="text-slate-400 font-light leading-relaxed text-sm">{job.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </section>
+
+            {/* Certifications & Strengths */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="glass rounded-3xl p-8 border border-white/5 space-y-6">
+                <h4 className="text-lg font-bold flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary">verified</span> Certifications
+                </h4>
+                <ul className="space-y-4 text-sm text-slate-400 font-light">
+                  <li className="flex gap-3">
+                    <span className="text-primary">•</span>
+                    Amazon Web Services Cloud Practitioner
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary">•</span>
+                    Advanced Systems Architecture (Venture Garden Group)
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary">•</span>
+                    Google SEO Fundamentals
+                  </li>
+                </ul>
+              </div>
+              <div className="glass rounded-3xl p-8 border border-white/5 space-y-6">
+                <h4 className="text-lg font-bold flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary">bolt</span> Philosophy
+                </h4>
+                <p className="text-sm text-slate-400 font-light leading-relaxed">
+                  "Build for the future, but deliver for today. Every line of code should be an investment in the system's long-term stability and success."
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </main>
+
+      {parse(htmlFooter)}
     </div>
   );
 }

@@ -1,271 +1,209 @@
+"use client";
 
-import parse from 'html-react-parser';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Contact Promise Ayobami Nwhator | Engineering Consultations',
-  description: 'Available for consultations on backend architecture, e-commerce systems, and academic journal infrastructure. Let\'s build your next scalable solution together.',
-  alternates: {
-    canonical: '/contact',
-  },
-};
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { supabase } from '@/lib/supabase';
 
 export default function Contact() {
-  const htmlContent = `
-    
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMsg('');
 
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert([formData]);
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "var(--primary)",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "var(--background)",
-                      "border-dark": "var(--border)",
-                      "text-muted": "#94a3b8",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+      if (error) throw error;
 
-
-<!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="/" target="_top" class="flex items-center gap-3 text-white">
-        <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
-      </nav>
-    </div>
-  </div>
-</header>
-<!-- PROMISE_SHARED_HEADER_END -->
-
-
-
-<!-- Top Navigation -->
-
-<!-- Main Content -->
-<main class="flex-grow flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 relative">
-<!-- Background Elements -->
-<div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-<div class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl opacity-50"></div>
-<div class="absolute top-[40%] -left-[10%] w-[400px] h-[400px] rounded-full bg-blue-500/5 blur-3xl opacity-30"></div>
-</div>
-<div class="max-w-6xl mx-auto w-full">
-<div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
-<!-- Left Column: Info -->
-<div class="lg:col-span-2 flex flex-col gap-8">
-<div>
-<h1 class="text-4xl md:text-5xl font-black text-foreground dark:text-white leading-tight tracking-tight mb-4">
-                            Let's Build <br class="hidden md:block"/> <span class="text-primary">Together.</span>
-</h1>
-<p class="text-slate-400 dark:text-slate-400 text-lg leading-relaxed">
-                            If you’re building something serious — a platform, system, journal, e-commerce brand, or scalable backend — I can help you structure it properly from the foundation.
-                        </p>
-</div>
-<!-- Availability Status -->
-<div class="inline-flex items-center gap-3 px-4 py-2 bg-emerald-500/10 dark:bg-emerald-500/10 border border-emerald-500/20 rounded-full self-start">
-<span class="relative flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-</span>
-<span class="text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wide">Available for new projects</span>
-</div>
-<!-- Contact Details -->
-<div class="space-y-6 mt-4">
-<div class="flex items-start gap-4 group">
-<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">Email</h3>
-<a class="text-slate-400 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm break-all" href="mailto:nwhator@gmail.com">nwhator@gmail.com</a>
-</div>
-</div>
-<div class="flex items-start gap-4 group">
-<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-400 group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300 shrink-0 shadow-lg group-hover:shadow-[#25D366]/20">
-<span class="material-symbols-outlined">chat</span>
-</div>
-<div>
-<h3 class="text-foreground dark:text-white font-semibold text-base mb-0.5">WhatsApp</h3>
-<a class="text-slate-400 dark:text-slate-400 hover:text-[#25D366] dark:hover:text-[#25D366] transition-colors text-sm break-all" href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer">+234 704 881 2719</a>
-</div>
-</div>
-</div>
-<!-- Social Links -->
-<div class="border-t border-slate-200 dark:border-slate-800 pt-8 mt-auto">
-<p class="text-sm font-medium text-slate-500 dark:text-slate-500 uppercase tracking-wider mb-4">Connect on Socials</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all shadow-sm hover:shadow-primary/10" href="https://github.com/nwhator" target="_blank" rel="noreferrer">
-<span class="material-symbols-outlined text-[1.25rem]">code</span>
-</a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all shadow-sm hover:shadow-primary/10" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">
-<span class="material-symbols-outlined text-[1.25rem]">work</span>
-</a>
-<a class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 dark:text-slate-400 hover:border-[#25D366] hover:text-[#25D366] transition-all shadow-sm hover:shadow-[#25D366]/10" href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer">
-<span class="material-symbols-outlined text-[1.25rem]">chat</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Right Column: Form -->
-<div class="lg:col-span-3">
-<div class="bg-surface dark:bg-[#1c2230] rounded-xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
-<h2 class="text-2xl font-bold text-foreground dark:text-white mb-6">Send a Message</h2>
-<form class="space-y-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="name">Name</label>
-<div class="relative">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<span class="material-symbols-outlined text-slate-400 text-[1.25rem]">person</span>
-</div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="name" placeholder="John Doe" type="text"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="email">Email</label>
-<div class="relative">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<span class="material-symbols-outlined text-slate-400 text-[1.25rem]">alternate_email</span>
-</div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="email" placeholder="john@example.com" type="email"/>
-</div>
-</div>
-</div>
-<div class="space-y-2">
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="subject">Subject</label>
-<div class="relative">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<span class="material-symbols-outlined text-slate-400 text-[1.25rem]">title</span>
-</div>
-<input class="block w-full pl-10 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm h-12" id="subject" placeholder="Project Inquiry / Job Opportunity" type="text"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" for="message">Message</label>
-<div class="relative">
-<div class="absolute top-3 left-3 pointer-events-none">
-<span class="material-symbols-outlined text-slate-400 text-[1.25rem]">chat_bubble_outline</span>
-</div>
-<textarea class="block w-full pl-10 pt-3 rounded-lg border-slate-300 dark:border-slate-700 bg-surface dark:bg-[#111621] text-foreground dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-primary dark:focus:border-primary dark:focus:ring-primary sm:text-sm" id="message" placeholder="Tell me about your project needs..." rows="5"></textarea>
-</div>
-</div>
-<div class="pt-2">
-<button class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all transform hover:-translate-y-0.5" type="submit">
-<span class="material-symbols-outlined text-[1.25rem]">send</span>
-                                    Send Message
-                                </button>
-</div>
-<p class="text-center text-xs text-slate-500 dark:text-slate-500 mt-4">
-                                By sending this message, you agree to the privacy policy.
-                            </p>
-</form>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer Simple -->
-
-
-
-
-
-<!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
-    <div class="flex items-center gap-4 text-sm">
-      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
-      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
-    </div>
-  </div>
-</footer>
-<script>
-(function () {
-  const yearNode = document.getElementById('copyright-year');
-  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
-
-  const routeMap = {
-    home: '/',
-    about: '/about',
-    work: '/projects',
-    project: '/projects',
-    projects: '/projects',
-    services: '/services',
-    technologies: '/technologies',
-    resume: '/resume',
-    contact: '/contact',
-    blog: '/blog'
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err: any) {
+      console.error(err);
+      setStatus('error');
+      setErrorMsg(err.message || 'Something went wrong. Please try again.');
+    }
   };
 
-  document.querySelectorAll('a').forEach(function (anchor) {
-    const rawHref = (anchor.getAttribute('href') || '').trim();
-    const label = (anchor.textContent || '').trim().toLowerCase();
-
-    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
-      anchor.setAttribute('href', 'https://github.com/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
-      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref !== '#') return;
-
-    for (const key in routeMap) {
-      if (label.includes(key)) {
-        anchor.setAttribute('href', routeMap[key]);
-        anchor.setAttribute('target', '_top');
-        break;
-      }
-    }
-  });
-})();
-</script>
-<!-- PROMISE_SHARED_FOOTER_END -->
-
-  `;
   return (
-    <div className="stitch-page-root overflow-hidden">
-      {/* Dynamic Background Glow */}
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      <div className="fixed inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
+    <div className="stitch-page-root overflow-hidden min-h-screen relative bg-background-dark">
+      {/* Background Elements */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.05)_0%,transparent_50%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
 
-      <div className="relative animate-fade-in">
-        {parse(htmlContent)}
-      </div>
+      {/* Header (Simplified for reference, assuming SHARED_HEADER is handled elsewhere or using this structure) */}
+      <header className="sticky top-0 z-50 border-b border-white/5 glass-nav backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <a href="/" className="flex items-center gap-3 text-white">
+              <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style={{ height: '28px', width: 'auto' }} />
+            </a>
+            <nav className="hidden md:flex items-center gap-6 text-sm">
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/">Home</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/about">About</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/projects">Projects</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/services">Services</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/technologies">Technologies</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/resume">Resume</a>
+              <a className="text-white font-bold" href="/contact">Contact</a>
+              <a className="text-slate-400 hover:text-primary transition-colors" href="/blog">Blog</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main className="relative z-10 py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-16">
+            {/* Info Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="lg:col-span-2 space-y-10"
+            >
+              <div>
+                <h1 className="text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                  Let's Build <br /> <span className="text-gradient-primary">Together.</span>
+                </h1>
+                <p className="text-slate-400 text-lg leading-relaxed font-light">
+                  Whether you're scaling a startup or architecting a mission-critical platform, I'm here to ensure your backend infrastructure is rock-solid.
+                </p>
+              </div>
+
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-green-500/5 border border-green-500/20 rounded-full">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="text-green-500 text-xs font-mono uppercase tracking-widest">System Status: Accepting Projects</span>
+              </div>
+
+              <div className="space-y-6">
+                <a href="mailto:nwhator@gmail.com" className="flex items-center gap-4 group">
+                  <div className="w-12 h-12 rounded-xl bg-surface border border-white/5 flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:border-primary/30 transition-all duration-300">
+                    <span className="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Email me at</p>
+                    <p className="text-white group-hover:text-primary transition-colors">nwhator@gmail.com</p>
+                  </div>
+                </a>
+
+                <a href="https://wa.me/2347048812719" className="flex items-center gap-4 group">
+                  <div className="w-12 h-12 rounded-xl bg-surface border border-white/5 flex items-center justify-center text-slate-400 group-hover:text-[#25D366] group-hover:border-[#25D366]/30 transition-all duration-300">
+                    <span className="material-symbols-outlined">chat</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase font-bold tracking-tighter">Chat on WhatsApp</p>
+                    <p className="text-white group-hover:text-[#25D366] transition-colors">+234 704 881 2719</p>
+                  </div>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Form Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="lg:col-span-3"
+            >
+              <div className="glass rounded-3xl p-8 md:p-10 border border-white/5 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] -z-10" />
+
+                <h2 className="text-2xl font-bold text-white mb-8">Send a Message</h2>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-slate-400" htmlFor="name">Name</label>
+                      <input
+                        required
+                        className="w-full bg-slate-900/50 border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                        id="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-slate-400" htmlFor="email">Email</label>
+                      <input
+                        required
+                        type="email"
+                        className="w-full bg-slate-900/50 border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                        id="email"
+                        placeholder="email@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-400" htmlFor="subject">Subject</label>
+                    <input
+                      required
+                      className="w-full bg-slate-900/50 border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                      id="subject"
+                      placeholder="How can I help you?"
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-400" htmlFor="message">Message</label>
+                    <textarea
+                      required
+                      rows={5}
+                      className="w-full bg-slate-900/50 border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primary/50 transition-all resize-none"
+                      id="message"
+                      placeholder="Tell me about your project..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    />
+                  </div>
+
+                  <button
+                    disabled={status === 'loading'}
+                    className={`w-full py-4 rounded-xl font-black text-white transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 ${status === 'loading' ? 'bg-slate-700' : 'bg-primary hover:bg-violet-600 shadow-xl shadow-primary/20 hover:shadow-primary/40'
+                      }`}
+                  >
+                    {status === 'loading' ? 'SOLVING ARCHITECTURE...' : 'INITIATE CONTACT'}
+                    <span className="material-symbols-outlined">send</span>
+                  </button>
+
+                  {status === 'success' && (
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-500 text-center font-bold">
+                      Message received! I'll be in touch shortly.
+                    </motion.div>
+                  )}
+
+                  {status === 'error' && (
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-center font-bold">
+                      {errorMsg}
+                    </motion.div>
+                  )}
+                </form>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </main>
+
+      <footer className="py-10 text-center text-slate-600 text-sm border-t border-white/5 mt-20">
+        © {new Date().getFullYear()} Promise Ayobami Nwhator. Systems Architect.
+      </footer>
     </div>
   );
 }

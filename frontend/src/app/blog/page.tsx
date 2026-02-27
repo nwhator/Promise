@@ -53,14 +53,7 @@ export default async function BlogPage() {
           <div className="text-center py-16">
             <p className="text-white/50 text-lg mb-2">No posts yet.</p>
             <p className="text-white/30 text-sm">
-              Add your first post via the{" "}
-              <Link
-                href="/admin-dashboard"
-                className="text-blue-400 hover:text-blue-300 underline"
-              >
-                admin dashboard
-              </Link>
-              .
+              Check back soon for engineering insights and updates.
             </p>
           </div>
         ) : (
