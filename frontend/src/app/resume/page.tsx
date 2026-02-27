@@ -58,19 +58,49 @@ export default function Resume() {
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
         <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
+<nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/" target="_top">Home</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/about" target="_top">About</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/projects" target="_top">Projects</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/services" target="_top">Services</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/technologies" target="_top">Technologies</a>
+        <a class="text-white font-bold text-sm" href="/resume" target="_top">Resume</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/contact" target="_top">Contact</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/blog" target="_top">Blog</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Nav Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background-dark border-b border-white/10 absolute w-full left-0 top-16 z-50">
+    <nav class="flex flex-col p-6 gap-6 text-[16px] font-bold">
+      <a class="text-slate-400" href="/" target="_top">Home</a>
+      <a class="text-slate-400" href="/about" target="_top">About</a>
+      <a class="text-slate-400" href="/projects" target="_top">Projects</a>
+      <a class="text-slate-400" href="/services" target="_top">Services</a>
+      <a class="text-slate-400" href="/technologies" target="_top">Technologies</a>
+      <a class="text-white" href="/resume" target="_top">Resume</a>
+      <a class="text-slate-400" href="/contact" target="_top">Contact</a>
+      <a class="text-slate-400" href="/blog" target="_top">Blog</a>
+    </nav>
+  </div>
 </header>
+<script>
+  (function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  })();
+</script>
 <!-- PROMISE_SHARED_HEADER_END -->
 
 
@@ -84,13 +114,13 @@ export default function Resume() {
 <div class="flex flex-col gap-2">
 <span class="text-primary font-bold tracking-wider uppercase text-sm">Resume</span>
 <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">Promise Ayobami Nwhator</h1>
-<p class="text-slate-500 dark:text-slate-400 text-lg max-w-3xl mt-2 leading-relaxed">Backend Engineer • WordPress Systems Architect • Scalable Platform Builder</p>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-3xl mt-2 leading-relaxed">Backend Engineer â€¢ WordPress Systems Architect â€¢ Scalable Platform Builder</p>
 <p class="text-slate-500 dark:text-slate-400">I build secure, scalable, and revenue-driven digital platforms.</p>
 </div>
 <div class="text-sm text-slate-500 dark:text-slate-400 space-y-1">
-<p>📍 Nigeria</p>
-<p>📧 nwhator@gmail.com</p>
-<p><a class="text-primary" href="https://github.com/nwhator" target="_blank" rel="noreferrer">GitHub</a> • <a class="text-primary" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">LinkedIn</a></p>
+<p>ðŸ“ Nigeria</p>
+<p>ðŸ“§ nwhator@gmail.com</p>
+<p><a class="text-primary" href="https://github.com/nwhator" target="_blank" rel="noreferrer">GitHub</a> â€¢ <a class="text-primary" href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer">LinkedIn</a></p>
 </div>
 </div>
 
@@ -133,7 +163,7 @@ export default function Resume() {
 <div class="space-y-6">
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">Lead Web Developer</h3>
-<p class="text-primary font-medium">Nigerian Dental Journal — Nigerian Dental Association</p>
+<p class="text-primary font-medium">Nigerian Dental Journal â€” Nigerian Dental Association</p>
 <ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Built and now maintain the official journal platform.</li>
 <li>Designed article submission, reviewer, and editorial workflow systems.</li>
@@ -143,7 +173,7 @@ export default function Resume() {
 </div>
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">WordPress Systems Developer</h3>
-<p class="text-primary font-medium">Étrange Media Services (2023–2025)</p>
+<p class="text-primary font-medium">Ã‰trange Media Services (2023â€“2025)</p>
 <ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Delivered corporate, portfolio, and e-commerce websites.</li>
 <li>Handled SEO/performance optimization and hosting migrations.</li>
@@ -152,7 +182,7 @@ export default function Resume() {
 </div>
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold">Backend & Web Developer</h3>
-<p class="text-primary font-medium">Forth Creativity (2020–2023)</p>
+<p class="text-primary font-medium">Forth Creativity (2020â€“2023)</p>
 <ul class="mt-3 space-y-2 text-slate-400 dark:text-slate-300 list-disc pl-5 marker:text-primary">
 <li>Developed React + Node.js products and backend services.</li>
 <li>Improved user engagement by 30%.</li>
@@ -173,18 +203,18 @@ export default function Resume() {
 <section className="animate-fade-in" class="grid md:grid-cols-2 gap-6">
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800 md:col-span-2">
 <h3 class="text-xl font-bold mb-3">Beyond Code</h3>
-<p class="text-slate-400 dark:text-slate-300">SEO implementation, analytics tracking, brand visual support (Canva), and IT networking/troubleshooting. I don’t just build — I optimize for growth and efficiency.</p>
+<p class="text-slate-400 dark:text-slate-300">SEO implementation, analytics tracking, brand visual support (Canva), and IT networking/troubleshooting. I donâ€™t just build â€” I optimize for growth and efficiency.</p>
 </div>
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold mb-3">Education & Certification</h3>
-<p class="text-slate-400 dark:text-slate-300 mb-2"><strong>BSc. Computer Science & Engineering</strong> — Obafemi Awolowo University</p>
-<p class="text-slate-400 dark:text-slate-300"><strong>Certified Software Engineer</strong> — ALX (Backend Engineering, C, Python, Node.js, API architecture, Docker, Agile workflows)</p>
+<p class="text-slate-400 dark:text-slate-300 mb-2"><strong>BSc. Computer Science & Engineering</strong> â€” Obafemi Awolowo University</p>
+<p class="text-slate-400 dark:text-slate-300"><strong>Certified Software Engineer</strong> â€” ALX (Backend Engineering, C, Python, Node.js, API architecture, Docker, Agile workflows)</p>
 </div>
 <div class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-slate-200 dark:border-slate-800">
 <h3 class="text-xl font-bold mb-3">Mobile Development</h3>
 <p class="text-slate-400 dark:text-slate-300">Built cross-platform mobile products with Flutter + Firebase, including an academic tutoring application for Human Anatomy in Pidgin English.</p>
 <h3 class="text-xl font-bold mt-5 mb-3">Languages</h3>
-<p class="text-slate-400 dark:text-slate-300">English – Fluent, German – A2, Yoruba – Conversational</p>
+<p class="text-slate-400 dark:text-slate-300">English â€“ Fluent, German â€“ A2, Yoruba â€“ Conversational</p>
 </div>
 </section>
 </div>
@@ -198,7 +228,7 @@ export default function Resume() {
 <!-- PROMISE_SHARED_FOOTER_START -->
 <footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
+    <p class="text-sm text-text-muted">Â© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
     <div class="flex items-center gap-4 text-sm">
       <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
       <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>

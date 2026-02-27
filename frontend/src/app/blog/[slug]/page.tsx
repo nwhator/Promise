@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPost } from "@/lib/blogApi";
 import { BlogChrome } from "@/components/BlogChrome";
+import parse from 'html-react-parser';
 
 export const dynamic = "force-dynamic";
 
@@ -101,13 +102,13 @@ export default async function BlogDetailPage({ params }: Props) {
               )}
               {post.excerpt && (
                 <p className="text-white/70 text-base mt-4 leading-relaxed border-l-2 border-blue-500/50 pl-4">
-                  {post.excerpt}
+                  {parse(post.excerpt)}
                 </p>
               )}
             </header>
 
-            <div className="prose prose-invert max-w-none whitespace-pre-wrap text-white/80 leading-relaxed">
-              {post.content}
+            <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-400 prose-strong:text-white prose-li:text-white/80 max-w-none text-white/80 leading-relaxed">
+              {parse(post.content ?? '')}
             </div>
           </div>
         </article>

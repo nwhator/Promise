@@ -62,6 +62,10 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -73,11 +77,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {/*
-       * The stitch_promise_portfolio pages load Tailwind CDN and Google Fonts
-       * from within their injected HTML bodies. This base layout intentionally
-       * keeps the <head> minimal so those external assets can co-exist.
-       */}
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
+      </head>
       <body>
         {children}
         <WhatsAppButton />

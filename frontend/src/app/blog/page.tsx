@@ -1,6 +1,7 @@
 import { getBlogPosts } from "@/lib/blogApi";
 import Link from "next/link";
 import { BlogChrome } from "@/components/BlogChrome";
+import parse from 'html-react-parser';
 
 export const dynamic = "force-dynamic";
 
@@ -69,7 +70,9 @@ export default async function BlogPage() {
                   </h2>
                   {post.excerpt && (
                     <p className="text-white/60 text-sm line-clamp-3 mb-4">
-                      {post.excerpt}
+                      {typeof post.excerpt === 'string'
+                        ? parse(post.excerpt.replace(/<[^>]+>/g, '').slice(0, 200))
+                        : post.excerpt}
                     </p>
                   )}
                   <div className="flex items-center gap-2 text-xs text-white/40">

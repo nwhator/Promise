@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services &amp; Packages - Promise Ayobami Promise Ayobami Promise Ayobami Nwhator',
+  title: 'Services & Packages - Promise Ayobami Nwhator',
   description: 'Services page for PROMISE NWHATOR.',
   alternates: {
     canonical: '/services',
@@ -12,351 +12,249 @@ export const metadata: Metadata = {
 
 export default function Services() {
   const htmlContent = `
-    
-
-
-
-<!-- Google Fonts: Space Grotesk -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Theme Configuration -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "var(--primary)",
-                        "background-light": "#f5f7f8",
-                        "background-dark": "var(--background)",
-                        "surface-dark": "#18242e",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "sans": ["Space Grotesk", "sans-serif"] 
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
-<style>
-        /* Custom scrollbar for webkit */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #101a22; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #283239; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3b4a54; 
-        }
-    </style>
-
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-white/5 glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
         <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
       </a>
+      
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="text-text-muted hover:text-primary transition-colors" href="/" target="_top">Home</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/projects" target="_top">Projects</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/services" target="_top">Services</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/technologies" target="_top">Technologies</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/resume" target="_top">Resume</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
-        <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/" target="_top">Home</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/about" target="_top">About</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/projects" target="_top">Projects</a>
+        <a class="text-white font-bold text-sm" href="/services" target="_top">Services</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/technologies" target="_top">Technologies</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/resume" target="_top">Resume</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/contact" target="_top">Contact</a>
+        <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="/blog" target="_top">Blog</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Nav Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background-dark border-b border-white/10 absolute w-full left-0 top-16 z-50">
+    <nav class="flex flex-col p-6 gap-6 text-[16px] font-bold">
+      <a class="text-slate-400" href="/" target="_top">Home</a>
+      <a class="text-slate-400" href="/about" target="_top">About</a>
+      <a class="text-slate-400" href="/projects" target="_top">Projects</a>
+      <a class="text-white" href="/services" target="_top">Services</a>
+      <a class="text-slate-400" href="/technologies" target="_top">Technologies</a>
+      <a class="text-slate-400" href="/resume" target="_top">Resume</a>
+      <a class="text-slate-400" href="/contact" target="_top">Contact</a>
+      <a class="text-slate-400" href="/blog" target="_top">Blog</a>
+    </nav>
+  </div>
 </header>
+<script>
+  (function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  })();
+</script>
 <!-- PROMISE_SHARED_HEADER_END -->
-
-
-
-<!-- Top Navigation -->
 
 <!-- Main Content -->
 <main class="flex-grow">
-<!-- Hero Section -->
-<section className="animate-fade-in" class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-<!-- Background Glow -->
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-<div class="max-w-4xl mx-auto text-center space-y-6">
-<h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                    Engineering Solutions <br class="hidden sm:block"/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Tailored to You</span>
-</h2>
-<p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-light">
-                    From backend APIs to full WordPress journal systems and e-commerce platforms, I help organizations turn ideas into stable, production-ready solutions.
-                </p>
-</div>
-</section>
-<!-- Pricing Cards Section -->
-<section className="animate-fade-in" class="pb-24 px-4 sm:px-6 lg:px-8">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-<!-- Card 1: MVP Development -->
-<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
-<div class="mb-6">
-<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">MVP Development</h3>
-<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Perfect for startups looking to validate ideas quickly with robust code.</p>
-<div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">\$5,000+</span>
-<span class="text-sm font-medium text-slate-500 dark:text-slate-400">/ project</span>
-</div>
-</div>
-<button class="w-full py-3 px-4 mb-8 bg-surface-brighter dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-foreground dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
-                            Get Started
-                            <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-<div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>React/Next.js Setup</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Database Integration</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Deployment Pipeline</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Basic SEO Optimization</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>2 Weeks Post-Launch Support</span>
-</div>
-</div>
-</div>
-<!-- Card 2: API Audit (Highlighted) -->
-<div class="relative flex flex-col p-8 rounded-2xl border-2 border-primary bg-surface dark:bg-surface-dark shadow-2xl shadow-primary/20 transform lg:-translate-y-4 z-10">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg">
-                            Most Popular
+    <!-- Hero Section -->
+    <section class="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-5xl md:text-7xl font-black tracking-tight leading-tight text-white">
+                Engineering Solutions <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Tailored to You</span>
+            </h2>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light">
+                From high-performance WordPress systems to production-ready SaaS platforms and premium UI design.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Cards Section -->
+    <section class="pb-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                <!-- Card 1: WordPress Development -->
+                <div class="group relative flex flex-col p-10 rounded-[2.5rem] border border-white/5 bg-slate-900/50 backdrop-blur-xl shadow-2xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2">
+                    <div class="mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-3xl">terminal</span>
                         </div>
-<div class="mb-6">
-<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">API Architecture Audit</h3>
-<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Deep dive analysis to improve performance, security, and scalability.</p>
-<div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">\$2,500+</span>
-<span class="text-sm font-medium text-slate-500 dark:text-slate-400">/ audit</span>
-</div>
-</div>
-<button class="w-full py-3 px-4 mb-8 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transform hover:scale-[1.02]">
-                            Audit My API
-                            <span class="material-symbols-outlined text-sm">bolt</span>
-</button>
-<div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Performance Analysis</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Security Vulnerability Review</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Refactoring Roadmap</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Documentation Update</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300 font-medium">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Best Practices Report</span>
-</div>
-</div>
-</div>
-<!-- Card 3: Enterprise Systems -->
-<div class="group relative flex flex-col p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
-<div class="mb-6">
-<h3 class="text-xl font-bold text-foreground dark:text-white mb-2">Enterprise Systems</h3>
-<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10">Complex large-scale solutions tailored to organizational needs.</p>
-<div class="flex items-baseline gap-1">
-<span class="text-4xl font-black tracking-tight text-foreground dark:text-white">Custom</span>
-<span class="text-sm font-medium text-slate-500 dark:text-slate-400">pricing</span>
-</div>
-</div>
-<button class="w-full py-3 px-4 mb-8 bg-surface-brighter dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-foreground dark:text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 group-hover:bg-slate-800 dark:group-hover:bg-slate-700">
-                            Contact Sales
-                            <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">mail</span>
-</button>
-<div class="space-y-4 flex-1">
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Microservices Architecture</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Legacy System Migration</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>SLA &amp; Dedicated Support</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>Dedicated Development Team</span>
-</div>
-<div class="flex gap-3 text-sm text-slate-400 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
-<span>24/7 Monitoring &amp; Alerts</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section className="animate-fade-in" class="py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-800 bg-background dark:bg-background-dark">
-<div class="max-w-3xl mx-auto">
-<h2 class="text-2xl font-bold mb-8 text-center text-foreground dark:text-white">Frequently Asked Questions</h2>
-<div class="flex flex-col gap-4">
-<!-- FAQ Item 1 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
-<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">What is your typical turnaround time?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined text-slate-500">expand_more</span>
-</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                            For standard MVP projects, the timeline is usually 4-6 weeks depending on complexity. API Audits take about 1 week. Enterprise solutions vary significantly and are estimated after initial discovery.
+                        <h3 class="text-2xl font-bold text-white mb-3">WordPress Development</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 h-12">Professional theme & plugin architecture, OJS integrations, and SEO-optimized news platforms.</p>
+                    </div>
+                    <a href="/contact" target="_top" class="w-full py-4 px-6 mb-10 bg-white/5 hover:bg-white/10 text-white font-bold rounded-2xl transition-all flex items-center justify-center gap-3 border border-white/10">
+                        GET STARTED
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                             <span>Custom Plugin Architecture</span>
                         </div>
-</details>
-<!-- FAQ Item 2 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
-<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">Do you offer post-launch support?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined text-slate-500">expand_more</span>
-</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Yes! Every MVP package comes with 2 weeks of bug-fix support. We also offer ongoing maintenance retainers for long-term health and feature additions.
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                             <span>Journal System (OJS) Scaling</span>
                         </div>
-</details>
-<!-- FAQ Item 3 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
-<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">How do payments work?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined text-slate-500">expand_more</span>
-</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                            We typically work with a 50% deposit to start, with the remaining 50% due upon project completion and deployment. For larger enterprise contracts, milestone-based payments are available.
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                             <span>Core Web Vitals Optimization</span>
                         </div>
-</details>
-<!-- FAQ Item 4 -->
-<details class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-surface dark:bg-surface-dark overflow-hidden transition-all duration-300">
-<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-base font-medium text-foreground dark:text-white group-hover:text-primary transition-colors">Do you work with existing teams?</span>
-<span class="transition group-open:rotate-180">
-<span class="material-symbols-outlined text-slate-500">expand_more</span>
-</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Absolutely. I have extensive experience integrating into existing agile workflows, conducting code reviews, and helping upskill junior developers on your team.
+                    </div>
+                </div>
+
+                <!-- Card 2: Full-Stack Engineering (Highlighted) -->
+                <div class="relative flex flex-col p-10 rounded-[2.5rem] border border-primary/50 bg-gradient-to-b from-primary/10 to-transparent backdrop-blur-2xl shadow-[0_0_50px_-12px_rgba(139,92,246,0.3)] lg:-translate-y-6 z-10 transition-transform duration-500 hover:scale-[1.02]">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] py-1.5 px-6 rounded-full shadow-xl">
+                        CORE EXPERTISE
+                    </div>
+                    <div class="mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-3xl">bolt</span>
                         </div>
-</details>
-</div>
-</div>
-</section>
+                        <h3 class="text-2xl font-bold text-white mb-3">Full-Stack Engineering</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8 h-12">Production-ready SaaS platforms, custom dashboards, and highly scalable backend APIs.</p>
+                    </div>
+                    <a href="/contact" target="_top" class="w-full py-4 px-6 mb-10 bg-primary hover:bg-violet-600 text-white font-bold rounded-2xl transition-all flex items-center justify-center gap-3 shadow-xl shadow-primary/20">
+                        BUILD MY PROJECT
+                        <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                    </a>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm text-white font-medium">
+                             <span class="material-symbols-outlined text-primary text-xl">stars</span>
+                             <span>Next.js & Node.js Architecture</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-white font-medium">
+                             <span class="material-symbols-outlined text-primary text-xl">stars</span>
+                             <span>Supabase & PostgreSQL Scaling</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-white font-medium">
+                             <span class="material-symbols-outlined text-primary text-xl">stars</span>
+                             <span>Enterprise-Grade Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Website & UI Design -->
+                <div class="group relative flex flex-col p-10 rounded-[2.5rem] border border-white/5 bg-slate-900/50 backdrop-blur-xl shadow-2xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2">
+                    <div class="mb-8">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
+                            <span class="material-symbols-outlined text-3xl">palette</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Website & UI Design</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 h-12">Premium, animated interfaces designed for conversion and state-of-the-art aesthetics.</p>
+                    </div>
+                    <a href="/contact" target="_top" class="w-full py-4 px-6 mb-10 bg-white/5 hover:bg-white/10 text-white font-bold rounded-2xl transition-all flex items-center justify-center gap-3 border border-white/10">
+                        START DESIGNING
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">design_services</span>
+                    </a>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-blue-400 text-xl">check_circle</span>
+                             <span>Framer Motion Animations</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-blue-400 text-xl">check_circle</span>
+                             <span>Conversion-Driven UX</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-300">
+                             <span class="material-symbols-outlined text-blue-400 text-xl">check_circle</span>
+                             <span>Mobile-First Responsiveness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-slate-950/50">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-black mb-12 text-center text-white italic">Technical FAQ</h2>
+            <div class="space-y-4 text-left">
+                <details class="group bg-white/5 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 list-none hover:bg-white/10 transition-colors">
+                        <span class="text-white font-bold">What is your typical turnaround time?</span>
+                        <span class="transition group-open:rotate-180">
+                            <span class="material-symbols-outlined text-slate-500">expand_more</span>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-400 leading-relaxed font-light">
+                        For standard engineering projects, timelines usually range from 4-8 weeks depending on complexity. UI Design projects often move faster, typically 2-3 weeks.
+                    </div>
+                </details>
+                <details class="group bg-white/5 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300">
+                    <summary class="flex cursor-pointer items-center justify-between p-6 list-none hover:bg-white/10 transition-colors">
+                        <span class="text-white font-bold">Do you offer post-launch maintenance?</span>
+                        <span class="transition group-open:rotate-180">
+                            <span class="material-symbols-outlined text-slate-500">expand_more</span>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-sm text-slate-400 leading-relaxed font-light">
+                        Absolutely. Every project includes a 30-day monitoring period. Long-term maintenance retainers are available for mission-critical systems.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
 </main>
-<!-- Footer -->
-
-
-
-
 
 <!-- PROMISE_SHARED_FOOTER_START -->
-<footer class="border-t border-border-dark glass-nav sticky top-0 z-50 mt-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-    <p class="text-sm text-text-muted">© <span id="copyright-year"></span> Promise Ayobami Nwhator. All rights reserved.</p>
-    <div class="flex items-center gap-4 text-sm">
-      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">GitHub</a>
-      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-text-muted hover:text-primary transition-colors">LinkedIn</a>
+<footer class="border-t border-white/5 bg-black py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="flex flex-col items-center md:items-start gap-4">
+        <img src="/promise-nwhator-logo.svg" alt="Logo" class="h-6 w-auto opacity-50 grayscale hover:grayscale-0 transition-all"/>
+        <p class="text-xs text-slate-500 font-mono italic">© ${new Date().getFullYear()} PROMISE NWHATOR. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="flex items-center gap-8 text-xs font-black tracking-widest uppercase">
+      <a href="https://github.com/nwhator" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-primary transition-colors">GITHUB</a>
+      <a href="https://linkedin.com/in/nwhator" target="_blank" rel="noreferrer" class="text-slate-400 hover:text-primary transition-colors">LINKEDIN</a>
+      <a href="/contact" class="text-slate-400 hover:text-primary transition-colors">HIRE ME</a>
     </div>
   </div>
 </footer>
-<script>
-(function () {
-  const yearNode = document.getElementById('copyright-year');
-  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
-
-  const routeMap = {
-    home: '/',
-    about: '/about',
-    work: '/projects',
-    project: '/projects',
-    projects: '/projects',
-    services: '/services',
-    technologies: '/technologies',
-    resume: '/resume',
-    contact: '/contact',
-    blog: '/blog'
-  };
-
-  document.querySelectorAll('a').forEach(function (anchor) {
-    const rawHref = (anchor.getAttribute('href') || '').trim();
-    const label = (anchor.textContent || '').trim().toLowerCase();
-
-    if (rawHref === 'https://github.com' || rawHref === 'https://github.com/') {
-      anchor.setAttribute('href', 'https://github.com/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref === 'https://linkedin.com' || rawHref === 'https://linkedin.com/') {
-      anchor.setAttribute('href', 'https://linkedin.com/in/nwhator');
-      anchor.setAttribute('target', '_blank');
-      anchor.setAttribute('rel', 'noreferrer');
-      return;
-    }
-
-    if (rawHref !== '#') return;
-
-    for (const key in routeMap) {
-      if (label.includes(key)) {
-        anchor.setAttribute('href', routeMap[key]);
-        anchor.setAttribute('target', '_top');
-        break;
-      }
-    }
-  });
-})();
-</script>
 <!-- PROMISE_SHARED_FOOTER_END -->
-
   `;
+
   return (
-    <div className="stitch-page-root overflow-hidden">
-      {/* Dynamic Background Glow */}
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
-      
-      <div className="relative animate-fade-in">
+    <div className="stitch-page-root bg-[#050505] min-h-screen text-white overflow-x-hidden font-sans">
+      {/* Cinematic Backgrounds */}
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.05)_0%,transparent_50%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none brightness-50" />
+
+      <div className="relative z-10 animate-fade-in">
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .material-symbols-outlined {
+                font-family: 'Material Symbols Outlined' !important;
+                display: inline-block !important;
+            }
+            .text-gradient-primary {
+                background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .glass-nav {
+                background: rgba(5, 5, 5, 0.8);
+                backdrop-filter: blur(12px);
+            }
+        `}} />
         {parse(htmlContent)}
       </div>
     </div>

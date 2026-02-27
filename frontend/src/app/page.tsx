@@ -6,12 +6,14 @@ import parse from 'html-react-parser';
 export default function Home() {
   const htmlHeader = `
 <!-- PROMISE_SHARED_HEADER_START -->
-<header class="sticky top-0 z-50 border-b border-border-dark glass-nav sticky top-0 z-50 backdrop-blur-md">
+<header class="sticky top-0 z-50 border-b border-border-dark glass-nav backdrop-blur-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" target="_top" class="flex items-center gap-3 text-white">
         <img src="/promise-nwhator-logo.svg" alt="PROMISE NWHATOR logo" style="height:28px;width:auto;"/>
       </a>
+      
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a class="text-white font-bold" href="/" target="_top">Home</a>
         <a class="text-text-muted hover:text-primary transition-colors" href="/about" target="_top">About</a>
@@ -22,9 +24,39 @@ export default function Home() {
         <a class="text-text-muted hover:text-primary transition-colors" href="/contact" target="_top">Contact</a>
         <a class="text-text-muted hover:text-primary transition-colors" href="/blog" target="_top">Blog</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile Nav Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background-dark border-b border-white/10 absolute w-full left-0 top-16 z-50">
+    <nav class="flex flex-col p-6 gap-6 text-[16px] font-bold">
+      <a class="text-white" href="/" target="_top">Home</a>
+      <a class="text-text-muted" href="/about" target="_top">About</a>
+      <a class="text-text-muted" href="/projects" target="_top">Projects</a>
+      <a class="text-text-muted" href="/services" target="_top">Services</a>
+      <a class="text-text-muted" href="/technologies" target="_top">Technologies</a>
+      <a class="text-text-muted" href="/resume" target="_top">Resume</a>
+      <a class="text-text-muted" href="/contact" target="_top">Contact</a>
+      <a class="text-text-muted" href="/blog" target="_top">Blog</a>
+    </nav>
+  </div>
 </header>
+<script>
+  (function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  })();
+</script>
 <!-- PROMISE_SHARED_HEADER_END -->
   `;
 
@@ -122,13 +154,13 @@ export default function Home() {
                 { name: "Next.js", icon: "terminal" },
                 { name: "Node.js", icon: "dns" },
                 { name: "PostgreSQL", icon: "database" },
-                { name: "TypeScript", icon: "javascript" },
+                { name: "TypeScript", icon: "code_blocks" },
                 { name: "Supabase", icon: "cloud" },
                 { name: "PHP", icon: "code" },
                 { name: "Tailwind", icon: "palette" },
                 { name: "AWS", icon: "memory" },
                 { name: "OJS", icon: "menu_book" },
-                { name: "Python", icon: "smart_toy" }
+                { name: "WordPress", icon: "view_quilt" }
               ].map((tech, i) => (
                 <motion.div
                   key={tech.name}
@@ -240,11 +272,11 @@ export default function Home() {
                 I am currently accepting select project consultations. Let's architect your success.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-12 py-6 bg-[#25D366] hover:bg-[#1ebd5e] text-black font-black text-xl rounded-2xl transition-all shadow-2xl shadow-[#25D366]/20 hover:-translate-y-1">
-                  START A CONVERSATION <span className="material-symbols-outlined font-black">chat</span>
+                <a href="/contact" className="flex items-center justify-center gap-3 px-12 py-6 bg-primary hover:bg-violet-600 text-white font-black text-xl rounded-2xl transition-all shadow-2xl shadow-primary/20 hover:-translate-y-1">
+                  START A CONVERSATION <span className="material-symbols-outlined font-black">rocket_launch</span>
                 </a>
-                <a href="/resume" className="flex items-center justify-center gap-3 px-12 py-6 glass text-white font-bold text-xl rounded-2xl transition-all hover:bg-white/10 hover:-translate-y-1">
-                  GO TO RESUME <span className="material-symbols-outlined text-lg">description</span>
+                <a href="https://wa.me/2347048812719?text=Hello%20Promise%2C%20I%20visited%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20potential%20project." target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-12 py-6 glass text-white font-bold text-xl rounded-2xl transition-all hover:bg-white/10 hover:-translate-y-1">
+                  WHATSAPP CHAT <span className="material-symbols-outlined text-lg">chat</span>
                 </a>
               </div>
             </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { supabase } from '@/lib/supabase';
 
@@ -13,6 +14,7 @@ export default function Contact() {
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +43,7 @@ export default function Contact() {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.05)_0%,transparent_50%)] pointer-events-none" />
       <div className="fixed inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
 
-      {/* Header (Simplified for reference, assuming SHARED_HEADER is handled elsewhere or using this structure) */}
+      {/* Header */}
       <header className="sticky top-0 z-50 border-b border-white/5 glass-nav backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -58,8 +60,31 @@ export default function Contact() {
               <a className="text-white font-bold" href="/contact">Contact</a>
               <a className="text-slate-400 hover:text-primary transition-colors" href="/blog">Blog</a>
             </nav>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-white p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
+            </button>
           </div>
         </div>
+        {/* Mobile Nav Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-[#0d1117] border-b border-white/10 w-full">
+            <nav className="flex flex-col p-6 gap-6 text-base font-bold">
+              <a className="text-slate-400" href="/">Home</a>
+              <a className="text-slate-400" href="/about">About</a>
+              <a className="text-slate-400" href="/projects">Projects</a>
+              <a className="text-slate-400" href="/services">Services</a>
+              <a className="text-slate-400" href="/technologies">Technologies</a>
+              <a className="text-slate-400" href="/resume">Resume</a>
+              <a className="text-white" href="/contact">Contact</a>
+              <a className="text-slate-400" href="/blog">Blog</a>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main className="relative z-10 py-20 px-4">
