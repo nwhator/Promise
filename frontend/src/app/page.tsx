@@ -1,4 +1,7 @@
+"use client";
+
 import { BlogChrome } from "@/components/BlogChrome";
+import { motion } from "framer-motion";
 
 export default function Home() {
 
@@ -212,5 +215,4 @@ export default function Home() {
       </div>
     </BlogChrome>
   );
-}
 }

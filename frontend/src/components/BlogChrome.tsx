@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
+import { BugEffect } from "./BugEffect";
 
 type BlogChromeProps = {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
 
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-500">
+      <BugEffect />
       {/* Dynamic Background Glow (Matching Homepage) */}
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
 
@@ -33,14 +35,14 @@ export function BlogChrome({ children }: BlogChromeProps) {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <Link href="/" className="text-slate-400 hover:text-primary transition-colors">Home</Link>
-              <Link href="/about" className="text-slate-400 hover:text-primary transition-colors">About</Link>
-              <Link href="/projects" className="text-slate-400 hover:text-primary transition-colors">Projects</Link>
-              <Link href="/services" className="text-slate-400 hover:text-primary transition-colors">Services</Link>
-              <Link href="/technologies" className="text-slate-400 hover:text-primary transition-colors">Technologies</Link>
-              <Link href="/resume" className="text-slate-400 hover:text-primary transition-colors">Resume</Link>
-              <Link href="/contact" className="text-slate-400 hover:text-primary transition-colors">Contact</Link>
-              <Link href="/blog" className="text-foreground font-bold">Blog</Link>
+              <Link href="/" className="text-foreground/60 hover:text-primary transition-colors">Home</Link>
+              <Link href="/about" className="text-foreground/60 hover:text-primary transition-colors">About</Link>
+              <Link href="/projects" className="text-foreground/60 hover:text-primary transition-colors">Projects</Link>
+              <Link href="/services" className="text-foreground/60 hover:text-primary transition-colors">Services</Link>
+              <Link href="/technologies" className="text-foreground/60 hover:text-primary transition-colors">Technologies</Link>
+              <Link href="/resume" className="text-foreground/60 hover:text-primary transition-colors">Resume</Link>
+              <Link href="/contact" className="text-foreground/60 hover:text-primary transition-colors">Contact</Link>
+              <Link href="/blog" className="text-foreground font-bold underline decoration-primary decoration-2 underline-offset-4">Blog</Link>
             </nav>
 
             <div className="flex items-center gap-4">
@@ -60,16 +62,16 @@ export function BlogChrome({ children }: BlogChromeProps) {
 
         {/* Mobile Nav Dropdown */}
         {mobileMenuOpen && (
-          <div className="mobile-nav-dropdown md:hidden w-full">
+          <div className="mobile-nav-dropdown md:hidden w-full bg-surface border-b border-border">
             <nav className="flex flex-col p-6 gap-6 text-[16px] font-bold">
-              <Link href="/" className="text-slate-400">Home</Link>
-              <Link href="/about" className="text-slate-400">About</Link>
-              <Link href="/projects" className="text-slate-400">Projects</Link>
-              <Link href="/services" className="text-slate-400">Services</Link>
-              <Link href="/technologies" className="text-slate-400">Technologies</Link>
-              <Link href="/resume" className="text-slate-400">Resume</Link>
-              <Link href="/contact" className="text-slate-400">Contact</Link>
-              <Link href="/blog" className="text-white">Blog</Link>
+              <Link href="/" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+              <Link href="/about" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>About</Link>
+              <Link href="/projects" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
+              <Link href="/services" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link href="/technologies" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Technologies</Link>
+              <Link href="/resume" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Resume</Link>
+              <Link href="/contact" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+              <Link href="/blog" className="text-foreground font-bold" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
             </nav>
           </div>
         )}
