@@ -72,7 +72,7 @@ export default function Contact() {
         </div>
         {/* Mobile Nav Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#0d1117] border-b border-white/10 w-full">
+          <div className="mobile-nav-dropdown md:hidden w-full">
             <nav className="flex flex-col p-6 gap-6 text-base font-bold">
               <a className="text-slate-400" href="/">Home</a>
               <a className="text-slate-400" href="/about">About</a>
