@@ -45,7 +45,7 @@
   --color-accent: var(--accent);
   --color-surface: var(--surface);
   --color-surface-brighter: var(--surface-brighter);
-  --color-border-dark: var(--border);
+  --color-border: var(--border);
 }
 
 /* ── Mobile nav dropdown ─────────── */
