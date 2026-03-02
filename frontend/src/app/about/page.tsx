@@ -48,7 +48,8 @@ export default function About() {
                   <h3 className="text-xs font-black uppercase tracking-widest text-foreground/40 mb-6 font-mono">Core Arsenal</h3>
                   <div className="flex flex-wrap gap-2">
                     {["System Architecture", "Next.js", "Node.js", "PHP", "AWS", "Supabase", "OJS", "PostgreSQL", "Tailwind"].map((skill, i) => (
-                      <span key={i} className="px-3 py-1 bg-surface-brighter border border-border rounded-lg text-xs font-medium text-foreground/70">
+                      <span key={i} className="tag-modern flex items-center gap-1.5 group">
+                        <span className="w-1 h-1 rounded-full bg-primary/40 group-hover:bg-primary transition-colors"></span>
                         {skill}
                       </span>
                     ))}

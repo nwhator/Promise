@@ -30,6 +30,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
                 width={180}
                 height={28}
                 priority
+                className="transition-all dark:brightness-100 brightness-0"
               />
             </Link>
 
@@ -43,6 +44,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
               <Link href="/resume" className="text-foreground/60 hover:text-primary transition-colors">Resume</Link>
               <Link href="/contact" className="text-foreground/60 hover:text-primary transition-colors">Contact</Link>
               <Link href="/blog" className="text-foreground font-bold">Blog</Link>
+              <Link href="/game" className="text-foreground/60 hover:text-primary transition-colors">Game</Link>
             </nav>
 
             <div className="flex items-center gap-4">
@@ -72,6 +74,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
               <Link href="/resume" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Resume</Link>
               <Link href="/contact" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
               <Link href="/blog" className="text-foreground font-bold" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+              <Link href="/game" className="text-foreground/60" onClick={() => setMobileMenuOpen(false)}>Game</Link>
             </nav>
           </div>
         )}

@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import { BlogChrome } from '@/components/BlogChrome';
 
 export default function Services() {
-  const htmlContent = `
+    const htmlContent = `
     <!-- Main Content -->
     <main class="flex-grow">
         <!-- Hero Section -->
@@ -146,17 +146,50 @@ export default function Services() {
                             Absolutely. Every project includes a 30-day monitoring period. Long-term maintenance retainers are available for mission-critical systems.
                         </div>
                     </details>
+                    <details class="group bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 list-none hover:bg-foreground/5 transition-colors">
+                            <span class="text-foreground font-bold">What is your project management process?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined text-foreground/40">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-sm text-foreground/60 leading-relaxed font-light">
+                            I follow a four-phase workflow: Discovery (requirements gathering), Blueprint (architecture & design), Development (sprint-based coding), and Launch (testing & deployment). You stay updated through weekly syncs and a live staging environment.
+                        </div>
+                    </details>
+                    <details class="group bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 list-none hover:bg-foreground/5 transition-colors">
+                            <span class="text-foreground font-bold">Can you integrate with my existing tech stack?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined text-foreground/40">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-sm text-foreground/60 leading-relaxed font-light">
+                            Yes. I specialize in building custom adapters and middleware. Whether you're on a legacy PHP system, a headless CMS, or a cloud infrastructure like AWS/GCP, I can architect secure and performant integrations.
+                        </div>
+                    </details>
+                    <details class="group bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 list-none hover:bg-foreground/5 transition-colors">
+                            <span class="text-foreground font-bold">Do you handle technical SEO and Core Web Vitals?</span>
+                            <span class="transition group-open:rotate-180">
+                                <span class="material-symbols-outlined text-foreground/40">expand_more</span>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-sm text-foreground/60 leading-relaxed font-light">
+                            Every platform I build is optimized from the ground up for performance. This includes semantic HTML, image optimization, edge caching, and server-side rendering to ensure your site scores 90+ on Lighthouse and is fully searchable by Google.
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
   `;
 
-  return (
-    <BlogChrome>
-      <div className="relative animate-fade-in">
-        {parse(htmlContent)}
-      </div>
-    </BlogChrome>
-  );
+    return (
+        <BlogChrome>
+            <div className="relative animate-fade-in">
+                {parse(htmlContent)}
+            </div>
+        </BlogChrome>
+    );
 }

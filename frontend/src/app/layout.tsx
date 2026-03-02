@@ -6,21 +6,22 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   title: {
-    default: "PROMISE NWHATOR | Full-Stack Software Engineer",
-    template: "%s | PROMISE NWHATOR",
+    default: "Promise Nwhator | Systems Architect & Backend Lead",
+    template: "%s | Promise Nwhator",
   },
   description:
-    "Nwhator Promise portfolio: scalable systems, backend engineering, case studies, and technical blog posts built with Next.js and Supabase.",
+    "Official portfolio of Promise Nwhator, a Systems Architect and Backend Lead specializing in Next.js, OJS, Node.js, and scalable digital infrastructure.",
   keywords: [
-    "Nwhator Promise",
-    "PROMISE NWHATOR",
-    "Full-Stack Engineer",
-    "Next.js",
-    "Supabase",
-    "Software Engineer Portfolio",
-    "Backend Engineer",
-    "FastAPI",
-    "Python",
+    "Promise Nwhator",
+    "Promise Ayobami Nwhator",
+    "Systems Architect Nigeria",
+    "Backend Lead",
+    "Next.js Developer",
+    "OJS Specialist",
+    "Academic Journal Infrastructure",
+    "Software Engineer Nigeria",
+    "PHP Developer",
+    "Full-Stack Software Engineer",
   ],
   authors: [{ name: "Nwhator Promise" }],
   creator: "Nwhator Promise",
@@ -88,6 +89,26 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <WhatsAppButton />
+          {/* JSON-LD Structured Data */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Promise Nwhator",
+                "alternateName": "Promise Ayobami Nwhator",
+                "url": "https://nwhator.com",
+                "image": "https://nwhator.com/me.jpeg",
+                "jobTitle": "Systems Architect & Backend Lead",
+                "sameAs": [
+                  "https://github.com/nwhator",
+                  "https://linkedin.com/in/nwhator",
+                ],
+                "description": "Systems Architect and Backend Lead specializing in scalable digital infrastructure, Next.js, and OJS."
+              })
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

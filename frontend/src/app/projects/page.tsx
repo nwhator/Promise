@@ -190,7 +190,10 @@ export default function Projects() {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px - 6 py - 2 rounded - xl text - sm font - bold transition - all ${ filter === f ? 'bg-primary text-white shadow-xl shadow-primary/20' : 'bg-surface text-foreground/50 border border-border hover:border-primary/50 hover:text-foreground' } `}
+                className={`btn-filter ${filter === f
+                    ? 'bg-primary border-primary text-white shadow-xl shadow-primary/20 scale-105'
+                    : 'bg-surface border-border text-foreground/50 hover:border-primary/50 hover:text-foreground'
+                  }`}
               >
                 {f}
               </button>
