@@ -20,7 +20,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(34,211,238,0.1)_0%,transparent_50%)] pointer-events-none" />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-white/5 glass-nav backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-border glass-nav backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3">
@@ -42,7 +42,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
               <Link href="/technologies" className="text-foreground/60 hover:text-primary transition-colors">Technologies</Link>
               <Link href="/resume" className="text-foreground/60 hover:text-primary transition-colors">Resume</Link>
               <Link href="/contact" className="text-foreground/60 hover:text-primary transition-colors">Contact</Link>
-              <Link href="/blog" className="text-foreground font-bold underline decoration-primary decoration-2 underline-offset-4">Blog</Link>
+              <Link href="/blog" className="text-foreground font-bold">Blog</Link>
             </nav>
 
             <div className="flex items-center gap-4">
@@ -81,15 +81,15 @@ export function BlogChrome({ children }: BlogChromeProps) {
       <div className="flex-1">{children}</div>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 px-4 py-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+      <footer className="border-t border-border px-4 py-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-foreground/50">
           <p>© {new Date().getFullYear()} Promise Ayobami Nwhator. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/nwhator"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-primary transition-colors"
             >
               GitHub
             </a>
@@ -97,7 +97,7 @@ export function BlogChrome({ children }: BlogChromeProps) {
               href="https://linkedin.com/in/nwhator"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-primary transition-colors"
             >
               LinkedIn
             </a>

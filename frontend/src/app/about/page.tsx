@@ -138,11 +138,7 @@ export default function About() {
                   <ul className="space-y-4 text-sm text-foreground/60 font-light">
                     <li className="flex gap-3">
                       <span className="text-primary">•</span>
-                      Amazon Web Services Cloud Practitioner
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-primary">•</span>
-                      Advanced Systems Architecture (Venture Garden Group)
+                      Software Engineering, ALX
                     </li>
                     <li className="flex gap-3">
                       <span className="text-primary">•</span>
